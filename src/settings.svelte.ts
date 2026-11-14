@@ -1,0 +1,11 @@
+import { stored } from '@/stored.svelte.ts';
+
+/** Display preferences, edited from the settings menu and saved in localStorage. */
+export const settings = {
+  /** Names under portraits in the character grids. */
+  names: stored('nameState', true),
+  /** "R8·S3" Renown/Support tags on Gifting portraits. */
+  badges: stored('badgeState', true),
+  /** Names under the lords in the route selector. */
+  routeNames: stored('routeNameState', true),
+};

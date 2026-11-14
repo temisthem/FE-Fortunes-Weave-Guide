@@ -160,3 +160,10 @@ export const compareCharacters = (sort: SortKey, route: Route) => (a: Character,
     a.name.localeCompare(b.name)
   );
 };
+
+/** Compact "R8·S3" tag for portraits of units recruited with Renown/Support. Nothing for auto-joiners. */
+export const requirementBadge = (c: Character, route: Route) => {
+  const info = getRouteInfo(c, route);
+  if (info?.status !== 'recruit') return null;
+  return `R${info.renown ?? '?'}·S${info.support ?? '?'}`;
+};
