@@ -12,6 +12,7 @@
     giftByName,
     gifts,
     isRecruitable,
+    isRouteLord,
     likesOnRoute,
     portrait,
     requirementBadge,
@@ -58,7 +59,9 @@
 
   let results: HTMLDivElement | undefined = $state();
 
-  const sortedCharacters = $derived([...characters].sort(compareCharacters(sort.value, route.value)));
+  const sortedCharacters = $derived(
+    characters.filter((c) => !isRouteLord(c, route.value)).sort(compareCharacters(sort.value, route.value)),
+  );
   const character = $derived(selectedCharacter.value ? characterByName.get(selectedCharacter.value) : undefined);
   const gift = $derived(selectedGift.value ? giftByName.get(selectedGift.value) : undefined);
 
@@ -94,7 +97,11 @@
   );
 
   const fans = $derived(
-    gift ? fansOf(gift.name).sort((a, b) => compareCharacters(sort.value, route.value)(a.character, b.character)) : [],
+    gift
+      ? fansOf(gift.name)
+          .filter((f) => !isRouteLord(f.character, route.value))
+          .sort((a, b) => compareCharacters(sort.value, route.value)(a.character, b.character))
+      : [],
   );
 </script>
 

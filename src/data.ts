@@ -92,7 +92,7 @@ export type LikeCounts = { loved: number; liked: number };
 
 /** How many recruitable units on this path love / like a gift. */
 export const likesOnRoute = (gift: string, route: Route): LikeCounts => {
-  const fans = fansOf(gift).filter((f) => isRecruitable(f.character, route));
+  const fans = fansOf(gift).filter((f) => isRecruitable(f.character, route) && !isRouteLord(f.character, route));
   const loved = fans.filter((f) => f.preference === 'Loved').length;
   return { loved, liked: fans.length - loved };
 };
@@ -137,22 +137,46 @@ export const SORT_LABELS: Record<SortKey, string> = {
   renown: 'Renown Lv',
 };
 
+/** Matches a join point in Part II or Part III (e.g. "Part II: War, Chapter 2"). */
+const LATE_PART = /\bPart (II|III)\b/;
+
 /**
- * Rank used for requirement sorting. Characters that join automatically need
- * nothing (0); recruitables use their level; story-only and unavailable units
- * go to the end.
+ * Units that only join automatically in Part II or III on this path (or through
+ * the story in those parts). They sort to the end with the non-recruitable units.
+ */
+export const joinsLate = (c: Character, route: Route) => {
+  const info = getRouteInfo(c, route);
+  if (!info) return LATE_PART.test(c.note ?? '');
+  return info.status === 'auto' && LATE_PART.test(info.when ?? '');
+};
+
+/** Units you can have early on this path: they join in Part I or can be recruited. */
+const availableEarly = (c: Character, route: Route) => isRecruitable(c, route) && !joinsLate(c, route);
+
+/** The selected route's lord is the player, so they never receive gifts. */
+export const isRouteLord = (c: Character, route: Route) => c.name === route;
+
+/**
+ * Rank used for requirement sorting. Units that join automatically need
+ * nothing (0); recruitables use their level; late joiners, story-only and
+ * unavailable units go to the end.
  */
 const requirementRank = (c: Character, route: Route, key: 'renown' | 'support') => {
   const info = getRouteInfo(c, route);
-  if (!info) return 900;
-  if (info.status === 'auto') return 0;
+  if (joinsLate(c, route)) return 700;
+  if (!info || info.status === 'auto') return 0;
   if (info.status === 'recruit') return info[key] ?? 500;
   if (info.status === 'guest') return 800;
   return 1000;
 };
 
+/**
+ * Both sorts list the units you can have early first, then late joiners and
+ * non-recruitable units at the end.
+ */
 export const compareCharacters = (sort: SortKey, route: Route) => (a: Character, b: Character) => {
-  if (sort === 'name') return a.name.localeCompare(b.name);
+  const group = Number(!availableEarly(a, route)) - Number(!availableEarly(b, route));
+  if (sort === 'name') return group || a.name.localeCompare(b.name);
   // Ties on Renown Lv are broken by Support Lv, then name.
   return (
     requirementRank(a, route, 'renown') - requirementRank(b, route, 'renown') ||
