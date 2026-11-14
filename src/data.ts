@@ -137,12 +137,16 @@ export const SORT_LABELS: Record<SortKey, string> = {
   renown: 'Renown Lv',
 };
 
-/** Matches a join point in Part II or Part III (e.g. "Part II: War, Chapter 2"). */
-const LATE_PART = /\bPart (II|III)\b/;
+/**
+ * Matches a join point outside Part I: Part II or III (e.g. "Part II: War,
+ * Chapter 2"), or the Prologue, whose units aren't playable in Part I.
+ */
+const LATE_PART = /\bPart (II|III)\b|\bPrologue\b/;
 
 /**
- * Units that only join automatically in Part II or III on this path (or through
- * the story in those parts). They sort to the end with the non-recruitable units.
+ * Units that aren't playable in Part I on this path: they join automatically
+ * in Part II or III, or through the story in the Prologue or those parts.
+ * They sort to the end with the non-recruitable units.
  */
 export const joinsLate = (c: Character, route: Route) => {
   const info = getRouteInfo(c, route);
@@ -150,7 +154,7 @@ export const joinsLate = (c: Character, route: Route) => {
   return info.status === 'auto' && LATE_PART.test(info.when ?? '');
 };
 
-/** Units you can have early on this path: they join in Part I or can be recruited. */
+/** Units you can have in Part I on this path: they join then or can be recruited. */
 const availableEarly = (c: Character, route: Route) => isRecruitable(c, route) && !joinsLate(c, route);
 
 /** The selected route's lord is the player, so they never receive gifts. */
