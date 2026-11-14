@@ -8,4 +8,6 @@ export const settings = {
   badges: stored('badgeState', true),
   /** Names under the lords in the route selector. */
   routeNames: stored('routeNameState', true),
+  /** Gifting lists only units recruited with Renown/Support (the ones with an R·S tag). */
+  recruitableOnly: stored('recruitableOnlyState', false),
 };

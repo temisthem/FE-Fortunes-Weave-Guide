@@ -11,8 +11,7 @@
     fansOf,
     giftByName,
     gifts,
-    isRecruitable,
-    isRouteLord,
+    showInGifting,
     likesOnRoute,
     portrait,
     requirementBadge,
@@ -60,7 +59,9 @@
   let results: HTMLDivElement | undefined = $state();
 
   const sortedCharacters = $derived(
-    characters.filter((c) => !isRouteLord(c, route.value)).sort(compareCharacters(sort.value, route.value)),
+    characters
+      .filter((c) => showInGifting(c, route.value, settings.recruitableOnly.value))
+      .sort(compareCharacters(sort.value, route.value)),
   );
   const character = $derived(selectedCharacter.value ? characterByName.get(selectedCharacter.value) : undefined);
   const gift = $derived(selectedGift.value ? giftByName.get(selectedGift.value) : undefined);
@@ -99,7 +100,7 @@
   const fans = $derived(
     gift
       ? fansOf(gift.name)
-          .filter((f) => !isRouteLord(f.character, route.value))
+          .filter((f) => showInGifting(f.character, route.value, settings.recruitableOnly.value))
           .sort((a, b) => compareCharacters(sort.value, route.value)(a.character, b.character))
       : [],
   );
@@ -119,7 +120,6 @@
         selected={selectedCharacter.value === c.name}
         onclick={() => selectCharacter(c.name)}
         badge={settings.badges.value ? requirementBadge(c, route.value) : null}
-        dimmed={!isRecruitable(c, route.value)}
       />
     {/each}
   </CharacterGrid>
@@ -142,7 +142,7 @@
             <GiftTile
               gift={g}
               selectable
-              likes={likesOnRoute(g.name, route.value)}
+              likes={likesOnRoute(g.name, route.value, settings.recruitableOnly.value)}
               selected={selectedGift.value === g.name}
               onclick={() => selectGift(g.name)}
             />
@@ -220,7 +220,7 @@
                     onclick={() => selectCharacter(c.name)}
                   >
                     <img
-                      class={cx('aspect-square w-8 shrink-0 rounded md:w-10', !isRecruitable(c, route.value) && interaction.dimmed)}
+                      class="aspect-square w-8 shrink-0 rounded md:w-10"
                       src={portrait(c.slug)}
                       alt=""
                       loading="lazy"

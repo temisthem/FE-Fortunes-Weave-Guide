@@ -90,9 +90,19 @@ export const isRecruitable = (c: Character, route: Route) => {
 
 export type LikeCounts = { loved: number; liked: number };
 
-/** How many recruitable units on this path love / like a gift. */
-export const likesOnRoute = (gift: string, route: Route): LikeCounts => {
-  const fans = fansOf(gift).filter((f) => isRecruitable(f.character, route) && !isRouteLord(f.character, route));
+/** Units recruited with Renown/Support on this path: the ones with an "R·S" tag. */
+export const hasRecruitTag = (c: Character, route: Route) => getRouteInfo(c, route)?.status === 'recruit';
+
+/**
+ * Units listed in Gifting: never the route's lord (the player), and with
+ * `recruitableOnly` only the units that have an R·S tag.
+ */
+export const showInGifting = (c: Character, route: Route, recruitableOnly: boolean) =>
+  !isRouteLord(c, route) && (!recruitableOnly || hasRecruitTag(c, route));
+
+/** How many of the units listed in Gifting love / like a gift (matches the "Who likes it" table). */
+export const likesOnRoute = (gift: string, route: Route, recruitableOnly: boolean): LikeCounts => {
+  const fans = fansOf(gift).filter((f) => showInGifting(f.character, route, recruitableOnly));
   const loved = fans.filter((f) => f.preference === 'Loved').length;
   return { loved, liked: fans.length - loved };
 };

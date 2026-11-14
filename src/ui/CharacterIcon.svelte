@@ -10,10 +10,8 @@
     onclick: () => void;
     /** Small label in the corner, e.g. "R8·S3". */
     badge?: string | null;
-    /** Grayscale a unit that is guest-only or can't be recruited on the selected path. */
-    dimmed?: boolean;
   };
-  let { character, selected, onclick, badge, dimmed = false }: Props = $props();
+  let { character, selected, onclick, badge }: Props = $props();
 </script>
 
 <div class="mx-[0.3%] mb-[0.6%] w-[15%] sm:w-[10%] md:w-[7.5%] lg:w-[6%] xl:w-[5.5%]">
@@ -25,7 +23,7 @@
     aria-pressed={selected}
   >
     <img
-      class={cx('aspect-square w-full transition', radius, selected && interaction.selected, dimmed && interaction.dimmed)}
+      class={cx('aspect-square w-full transition', radius, selected && interaction.selected)}
       src={portrait(character.slug)}
       alt={character.name}
       loading="lazy"

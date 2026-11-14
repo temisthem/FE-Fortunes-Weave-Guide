@@ -26,10 +26,17 @@
     gameRant: 'https://gamerant.com/fire-emblem-fortunes-weave-feed-the-pale-raven-correct-answers/',
   };
 
-  const settingItems = [
-    { label: 'Show names', setting: settings.names },
-    { label: 'Show Renown/Support tags', setting: settings.badges },
-    { label: 'Show route names', setting: settings.routeNames },
+  // Grouped by the screen they affect. Pale Raven has no settings of its own.
+  const settingSections = [
+    { title: 'General', items: [{ label: 'Show names', setting: settings.names }] },
+    {
+      title: 'Gifting',
+      items: [
+        { label: 'Show route names', setting: settings.routeNames },
+        { label: 'Show Renown/Support tags', setting: settings.badges },
+        { label: 'Only show recruitable units', setting: settings.recruitableOnly },
+      ],
+    },
   ];
 </script>
 
@@ -38,7 +45,7 @@
     <header class="mb-3 md:mb-4">
       <Tabs options={SCREEN_OPTIONS} bind:value={screen.value}>
         {#snippet aside()}
-          <SettingsMenu items={settingItems} />
+          <SettingsMenu sections={settingSections} />
         {/snippet}
       </Tabs>
     </header>

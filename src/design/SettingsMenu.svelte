@@ -1,9 +1,13 @@
-<!-- Gear button that opens a small dropdown of on/off settings. Closes on outside click or Escape. -->
+<!--
+  Gear button that opens a small dropdown of on/off settings, grouped under
+  headings. Closes on outside click or Escape.
+-->
 <script lang="ts">
   import type { Stored } from '@/stored.svelte.ts';
   import { cx, radius, interaction, text } from './tokens.ts';
 
-  let { items }: { items: { label: string; setting: Stored<boolean> }[] } = $props();
+  type Section = { title: string; items: { label: string; setting: Stored<boolean> }[] };
+  let { sections }: { sections: Section[] } = $props();
 
   let open = $state(false);
   let root: HTMLDivElement | undefined = $state();
@@ -53,13 +57,21 @@
     <div
       class={cx(radius, 'absolute right-0 top-full z-20 mt-1 w-60 border-2 border-amber-900/40 bg-amber-50 p-1.5 shadow-lg')}
     >
-      {#each items as item (item.label)}
-        <label
-          class={cx(text.small, 'flex cursor-pointer items-center justify-between gap-3 rounded px-2 py-1.5 hover:bg-amber-100')}
-        >
-          {item.label}
-          <input type="checkbox" class="h-4 w-4 cursor-pointer accent-amber-600" bind:checked={item.setting.value} />
-        </label>
+      {#each sections as section, i (section.title)}
+        <div class={cx(i > 0 && 'mt-1.5 border-t border-amber-900/20 pt-1.5')}>
+          <p class={cx(text.label, 'px-2 pb-0.5 text-[10px] md:text-xs')}>{section.title}</p>
+          {#each section.items as item (item.label)}
+            <label
+              class={cx(
+                text.small,
+                'flex cursor-pointer items-center justify-between gap-3 rounded px-2 py-1.5 hover:bg-amber-100',
+              )}
+            >
+              {item.label}
+              <input type="checkbox" class="h-4 w-4 cursor-pointer accent-amber-600" bind:checked={item.setting.value} />
+            </label>
+          {/each}
+        </div>
       {/each}
     </div>
   {/if}
