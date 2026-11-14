@@ -117,6 +117,7 @@ export const GiftTile = ({
   selected,
   onClick,
   selectable,
+  compact,
 }: {
   gift: Gift;
   preference?: Preference;
@@ -124,6 +125,8 @@ export const GiftTile = ({
   onClick?: () => void;
   /** In a picker: show fan counts and grey out the tiles that aren't selected. */
   selectable?: boolean;
+  /** Name only (no category line), for the character's gift lists. */
+  compact?: boolean;
 }) => {
   const fans = fanCount.get(gift.name) ?? 0;
   return (
@@ -134,7 +137,8 @@ export const GiftTile = ({
       className={cx(
         radius,
         state.focus,
-        'flex min-h-[3.25rem] w-full flex-col justify-center border-2 px-2.5 py-1.5 text-left transition',
+        'flex w-full flex-col justify-center border-2 px-2.5 py-1.5 text-left transition',
+        !compact && 'min-h-[3.25rem]',
         preference === 'Loved' ? 'border-yellow-400 bg-rose-900' : 'border-amber-950 bg-amber-800',
         selected && state.selected,
         selectable && !selected && state.unselected,
@@ -145,10 +149,12 @@ export const GiftTile = ({
         {preference === 'Loved' && <span className={'mr-1 text-yellow-300'}>♥</span>}
         {gift.name}
       </span>
-      <span className={'text-[10px] uppercase tracking-wide text-amber-200/80 md:text-[11px]'}>
-        {gift.category}
-        {selectable && ` · ${fans} fan${fans === 1 ? '' : 's'}`}
-      </span>
+      {!compact && (
+        <span className={'text-[10px] uppercase tracking-wide text-amber-200/80 md:text-[11px]'}>
+          {gift.category}
+          {selectable && ` · ${fans} fan${fans === 1 ? '' : 's'}`}
+        </span>
+      )}
     </button>
   );
 };

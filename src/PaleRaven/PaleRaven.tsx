@@ -51,7 +51,7 @@ const PaleRaven = ({ showName }: { showName: boolean }) => {
                 <Table>
                   <thead>
                     <tr>
-                      <Th width={'60%'}>Prompt</Th>
+                      <Th className={'w-[62%] sm:w-[60%]'}>Prompt</Th>
                       <Th>Answer</Th>
                     </tr>
                   </thead>

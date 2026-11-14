@@ -19,9 +19,8 @@ const App = () => {
   return (
     <div className={'app-bg'}>
       <div className={'mx-auto flex h-full min-h-screen max-w-[1280px] flex-col bg-amber-50 bg-opacity-85 p-4 md:p-5'}>
-        <header className={'mb-5 flex flex-wrap items-center gap-3'}>
-          <h1 className={text.title}>Fortune&rsquo;s Weave Guide</h1>
-          <div className={'ml-auto flex flex-wrap items-center gap-3'}>
+        <header className={'mb-5 flex flex-wrap items-center justify-end gap-3'}>
+          <div className={'flex flex-wrap items-center justify-end gap-3'}>
             <ToggleGroup options={SCREEN_OPTIONS} value={screen} onChange={setScreen} />
             <Button variant={'toggle'} active={showNames} onClick={() => setShowNames(!showNames)}>
               Show Names

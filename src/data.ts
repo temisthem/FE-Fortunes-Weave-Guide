@@ -97,6 +97,22 @@ export const describeStatus = (c: Character, route: Route) => {
   }
 };
 
+/**
+ * Recruitment requirements on one route. `renown`/`support` are set only for
+ * recruitable units. `details` holds timing and extra conditions, or the
+ * status text when the unit isn't recruitable.
+ */
+export const requirementSummary = (c: Character, route: Route) => {
+  const info = getRouteInfo(c, route);
+  if (info?.status !== 'recruit') return { details: describeStatus(c, route) };
+  const when = info.when && (/^From /.test(info.when) ? info.when : `From ${info.when.replace(/ onward$/, '')}`);
+  return {
+    renown: info.renown ?? '?',
+    support: info.support ?? '?',
+    details: [when, ...(info.conditions ?? [])].filter(Boolean).join(' · '),
+  };
+};
+
 // ---- sorting -------------------------------------------------------------
 
 export type SortKey = 'name' | 'renown' | 'support';

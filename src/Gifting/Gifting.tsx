@@ -9,12 +9,11 @@ import {
   characterByName,
   characters,
   compareCharacters,
-  describeStatus,
   fansOf,
-  getRouteInfo,
   giftByName,
   gifts,
   portrait,
+  requirementSummary,
 } from '@/data.ts';
 import {
   Button,
@@ -31,7 +30,6 @@ import {
   ToggleGroup,
   Toolbar,
   cx,
-  rowHighlight,
   state,
   text,
 } from '@/design.tsx';
@@ -55,24 +53,20 @@ const MODE_OPTIONS = [
   { value: 'gift', label: 'By Gift' },
 ] as const;
 
-/** Renown / Support / other-requirements cells for one route. */
-const RequirementCells = ({ character, route }: { character: Character; route: Route }) => {
-  const info = getRouteInfo(character, route);
-  const recruitable = info?.status === 'recruit';
-  const other = recruitable
-    ? [
-        info.when && (/^From /.test(info.when) ? info.when : `From ${info.when.replace(/ onward$/, '')}`),
-        ...(info.conditions ?? []),
-      ]
-        .filter(Boolean)
-        .join(' · ')
-    : describeStatus(character, route);
+/** One-line recruitment summary for the selected route. */
+const RecruitmentLine = ({ character, route }: { character: Character; route: Route }) => {
+  const r = requirementSummary(character, route);
   return (
-    <>
-      <Td tone={'center'}>{recruitable ? info.renown ?? '?' : '—'}</Td>
-      <Td tone={'center'}>{recruitable ? info.support ?? '?' : '—'}</Td>
-      <Td tone={'muted'}>{other}</Td>
-    </>
+    <Fact label={`Recruit (${route}’s Path)`}>
+      {r.renown !== undefined && (
+        <>
+          <span className={'font-semibold'}>Renown Lv {r.renown}</span> ·{' '}
+          <span className={'font-semibold'}>Support Lv {r.support}</span>
+          {r.details && ' · '}
+        </>
+      )}
+      {r.details}
+    </Fact>
   );
 };
 
@@ -116,34 +110,10 @@ const Gifting = ({ showName }: { showName: boolean }) => {
   const renderCharacterDetails = (c: Character) => (
     <>
       <DetailHeader image={portrait(c.slug)} title={c.name}>
+        <RecruitmentLine character={c} route={route} />
         {c.likes && <Fact label={'Likes'}>{c.likes}</Fact>}
         {c.interests && <Fact label={'Interests'}>{c.interests}</Fact>}
       </DetailHeader>
-
-      <Section title={'Recruitment requirements'}>
-        {c.recruit ? (
-          <Table>
-            <thead>
-              <tr>
-                <Th width={'22%'}>Route</Th>
-                <Th width={'14%'}>Renown Lv</Th>
-                <Th width={'14%'}>Support Lv</Th>
-                <Th>Other requirements</Th>
-              </tr>
-            </thead>
-            <tbody>
-              {ROUTES.map((r) => (
-                <tr key={r} className={r === route ? rowHighlight : ''}>
-                  <Td tone={'strong'}>{r}&rsquo;s Path</Td>
-                  <RequirementCells character={c} route={r} />
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-        ) : (
-          <p className={cx(text.body, 'text-center')}>{c.note ?? 'Joins through the story.'}</p>
-        )}
-      </Section>
 
       {c.loved.length + c.reallyLiked.length === 0 ? (
         <EmptyState>No known favourite gifts yet.</EmptyState>
@@ -153,7 +123,13 @@ const Gifting = ({ showName }: { showName: boolean }) => {
             <Section title={'♥ Loved gifts'}>
               <GiftGrid>
                 {c.loved.map((g) => (
-                  <GiftTile key={g} gift={giftByName.get(g)!} preference={'Loved'} onClick={() => selectGift(g, true)} />
+                  <GiftTile
+                    key={g}
+                    gift={giftByName.get(g)!}
+                    preference={'Loved'}
+                    compact
+                    onClick={() => selectGift(g, true)}
+                  />
                 ))}
               </GiftGrid>
             </Section>
@@ -166,6 +142,7 @@ const Gifting = ({ showName }: { showName: boolean }) => {
                     key={g}
                     gift={giftByName.get(g)!}
                     preference={'Really Liked'}
+                    compact
                     onClick={() => selectGift(g, true)}
                   />
                 ))}
@@ -241,37 +218,51 @@ const Gifting = ({ showName }: { showName: boolean }) => {
             <Table>
               <thead>
                 <tr>
-                  <Th width={'26%'}>Character</Th>
-                  <Th width={'14%'}>Preference</Th>
-                  <Th width={'12%'}>Renown Lv</Th>
-                  <Th width={'12%'}>Support Lv</Th>
-                  <Th>Other requirements</Th>
+                  <Th>Character</Th>
+                  <Th className={'hidden w-[16%] sm:table-cell'}>Preference</Th>
+                  <Th className={'w-[19%] sm:w-[12%]'}>Renown Lv</Th>
+                  <Th className={'w-[19%] sm:w-[12%]'}>Support Lv</Th>
+                  <Th className={'hidden w-[34%] sm:table-cell'}>Other requirements</Th>
                 </tr>
               </thead>
               <tbody>
-                {fans.map(({ character: c, preference }) => (
-                  <tr key={c.name}>
-                    <Td tone={'strong'}>
-                      <button
-                        type={'button'}
-                        className={cx('flex items-center gap-2 text-left hover:underline', state.focus)}
-                        onClick={() => selectCharacter(c.name)}
-                      >
-                        <img
-                          className={'aspect-square w-8 shrink-0 rounded md:w-10'}
-                          src={portrait(c.slug)}
-                          alt={''}
-                          loading={'lazy'}
-                        />
-                        <span className={'truncate'}>{c.name}</span>
-                      </button>
-                    </Td>
-                    <Td tone={'center'}>
-                      <PreferenceLabel preference={preference} />
-                    </Td>
-                    <RequirementCells character={c} route={route} />
-                  </tr>
-                ))}
+                {fans.map(({ character: c, preference }) => {
+                  const req = requirementSummary(c, route);
+                  return (
+                    <tr key={c.name}>
+                      <Td>
+                        <button
+                          type={'button'}
+                          className={cx('flex w-full items-center gap-2 text-left', state.focus)}
+                          onClick={() => selectCharacter(c.name)}
+                        >
+                          <img
+                            className={'aspect-square w-8 shrink-0 rounded md:w-10'}
+                            src={portrait(c.slug)}
+                            alt={''}
+                            loading={'lazy'}
+                          />
+                          <span className={'min-w-0'}>
+                            <span className={'block truncate font-semibold hover:underline'}>{c.name}</span>
+                            {/* On phones the Preference and Other columns are hidden, so show them here. */}
+                            <span className={cx(text.caption, 'block sm:hidden')}>
+                              <PreferenceLabel preference={preference} />
+                              {req.details && <span className={'text-amber-900'}> · {req.details}</span>}
+                            </span>
+                          </span>
+                        </button>
+                      </Td>
+                      <Td tone={'center'} className={'hidden sm:table-cell'}>
+                        <PreferenceLabel preference={preference} />
+                      </Td>
+                      <Td tone={'center'}>{req.renown ?? '—'}</Td>
+                      <Td tone={'center'}>{req.support ?? '—'}</Td>
+                      <Td tone={'muted'} className={'hidden sm:table-cell'}>
+                        {req.details}
+                      </Td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </Table>
           </Section>
@@ -306,11 +297,15 @@ const Gifting = ({ showName }: { showName: boolean }) => {
       )}
 
       <div ref={results.ref} className={'mt-6 scroll-mt-4'}>
-        {mode === 'character'
-          ? character
-            ? renderCharacterDetails(character)
-            : <EmptyState>Select a character to start!</EmptyState>
-          : renderGiftResults()}
+        {mode === 'character' ? (
+          character ? (
+            renderCharacterDetails(character)
+          ) : (
+            <EmptyState>Select a character to start!</EmptyState>
+          )
+        ) : (
+          renderGiftResults()
+        )}
       </div>
     </>
   );

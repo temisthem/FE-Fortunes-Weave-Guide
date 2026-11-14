@@ -187,8 +187,8 @@ export const Panel = ({ children }: { children: ReactNode }) => (
 
 // ---- tables --------------------------------------------------------------
 
-/** Soft inner dividers; the rounded outer border comes from the Table wrapper. */
-const cellBase = 'border-b border-r border-amber-900/20 px-3 py-2 align-middle last:border-r-0';
+/** Soft inner dividers; the rounded outer border comes from the Table wrapper. Tighter on phones. */
+const cellBase = 'border-b border-r border-amber-900/20 px-1.5 py-1.5 align-middle last:border-r-0 sm:px-3 sm:py-2';
 
 /**
  * Rounded card around a table. Uses separate borders so the corners can be
@@ -210,10 +210,17 @@ export const Table = ({ children }: { children: ReactNode }) => (
   </div>
 );
 
-export const Th = ({ children, width }: { children: ReactNode; width?: string }) => (
+/**
+ * Header cell. Labels wrap instead of overflowing narrow columns. Set the
+ * width with Tailwind classes via `className` so it can change by breakpoint.
+ */
+export const Th = ({ children, className }: { children: ReactNode; className?: string }) => (
   <th
-    className={cx(cellBase, text.label, 'border-b-2 border-b-amber-900/40 bg-amber-200 text-center')}
-    style={width ? { width } : undefined}
+    className={cx(
+      cellBase,
+      'border-b-2 border-b-amber-900/40 bg-amber-200 text-center text-[10px] font-bold uppercase leading-tight tracking-wide text-amber-900 [overflow-wrap:anywhere] md:text-sm',
+      className,
+    )}
   >
     {children}
   </th>
@@ -227,12 +234,15 @@ const tdTone: Record<TdTone, string> = {
   muted: 'text-amber-900',
 };
 
-export const Td = ({ children, tone = 'default' }: { children: ReactNode; tone?: TdTone }) => (
-  <td className={cx(cellBase, tdTone[tone])}>{children}</td>
-);
-
-/** Highlight a table row (e.g. the current route). */
-export const rowHighlight = '!bg-amber-300/60';
+export const Td = ({
+  children,
+  tone = 'default',
+  className,
+}: {
+  children: ReactNode;
+  tone?: TdTone;
+  className?: string;
+}) => <td className={cx(cellBase, tdTone[tone], className)}>{children}</td>;
 
 // ---- links ---------------------------------------------------------------
 
