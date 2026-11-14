@@ -12,7 +12,7 @@ import {
   getRouteInfo,
   portrait,
 } from '@/data.ts';
-import { ControlGroup, ToggleGroup, cx, radius, state, text } from '@/design.tsx';
+import { Button, ControlGroup, ToggleGroup, cx, radius, state, text } from '@/design.tsx';
 
 /** Portrait button in a selection grid. The selected one gets a ring; others stay in full colour. */
 export const CharacterIcon = ({
@@ -89,6 +89,15 @@ export const RouteSelector = ({ route, setRoute }: { route: Route; setRoute: (r:
         </button>
       ))}
     </div>
+  </ControlGroup>
+);
+
+/** Display setting for portrait grids. Shared by every screen with a grid. */
+export const NamesToggle = ({ showName, setShowName }: { showName: boolean; setShowName: (v: boolean) => void }) => (
+  <ControlGroup>
+    <Button variant={'toggle'} active={showName} onClick={() => setShowName(!showName)}>
+      Show Names
+    </Button>
   </ControlGroup>
 );
 

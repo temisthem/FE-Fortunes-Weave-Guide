@@ -1,6 +1,6 @@
 import Gifting from '@/Gifting/Gifting.tsx';
 import PaleRaven from '@/PaleRaven/PaleRaven.tsx';
-import { Button, Link, ToggleGroup, cx, text } from '@/design.tsx';
+import { Link, Tabs, cx, text } from '@/design.tsx';
 import { useStoredState } from '@/useStoredState.ts';
 
 type Screen = 'gifting' | 'raven';
@@ -19,18 +19,13 @@ const App = () => {
   return (
     <div className={'app-bg'}>
       <div className={'mx-auto flex h-full min-h-screen max-w-[1280px] flex-col bg-amber-50 bg-opacity-85 p-4 md:p-5'}>
-        <header className={'mb-5 flex flex-wrap items-center justify-end gap-3'}>
-          <div className={'flex flex-wrap items-center justify-end gap-3'}>
-            <ToggleGroup options={SCREEN_OPTIONS} value={screen} onChange={setScreen} />
-            <Button variant={'toggle'} active={showNames} onClick={() => setShowNames(!showNames)}>
-              Show Names
-            </Button>
-          </div>
+        <header className={'mb-5'}>
+          <Tabs options={SCREEN_OPTIONS} value={screen} onChange={setScreen} />
         </header>
 
         <main>
-          {screen === 'gifting' && <Gifting showName={showNames} />}
-          {screen === 'raven' && <PaleRaven showName={showNames} />}
+          {screen === 'gifting' && <Gifting showName={showNames} setShowName={setShowNames} />}
+          {screen === 'raven' && <PaleRaven showName={showNames} setShowName={setShowNames} />}
         </main>
 
         <footer className={cx(text.small, 'ml-auto mt-auto pt-10 text-right text-amber-900')}>

@@ -42,6 +42,7 @@ import {
   CharacterIcon,
   GiftGrid,
   GiftTile,
+  NamesToggle,
   PreferenceLabel,
   RouteSelector,
   SortSelector,
@@ -67,7 +68,7 @@ const RecruitmentHeader = ({ character, route }: { character: Character; route: 
   );
 };
 
-const Gifting = ({ showName }: { showName: boolean }) => {
+const Gifting = ({ showName, setShowName }: { showName: boolean; setShowName: (v: boolean) => void }) => {
   const [mode, setMode] = useStoredState<GiftMode>('gift.mode', 'character', (v) =>
     ['character', 'gift'].includes(v as string),
   );
@@ -269,6 +270,7 @@ const Gifting = ({ showName }: { showName: boolean }) => {
         <ToggleGroup label={'View'} options={MODE_OPTIONS} value={mode} onChange={setMode} />
         <RouteSelector route={route} setRoute={setRoute} />
         <SortSelector sort={sort} setSort={setSort} />
+        <NamesToggle showName={showName} setShowName={setShowName} />
       </Toolbar>
 
       {mode === 'character' ? (

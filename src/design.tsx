@@ -109,6 +109,44 @@ export const ToggleGroup = <T extends string>({
   </ControlGroup>
 );
 
+/**
+ * Top-level navigation between the app's screens. Styled as underlined tabs so
+ * it reads differently from the in-screen toggle buttons.
+ */
+export const Tabs = <T extends string>({
+  options,
+  value,
+  onChange,
+}: {
+  options: readonly { value: T; label: ReactNode }[];
+  value: T;
+  onChange: (v: T) => void;
+}) => (
+  <nav className={'flex border-b-2 border-amber-900/25'} role={'tablist'}>
+    {options.map((o) => {
+      const active = o.value === value;
+      return (
+        <button
+          key={o.value}
+          type={'button'}
+          role={'tab'}
+          aria-selected={active}
+          onClick={() => onChange(o.value)}
+          className={cx(
+            '-mb-0.5 flex-1 border-b-4 px-4 py-2 text-base font-bold transition-colors md:text-lg',
+            'rounded-t-md focus-visible:bg-amber-200/60 focus-visible:outline-none',
+            active
+              ? 'border-amber-600 text-amber-950'
+              : 'border-transparent text-amber-900/60 hover:border-amber-300 hover:text-amber-900',
+          )}
+        >
+          {o.label}
+        </button>
+      );
+    })}
+  </nav>
+);
+
 /** Row of control groups at the top of a screen. */
 export const Toolbar = ({ children }: { children: ReactNode }) => (
   <div className={'flex flex-wrap items-center justify-center gap-x-8 gap-y-3'}>{children}</div>
