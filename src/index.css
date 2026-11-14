@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Stand-in for the hangout guide's painted background: a dusky sky with soft
+   feather-like streaks behind the translucent amber panel. */
+.app-bg {
+  background-color: #2b2140;
+  background-image:
+    radial-gradient(ellipse at 15% 10%, rgba(255, 214, 153, 0.35), transparent 45%),
+    radial-gradient(ellipse at 85% 85%, rgba(186, 120, 255, 0.25), transparent 50%),
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.04) 0 2px, transparent 2px 22px),
+    linear-gradient(180deg, #3b2c55 0%, #6b3f4f 55%, #a35b3a 100%);
+  background-attachment: fixed;
+}

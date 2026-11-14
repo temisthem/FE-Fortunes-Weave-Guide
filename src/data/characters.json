@@ -1,0 +1,3252 @@
+[
+ {
+  "name": "Alexandra",
+  "slug": "alexandra",
+  "loved": [
+   "Eastern Earrings",
+   "Strategy Manuscript",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Alecto Garum",
+   "Dagda Beard Grass",
+   "Garum",
+   "Gaudy Bangle",
+   "Herbal Recipe Guide",
+   "Home-Recipe Book",
+   "Horse-Grooming Kit",
+   "Kitten Figurine",
+   "Mane Ornament",
+   "Pastry Cookbook",
+   "Smooth Garum",
+   "Strong Seasonings",
+   "Sturdy Rucksack",
+   "Training Bracelet",
+   "Village Recipes",
+   "Wing Fletching"
+  ],
+  "likes": "Her parents, Bucephalus, virtuous men, talking about love",
+  "interests": "Combat training, caring for her beloved steed",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 2,
+    "renown": 7
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 8
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 1,
+    "renown": 6
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 10
+   }
+  }
+ },
+ {
+  "name": "Anatolia",
+  "slug": "anatolia",
+  "loved": [
+   "History of a Master",
+   "Morfis Almanac",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Ahm Lu Cloth",
+   "Candy Crystals",
+   "Eastern Black Silk",
+   "Eastern Tea Leaves",
+   "Magic-Trick Set",
+   "Protection Figurine",
+   "Tome from Away"
+  ],
+  "likes": "Hexagram divination, round objects",
+  "interests": "Focusing her mind, martial-arts training",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 5: Qualifier",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "guest": "Chapter 4: Qualifier; Anatolia's Paralogue",
+    "status": "guest"
+   },
+   "Theodora": {
+    "guest": "Chapter 5: Qualifier; Chapter 12: Battle",
+    "status": "guest"
+   },
+   "Leda": {
+    "guest": "Chapter 5: Qualifier; Anatolia's Paralogue",
+    "status": "guest"
+   }
+  }
+ },
+ {
+  "name": "Aswan",
+  "slug": "aswan",
+  "loved": [],
+  "reallyLiked": [
+   "Full Sewing Kit",
+   "Pack of Pastels",
+   "The Works of Dante"
+  ],
+  "likes": "Dante's plays, board games, sewing, beautiful landscapes",
+  "interests": "Classroom study, archery training",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 5: Dungeon",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "status": "unavailable"
+   },
+   "Theodora": {
+    "status": "unavailable"
+   },
+   "Leda": {
+    "status": "unavailable"
+   }
+  },
+  "note": "Joins in Part III: Salvation, Section 5."
+ },
+ {
+  "name": "Benditz",
+  "slug": "benditz",
+  "loved": [
+   "Eastern Black Silk",
+   "Eastern Earrings",
+   "Eastern Tea Leaves",
+   "Strategy Manuscript",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Coffee Pastries",
+   "Common Coffee",
+   "Eastern Love Story",
+   "Gaudy Bangle",
+   "Orgus Coffee",
+   "Select Coffee",
+   "Southern Coffee",
+   "Wing Fletching"
+  ],
+  "likes": "The Great August's tactics, up-and-coming young people",
+  "interests": "Lecturing young people, reading",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 9
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 2,
+    "renown": 7
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 1,
+    "renown": 8
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 7
+   }
+  }
+ },
+ {
+  "name": "Bertrand",
+  "slug": "bertrand",
+  "loved": [
+   "Dual Fish Knives",
+   "Ebony Game Board",
+   "Legendary Garum",
+   "Rancid Garum",
+   "Strategy Manuscript"
+  ],
+  "reallyLiked": [
+   "Ahm Lu Cloth",
+   "Alecto Garum",
+   "Concentrated Garum",
+   "Morfis Almanac",
+   "Smooth Garum",
+   "Sturdy Rucksack",
+   "Tales of Adventure",
+   "Tome from Away",
+   "Training Bracelet"
+  ],
+  "likes": "Smithing, salted meats, garum, well-crafted weapons",
+  "interests": "Playing board games, reading",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 11: Battle; Bertrand's Paralogue",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "guest": "Bertrand's Paralogue",
+    "status": "guest"
+   },
+   "Theodora": {
+    "guest": "Bertrand's Paralogue",
+    "status": "guest"
+   },
+   "Leda": {
+    "status": "unavailable"
+   }
+  }
+ },
+ {
+  "name": "Bonaventure",
+  "slug": "bonaventure",
+  "loved": [
+   "Crimson Ghosh",
+   "Strategy Manuscript",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Ceremonial Spear",
+   "Eastern Black Silk",
+   "Garum",
+   "Home-Recipe Book",
+   "Jade Ghosh",
+   "Pastry Cookbook",
+   "Rare Spices",
+   "Secret Ghosh",
+   "Strong Seasonings",
+   "Sun Ghosh",
+   "Tales of the Arena",
+   "The Works of Dante",
+   "Thick Foreign Tome",
+   "Village Recipes"
+  ],
+  "likes": "Knowledge, dialogue with sages, learning about other countries",
+  "interests": "Cooking, reciting poetry",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 4: Qualifier",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "guest": "Chapter 6: Qualifier",
+    "status": "guest"
+   },
+   "Theodora": {
+    "status": "auto",
+    "when": "Chapter 1"
+   },
+   "Leda": {
+    "guest": "Chapter 6: Qualifier",
+    "status": "guest"
+   }
+  }
+ },
+ {
+  "name": "Buccar",
+  "slug": "buccar",
+  "loved": [
+   "Crimson Ghosh",
+   "Dual Fish Knives",
+   "Legendary Garum",
+   "Rancid Garum"
+  ],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Eastern Tea Leaves",
+   "Energizing Ghosh",
+   "Garum",
+   "Home-Recipe Book",
+   "Light Shosh",
+   "Mature Ghosh",
+   "Mature Shosh",
+   "Niiza Garum",
+   "Outdoor Cooking Set",
+   "Rare Spices",
+   "Rustic Ghosh",
+   "Village Recipes",
+   "Volcano Ghosh",
+   "Young Ghosh",
+   "Young Shosh"
+  ],
+  "likes": "Loyalty, training, dreaming about Leda's happiness",
+  "interests": "Cooking, mentoring young people",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 7: Qualifier; Chapter 8: Battle and Clash",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "guest": "Chapter 6: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Clear Leda's Paralogue"
+    ]
+   },
+   "Theodora": {
+    "guest": "Chapter 7: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 10 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Clear Leda's Paralogue"
+    ]
+   },
+   "Leda": {
+    "status": "auto",
+    "when": "Chapter 1"
+   }
+  }
+ },
+ {
+  "name": "Cai",
+  "slug": "cai",
+  "loved": [],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Crimson Ghosh",
+   "Sharp Fishhook"
+  ],
+  "likes": "Physical training, catching animals",
+  "interests": "Fishing, spear training",
+  "recruit": {
+   "Cai": {
+    "status": "auto",
+    "when": "Chapter 1"
+   },
+   "Dietrich": {
+    "guest": "Chapter 4: Qualifier; Cai's Paralogue",
+    "status": "guest"
+   },
+   "Theodora": {
+    "guest": "Chapter 4: Qualifier; Chapter 11: Dungeon; Cai's Paralogue",
+    "status": "guest"
+   },
+   "Leda": {
+    "guest": "Chapter 8: Qualifier; Cai's Paralogue",
+    "status": "guest"
+   }
+  }
+ },
+ {
+  "name": "Catania",
+  "slug": "catania",
+  "loved": [
+   "Eastern Black Silk",
+   "Eastern Earrings",
+   "Eastern Tea Leaves",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Coffee Pastries",
+   "Common Coffee",
+   "Dagda Beard Grass",
+   "Gaudy Bangle",
+   "Horse-Grooming Kit",
+   "Kitten Figurine",
+   "Magic-Trick Set",
+   "Orgus Coffee",
+   "Pack of Pastels",
+   "Select Coffee",
+   "Southern Coffee"
+  ],
+  "likes": "Sterling wares, sterling people, sterling meals",
+  "interests": "Gathering information, making a name for herself",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 10
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 1,
+    "renown": 8
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 7
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 4 onward",
+    "support": 1,
+    "renown": 2
+   }
+  }
+ },
+ {
+  "name": "Centurio",
+  "slug": "centurio",
+  "loved": [
+   "Ceremonial Spear",
+   "Eastern Board Game",
+   "History of a Master",
+   "Portrait of Yu Phas",
+   "School Scandal",
+   "Strategy Manuscript"
+  ],
+  "reallyLiked": [
+   "Antique Medal",
+   "Board-Game Tactics",
+   "Spirit Board Game",
+   "Tales of the Arena",
+   "Trader's Handbook",
+   "Training Pillar",
+   "Training Weights"
+  ],
+  "likes": "Serving Aurora's temple, patrolling",
+  "interests": "Playing board games, classroom study",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 6: Battle",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "status": "unavailable"
+   },
+   "Theodora": {
+    "status": "unavailable"
+   },
+   "Leda": {
+    "status": "unavailable"
+   }
+  },
+  "note": "Joins in Part III: Salvation, Section 2."
+ },
+ {
+  "name": "Creek",
+  "slug": "creek",
+  "loved": [
+   "History of a Master"
+  ],
+  "reallyLiked": [
+   "Sharp Dagger",
+   "The Works of Dante"
+  ],
+  "likes": "The green armor he received from the king, beautiful women",
+  "interests": "Researching military strategies, enjoying the arts",
+  "recruit": null,
+  "note": "Joins in Part II: War, Chapter 2 (Dietrich and Leda paths only)."
+ },
+ {
+  "name": "Dadao",
+  "slug": "dadao",
+  "loved": [
+   "Poems of the Greats",
+   "Strategy Manuscript",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Coffee Pastries",
+   "Fragrant Pastries",
+   "Ginji Cervi",
+   "Honey Milk",
+   "Honey Pastries",
+   "Huge Fish Eyeball",
+   "Jamel Milk",
+   "Mature Dried Cervi",
+   "Mellow Pastries",
+   "Pastry Cookbook",
+   "Potted Vegetables",
+   "Saraminian Sweets",
+   "Simple Pastries",
+   "Strong Cervi",
+   "Weak Cervi",
+   "Yarc Milk"
+  ],
+  "likes": "Women (especially Anatolia), machines, good food, fighting",
+  "interests": "Tinkering with machines, watching out for the weak",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "From Chapter 7 to Chapter 10",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 2 Kothar Gar"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "From Chapter 8 to Chapter 12",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Give 2 Kothar Gar"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "From Chapter 7 to Chapter 11",
+    "support": 2,
+    "renown": 5,
+    "conditions": [
+     "Give 2 Kothar Gar"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "From Chapter 6 to Chapter 12",
+    "support": 2,
+    "renown": 5,
+    "conditions": [
+     "Give 2 Kothar Gar"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Dante",
+  "slug": "dante",
+  "loved": [
+   "History of a Master",
+   "Morfis Almanac",
+   "Poems of the Greats",
+   "Portrait of Yu Phas",
+   "School Scandal",
+   "Tome from Away"
+  ],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Common Coffee",
+   "Crimson Ghosh",
+   "Everyday Scenes",
+   "Magic-Trick Set",
+   "Pack of Pastels",
+   "Select Coffee",
+   "Tales of the Arena",
+   "The Works of Dante"
+  ],
+  "likes": "Herself, writing quickly, searching for dramatic subjects",
+  "interests": "Studying people for research, seeing how others act",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Give 8000 Gold"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 2,
+    "renown": 8,
+    "conditions": [
+     "Give 8000 Gold"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Give 8000 Gold"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Give 8000 Gold"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Diego",
+  "slug": "diego",
+  "loved": [
+   "Arrowhead Gem",
+   "Decorative Arrows"
+  ],
+  "reallyLiked": [
+   "Crimson Ghosh",
+   "Joint-Relief Gloves",
+   "Protection Figurine",
+   "Sharp Dagger",
+   "Training Pillar",
+   "Training Weights"
+  ],
+  "likes": "Walking in the forest, foraging medicinal herbs, Orchel",
+  "interests": "Playing the flute, being devoted to Orchel",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 4: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 11 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Clear Orchel's Paralogue"
+    ]
+   },
+   "Dietrich": {
+    "guest": "Chapter 7: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 11 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Clear Orchel's Paralogue"
+    ]
+   },
+   "Theodora": {
+    "guest": "Chapter 3: Battle; Chapter 4: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 12",
+    "support": 2,
+    "renown": 8,
+    "conditions": [
+     "Clear Orchel's Paralogue"
+    ]
+   },
+   "Leda": {
+    "guest": "Chapter 5: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 11 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Clear Orchel's Paralogue"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Dietrich",
+  "slug": "dietrich",
+  "loved": [],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Board-Game Tactics",
+   "Crimson Ghosh",
+   "Ginji Cervi",
+   "Honey Milk",
+   "Honey Pastries",
+   "Joint-Relief Gloves",
+   "Kitten Figurine",
+   "Pastry Cookbook",
+   "Protection Figurine",
+   "Pure-White Cervi",
+   "Spirit Board Game",
+   "Training Pillar",
+   "Training Weights"
+  ],
+  "likes": "Objects of beauty, sweet things, his little sister",
+  "interests": "Fighting the strong, meditating",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 5: Qualifier",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "status": "auto",
+    "when": "Chapter 1"
+   },
+   "Theodora": {
+    "guest": "Chapter 7: Qualifier; Dietrich's Paralogue",
+    "status": "guest"
+   },
+   "Leda": {
+    "guest": "Chapter 6: Qualifier; Dietrich's Paralogue",
+    "status": "guest"
+   }
+  }
+ },
+ {
+  "name": "Eshmel",
+  "slug": "eshmel",
+  "loved": [],
+  "reallyLiked": [],
+  "likes": "Ambitious people, people of great talent, small and unnamed flowers",
+  "interests": "Playing board games",
+  "recruit": null,
+  "note": "Protagonist (the Pale Raven)."
+ },
+ {
+  "name": "Esmeralda",
+  "slug": "esmeralda",
+  "loved": [
+   "Eastern Earrings",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Alecto Garum",
+   "Coffee Pastries",
+   "Dagda Beard Grass",
+   "Eastern Tea Leaves",
+   "Flexible Fishing Rod",
+   "Fragrant Pastries",
+   "Garum",
+   "Gaudy Bangle",
+   "Herbal Recipe Guide",
+   "Home-Recipe Book",
+   "Horse-Grooming Kit",
+   "Huge Fish Eyeball",
+   "Kitten Figurine",
+   "Mellow Pastries",
+   "Pastry Cookbook",
+   "Saraminian Sweets",
+   "Sharp Fishhook",
+   "Simple Pastries",
+   "Smooth Garum",
+   "Strong Seasonings",
+   "Training Bracelet",
+   "Village Recipes"
+  ],
+  "likes": "Handsome men, throwing her trident, maintaining fishing gear",
+  "interests": "Fishing, carving wooden dolls",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 2,
+    "renown": 7,
+    "conditions": [
+     "Complete Esmeralda's Request"
+    ]
+   },
+   "Dietrich": {
+    "status": "auto",
+    "when": "Chapter 2"
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Complete Esmeralda's Request"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Complete Esmeralda's Request"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Fabio",
+  "slug": "fabio",
+  "loved": [
+   "Tales of Adventure",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Aromatic Shosh",
+   "Brined Fish Guts",
+   "Coffee Pastries",
+   "Common Coffee",
+   "Dagda Beard Grass",
+   "Eastern Black Silk",
+   "Eastern Tea Leaves",
+   "Huge Fish Eyeball",
+   "Jade Ghosh",
+   "Light Shosh",
+   "Mature Ghosh",
+   "Mature Shosh",
+   "Orgus Coffee",
+   "Pack of Pastels",
+   "Potted Vegetables",
+   "Rustic Ghosh",
+   "Secret Ghosh",
+   "Select Coffee",
+   "Southern Coffee",
+   "Southern Ghosh",
+   "Sun Ghosh",
+   "Young Ghosh"
+  ],
+  "likes": "Suffering, half-forgotten feelings, dissecting beautiful things",
+  "interests": "Drawing, conversing with thoughtful people",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 5: Qualifier",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "status": "auto",
+    "when": "Chapter 1"
+   },
+   "Theodora": {
+    "guest": "Chapter 7: Qualifier",
+    "status": "guest"
+   },
+   "Leda": {
+    "guest": "Chapter 6: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 11 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Clear Dietrich's Paralogue",
+     "Complete Fabio's Request"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Fianna",
+  "slug": "fianna",
+  "loved": [
+   "Arrowhead Gem",
+   "Blue-Rose Bouquet",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Common Coffee",
+   "Crimson Ghosh",
+   "Joint-Relief Gloves",
+   "Rare Spices",
+   "Select Coffee",
+   "Skin Balm",
+   "Southern Coffee"
+  ],
+  "likes": "Books of poetry, spicy foods, coffee, trustworthy people",
+  "interests": "Praying, going to the theater",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 3000 Gold"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 3000 Gold"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Give 3000 Gold"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 5,
+    "conditions": [
+     "Give 3000 Gold"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Gaitz",
+  "slug": "gaitz",
+  "loved": [
+   "Ceremonial Spear",
+   "Flower Painting",
+   "History of a Master",
+   "Morfis Almanac",
+   "Portrait of Yu Phas",
+   "Tome from Away"
+  ],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Common Coffee",
+   "Crimson Ghosh",
+   "Horse-Grooming Kit",
+   "Joint-Relief Gloves",
+   "Orgus Coffee",
+   "The Works of Dante",
+   "Training Pillar",
+   "Training Weights"
+  ],
+  "likes": "Tea from Sai, Ferghanan horses, dueling, calligraphy",
+  "interests": "Brewing tea, practicing martial arts",
+  "recruit": {
+   "Cai": {
+    "status": "unavailable"
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 12",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Clear Bertrand's Paralogue"
+    ]
+   },
+   "Theodora": {
+    "status": "unavailable"
+   },
+   "Leda": {
+    "status": "unavailable"
+   }
+  }
+ },
+ {
+  "name": "Goliath",
+  "slug": "goliath",
+  "loved": [
+   "Strategy Manuscript",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Aromatic Shosh",
+   "Eastern Tea Leaves",
+   "Jade Ghosh",
+   "Kitten Figurine",
+   "Light Shosh",
+   "Mature Ghosh",
+   "Mature Shosh",
+   "Rustic Ghosh",
+   "Secret Ghosh",
+   "Southern Ghosh",
+   "Sturdy Rucksack",
+   "Sun Ghosh",
+   "Training Bracelet",
+   "Wing Fletching",
+   "Young Ghosh"
+  ],
+  "likes": "Rampaging, food, animals, smoking meat",
+  "interests": "Training, competing as a gladiator",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 3 Giant's Meat"
+    ],
+    "guest": "Chapter 11: Battle*"
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Give 3 Giant's Meat"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Give 3 Giant's Meat"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Give 3 Giant's Meat"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Guzran",
+  "slug": "guzran",
+  "loved": [
+   "Strategy Manuscript",
+   "Tales of Adventure",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Aromatic Shosh",
+   "Common Coffee",
+   "Eastern Tea Leaves",
+   "Huge Fish Eyeball",
+   "Jade Ghosh",
+   "Light Shosh",
+   "Mature Ghosh",
+   "Mature Shosh",
+   "Orgus Coffee",
+   "Rustic Ghosh",
+   "Secret Ghosh",
+   "Select Coffee",
+   "Southern Coffee",
+   "Southern Ghosh",
+   "Strong Seasonings",
+   "Sun Ghosh",
+   "Wing Fletching",
+   "Young Ghosh",
+   "Young Shosh"
+  ],
+  "likes": "Booze, women, interesting people, young greenhorns",
+  "interests": "Boasting",
+  "recruit": {
+   "Cai": {
+    "status": "auto",
+    "when": "Chapter 3"
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 8
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 5 onward",
+    "support": 1,
+    "renown": 3
+   }
+  }
+ },
+ {
+  "name": "Halvin",
+  "slug": "halvin",
+  "loved": [
+   "Eastern Black Silk",
+   "Eastern Earrings"
+  ],
+  "reallyLiked": [
+   "Crimson Ghosh",
+   "Eastern Tea Leaves",
+   "Exquisite Ring",
+   "Garum",
+   "Gaudy Bangle",
+   "Jade Panther Figure",
+   "Magic-Trick Set",
+   "Potted Vegetables",
+   "Simple Pastries",
+   "Skin Balm",
+   "Village Recipes"
+  ],
+  "likes": "Growing vegetables, shopping, street performing, cheering crowds",
+  "interests": "Practicing magic tricks, housekeeping",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "From Chapter 6 to Chapter 10",
+    "support": 3,
+    "renown": 5,
+    "conditions": [
+     "Give 10 Dates"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "From Chapter 7 to Chapter 12",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Give 10 Dates"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "From Chapter 8 to Chapter 11",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 10 Dates"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "From Chapter 7 to Chapter 12",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 10 Dates"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Hong Hua",
+  "slug": "hong-hua",
+  "loved": [
+   "Fodlan Tea",
+   "History of a Master",
+   "Portrait of Yu Phas"
+  ],
+  "reallyLiked": [
+   "Ahm Lu Cloth",
+   "Candy Crystals",
+   "Coffee Pastries",
+   "Common Coffee",
+   "Flower Painting",
+   "Magic-Trick Set",
+   "Mature Dried Cervi",
+   "Mellow Pastries",
+   "Morfis Almanac",
+   "Orgus Coffee",
+   "Select Coffee",
+   "Southern Coffee",
+   "Strong Cervi",
+   "Tome from Away",
+   "Weak Cervi"
+  ],
+  "likes": "Memories of happier times",
+  "interests": "None",
+  "recruit": {
+   "Cai": {
+    "status": "unavailable"
+   },
+   "Dietrich": {
+    "status": "unavailable"
+   },
+   "Theodora": {
+    "guest": "Chapter 6: Battle",
+    "status": "guest"
+   },
+   "Leda": {
+    "status": "unavailable"
+   }
+  },
+  "note": "Joins in the Prologue."
+ },
+ {
+  "name": "Inyoni",
+  "slug": "inyoni",
+  "loved": [
+   "Strategy Manuscript",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Eastern Black Silk",
+   "Eastern Tea Leaves",
+   "Huge Fish Eyeball",
+   "Sharp Fishhook",
+   "Sturdy Rucksack",
+   "Training Bracelet",
+   "Wing Fletching"
+  ],
+  "likes": "Her family and hometown, hunting, farm work, bow maintenance",
+  "interests": "Archery training, being frugal",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 6000 Gold"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 6000 Gold"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 1,
+    "renown": 9,
+    "conditions": [
+     "Give 4000 Gold"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 1,
+    "renown": 7,
+    "conditions": [
+     "Give 3000 Gold"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Io",
+  "slug": "io",
+  "loved": [],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Board-Game Tactics",
+   "Common Coffee",
+   "Crimson Ghosh",
+   "Horse-Grooming Kit",
+   "Joint-Relief Gloves",
+   "Kitten Figurine",
+   "Mane Ornament",
+   "Protection Figurine",
+   "Spirit Board Game",
+   "Sturdy Rucksack",
+   "Training Pillar",
+   "Training Weights"
+  ],
+  "likes": "Chivalry, self-discipline, his beloved horse Rocinan",
+  "interests": "Caring for his faithful steed, being quiet",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Give 4000 Gold"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 4 onward",
+    "support": 2,
+    "renown": 3,
+    "conditions": [
+     "Give 800 Gold"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 10 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Give 4000 Gold"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 1,
+    "renown": 6,
+    "conditions": [
+     "Give 1500 Gold"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Jasmine",
+  "slug": "jasmine",
+  "loved": [],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Crimson Ghosh",
+   "Dual Fish Knives",
+   "Honey Pastries",
+   "Jamel Milk",
+   "Joint-Relief Gloves",
+   "Kitten Figurine",
+   "Magic-Trick Set",
+   "Niiza Garum",
+   "Outdoor Cooking Set",
+   "Pack of Pastels",
+   "Pastry Cookbook",
+   "Protection Figurine",
+   "Pure-White Cervi",
+   "Rare Spices",
+   "Sturdy Rucksack",
+   "Training Pillar",
+   "Training Weights"
+  ],
+  "likes": "Memories of her spouse, mercenary friends, trying to get rich",
+  "interests": "Counting money, managing her mercenary group",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 1,
+    "renown": 8,
+    "conditions": [
+     "Give 2000 Gold"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Give 5000 Gold"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 5000 Gold"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 2,
+    "renown": 4,
+    "conditions": [
+     "Give 500 Gold"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Jester",
+  "slug": "jester",
+  "loved": [
+   "Arrowhead Gem"
+  ],
+  "reallyLiked": [
+   "Board-Game Tactics",
+   "Common Coffee",
+   "Crimson Ghosh",
+   "Dual Fish Knives",
+   "Joint-Relief Gloves",
+   "Orgus Coffee",
+   "Pastry Cookbook",
+   "Select Coffee",
+   "Southern Coffee",
+   "Spirit Board Game"
+  ],
+  "likes": "The White-Maned Demon, seeing fear in his opponents' faces",
+  "interests": "Slicing opponents into pieces, terrifying audiences",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Complete Jesters's 3 Requests"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Complete Jesters's 3 Requests"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Complete Jesters's 3 Requests"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Complete Jesters's 3 Requests"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Kiroc",
+  "slug": "kiroc",
+  "loved": [
+   "Arrowhead Gem",
+   "Crimson Ghosh",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Common Coffee",
+   "Joint-Relief Gloves",
+   "Light Shosh",
+   "Mature Ghosh",
+   "Mature Shosh",
+   "Rustic Ghosh",
+   "Select Coffee",
+   "Sharp Fishhook",
+   "Southern Coffee",
+   "Training Pillar",
+   "Training Weights",
+   "Young Ghosh",
+   "Young Shosh"
+  ],
+  "likes": "Thievery, the open sea, ships, obedient underlings",
+  "interests": "Riding on ships, pirating",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 8 Pure Water"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 1,
+    "renown": 4,
+    "conditions": [
+     "Give 3 Pure Water"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 10 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Give 8 Pure Water"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 5 onward",
+    "support": 1,
+    "renown": 4,
+    "conditions": [
+     "Give 3 Pure Water"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Klapka",
+  "slug": "klapka",
+  "loved": [],
+  "reallyLiked": [],
+  "likes": "Mosa pride, his beloved wife, tales of heroism",
+  "interests": "Disciplining his soldiers, collecting eastern porcelain",
+  "recruit": null,
+  "note": "Joins in Part III: Salvation, Section 6."
+ },
+ {
+  "name": "Leda",
+  "slug": "leda",
+  "loved": [
+   "Eastern Black Silk",
+   "Eastern Earrings",
+   "Tales of Adventure",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Aromatic Shosh",
+   "Brined Fish Guts",
+   "Dagda Beard Grass",
+   "Eastern Tea Leaves",
+   "Gaudy Bangle",
+   "Horse-Grooming Kit",
+   "Huge Fish Eyeball",
+   "Jade Ghosh",
+   "Kitten Figurine",
+   "Light Shosh",
+   "Magic-Trick Set",
+   "Mature Ghosh",
+   "Mature Shosh",
+   "Pack of Pastels",
+   "Rustic Ghosh",
+   "Secret Ghosh",
+   "Southern Ghosh",
+   "Sun Ghosh",
+   "Training Bracelet",
+   "Young Ghosh"
+  ],
+  "likes": "Memories of her parents, songs from home, gemstones, applause",
+  "interests": "Tuning her vihuela, taking long horseback rides",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 7: Qualifier",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "guest": "Chapter 6: Qualifier; Leda's Paralogue",
+    "status": "guest"
+   },
+   "Theodora": {
+    "guest": "Chapter 7: Qualifier; Leda's Paralogue",
+    "status": "guest"
+   },
+   "Leda": {
+    "status": "auto",
+    "when": "Chapter 1"
+   }
+  }
+ },
+ {
+  "name": "Lilian",
+  "slug": "lilian",
+  "loved": [
+   "Eastern Earrings",
+   "Eastern Tea Leaves",
+   "Poems of the Greats",
+   "Strategy Manuscript",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Gaudy Bangle",
+   "Herbal Recipe Guide",
+   "Home-Recipe Book",
+   "Pastry Cookbook",
+   "Strong Seasonings",
+   "Trader's Handbook",
+   "Training Bracelet",
+   "Village Recipes",
+   "Wing Fletching"
+  ],
+  "likes": "Gold coins, gemstones, older men",
+  "interests": "Being frugal, hunting",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "From Chapter 8 to Chapter 11",
+    "support": 2,
+    "renown": 8,
+    "conditions": [
+     "Give 5000 Gold"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "From Chapter 7 to Chapter 11",
+    "support": 2,
+    "renown": 8,
+    "conditions": [
+     "Give 5000 Gold"
+    ]
+   },
+   "Theodora": {
+    "status": "auto",
+    "when": "Chapter 4"
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "From Chapter 7 to Chapter 11",
+    "support": 2,
+    "renown": 7,
+    "conditions": [
+     "Give 5000 Gold"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Loretta",
+  "slug": "loretta",
+  "loved": [],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Crimson Ghosh",
+   "Ginji Cervi",
+   "Honey Milk",
+   "Honey Pastries",
+   "Joint-Relief Gloves",
+   "Mellow Pastries",
+   "Pastry Cookbook",
+   "Pure-White Cervi",
+   "Simple Pastries",
+   "Training Pillar",
+   "Training Weights"
+  ],
+  "likes": "Reliable people, sweets, her friends",
+  "interests": "Sword training, fishing",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 3 Iron Swords"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Give 3 Iron Swords"
+    ]
+   },
+   "Theodora": {
+    "guest": "Chapter 3: Battle",
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 5,
+    "conditions": [
+     "Give 3 Iron Swords"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 5,
+    "conditions": [
+     "Give 3 Iron Swords"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Ludia",
+  "slug": "ludia",
+  "loved": [
+   "Eastern Black Silk",
+   "Eastern Earrings",
+   "Eastern Love Story",
+   "Eastern Tea Leaves",
+   "Strategy Manuscript",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Coffee Pastries",
+   "Common Coffee",
+   "Everyday Scenes",
+   "Gaudy Bangle",
+   "Herbal Recipe Guide",
+   "Home-Recipe Book",
+   "Magic-Trick Set",
+   "Orgus Coffee",
+   "Pack of Pastels",
+   "Pastry Cookbook",
+   "Select Coffee",
+   "Sharp Fishhook",
+   "Skin Balm",
+   "Southern Coffee",
+   "Sturdy Rucksack",
+   "Trader's Handbook",
+   "Training Bracelet",
+   "Village Recipes"
+  ],
+  "likes": "Writing stories, appreciating art, talking about love and romance",
+  "interests": "Reading adventure stories, going shopping",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Complete Ludia's Request"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Complete Ludia's Request"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Complete Ludia's Request"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Complete Ludia's Request"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Lysander",
+  "slug": "lysander",
+  "loved": [],
+  "reallyLiked": [
+   "Dagda Beard Grass",
+   "Eastern Tea Leaves",
+   "Horse-Grooming Kit",
+   "Mane Ornament",
+   "Training Weights",
+   "Wing Fletching"
+  ],
+  "likes": "Skygazing, dining with women",
+  "interests": "Crafting throwing sticks, going on long rides",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "From Chapter 8 to Chapter 11",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 5 Iron Spears"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "From Chapter 6 to Chapter 11",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Give 5 Iron Spears"
+    ]
+   },
+   "Theodora": {
+    "status": "auto",
+    "when": "Chapter 4"
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "From Chapter 7 to Chapter 11",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 5 Iron Spears"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Majide",
+  "slug": "majide",
+  "loved": [
+   "Arrowhead Gem",
+   "Crimson Ghosh",
+   "Dual Fish Knives"
+  ],
+  "reallyLiked": [
+   "Joint-Relief Gloves",
+   "Light Shosh",
+   "Mature Ghosh",
+   "Mature Shosh",
+   "Rustic Ghosh",
+   "Training Pillar",
+   "Training Weights",
+   "Volcano Ghosh",
+   "Young Ghosh",
+   "Young Shosh"
+  ],
+  "likes": "Booze, women, fighting, being strong",
+  "interests": "Fighting with annoying people",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 2,
+    "renown": 5,
+    "conditions": [
+     "Agree 3 times"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Agree 3 times"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Agree 3 times"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Agree 3 times"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Mikaela",
+  "slug": "mikaela",
+  "loved": [
+   "Tales of Adventure",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Alecto Garum",
+   "Aromatic Shosh",
+   "Common Coffee",
+   "Eastern Tea Leaves",
+   "Garum",
+   "Herbal Recipe Guide",
+   "Home-Recipe Book",
+   "Huge Fish Eyeball",
+   "Jade Ghosh",
+   "Light Shosh",
+   "Mature Ghosh",
+   "Mature Shosh",
+   "Orgus Coffee",
+   "Pastry Cookbook",
+   "Rare Spices",
+   "Rustic Ghosh",
+   "Secret Ghosh",
+   "Select Coffee",
+   "Southern Coffee",
+   "Southern Ghosh",
+   "Strong Seasonings",
+   "Sun Ghosh",
+   "Village Recipes",
+   "Wing Fletching",
+   "Young Ghosh"
+  ],
+  "likes": "Moving her body, looking after others",
+  "interests": "Cooking, baking, brewing coffee",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 5,
+    "conditions": [
+     "Give 3000 Gold"
+    ]
+   },
+   "Dietrich": {
+    "status": "auto",
+    "when": "Chapter 4"
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 3000 Gold"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Give 3000 Gold"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Mu",
+  "slug": "mu",
+  "loved": [
+   "Candy Crystals",
+   "History of a Master",
+   "Portrait of Yu Phas"
+  ],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Honey Pastries",
+   "Jamel Milk",
+   "Outdoor Cooking Set",
+   "Pickled Vegetables",
+   "Pure-White Cervi",
+   "Tome from Away",
+   "Weak Cervi",
+   "Yarc Milk"
+  ],
+  "likes": "Concocting new medicines, her father, her mother, eating sweets",
+  "interests": "Making medicinal elixirs, exercise",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Give 3 Glirmosa"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 3 Glirmosa"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Give 3 Glirmosa"
+    ]
+   },
+   "Leda": {
+    "status": "auto",
+    "when": "Chapter 1"
+   }
+  }
+ },
+ {
+  "name": "Nathan",
+  "slug": "nathan",
+  "loved": [
+   "History of a Master"
+  ],
+  "reallyLiked": [
+   "Secret Ghosh",
+   "Sharp Dagger",
+   "Sun Ghosh"
+  ],
+  "likes": "The red armor he received from the king, being loyal",
+  "interests": "All forms of battle training",
+  "recruit": null,
+  "note": "Joins in Part II: War, Chapter 3 (Dietrich and Leda paths only)."
+ },
+ {
+  "name": "Nezha",
+  "slug": "nezha",
+  "loved": [
+   "Strategy Manuscript",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Eastern Tea Leaves",
+   "Pickled Bulbs",
+   "Sturdy Rucksack",
+   "Training Bracelet",
+   "Wing Fletching"
+  ],
+  "likes": "Physical activity, justice, fighting, good food",
+  "interests": "Combat training, eating large amounts of food",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "From Chapter 6 to Chapter 10",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Give 3 Sandworm Meat"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "From Chapter 8 to Chapter 12",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Give 3 Sandworm Meat"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "From Chapter 7 to Chapter 11",
+    "support": 2,
+    "renown": 6,
+    "conditions": [
+     "Give 3 Sandworm Meat"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "From Chapter 9 to Chapter 12",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Give 3 Sandworm Meat"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Ninae",
+  "slug": "ninae",
+  "loved": [
+   "Strategy Manuscript",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Crimson Ghosh",
+   "Eastern Black Silk",
+   "Eastern Tea Leaves"
+  ],
+  "likes": "Pitiable people, talking to spirits, her keepsake necklace, skygazing",
+  "interests": "Daydreaming, training",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Give 1 Paradise Fish"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 1 Paradise Fish"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Give 1 Paradise Fish"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 1 Paradise Fish"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Noctula",
+  "slug": "noctula",
+  "loved": [
+   "Strategy Manuscript",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Eastern Tea Leaves",
+   "Protection Figurine",
+   "Sturdy Rucksack",
+   "Training Bracelet",
+   "Wing Fletching"
+  ],
+  "likes": "The city and its people, brawling",
+  "interests": "Sightseeing in the city, training",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 5 onward",
+    "support": 1,
+    "renown": 4
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 1,
+    "renown": 6
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 1,
+    "renown": 3
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8
+   }
+  }
+ },
+ {
+  "name": "Nuzzuo",
+  "slug": "nuzzuo",
+  "loved": [
+   "Arrowhead Gem",
+   "Dual Fish Knives"
+  ],
+  "reallyLiked": [
+   "Common Coffee",
+   "Crimson Ghosh",
+   "Joint-Relief Gloves",
+   "Kitten Figurine",
+   "Niiza Garum",
+   "Outdoor Cooking Set",
+   "Pickled Vegetables",
+   "Protection Figurine",
+   "Select Coffee",
+   "Sturdy Rucksack",
+   "Training Bracelet",
+   "Training Pillar",
+   "Training Weights"
+  ],
+  "likes": "Tradition, honor, great power",
+  "interests": "Conversing with forest spirits",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 2,
+    "renown": 6,
+    "conditions": [
+     "Give 3 Iron Bows"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 1,
+    "renown": 9,
+    "conditions": [
+     "Give 2 Iron Bows"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 1,
+    "renown": 6,
+    "conditions": [
+     "Give 3 Iron Bows"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Give 3 Iron Bows"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Nydine",
+  "slug": "nydine",
+  "loved": [
+   "Strategy Manuscript",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Eastern Love Story",
+   "Eastern Tea Leaves",
+   "Kitten Figurine",
+   "Sturdy Rucksack",
+   "Training Bracelet",
+   "Training Weights",
+   "Wing Fletching"
+  ],
+  "likes": "Honoring her duties, caring for orniuses",
+  "interests": "Improving her combat abilities, reading",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 1,
+    "renown": 6,
+    "conditions": [
+     "Give 2 Bronze Axes"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 4 onward",
+    "support": 2,
+    "renown": 5,
+    "conditions": [
+     "Give 2 Bronze Axes"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 5,
+    "conditions": [
+     "Give 3 Iron Axes"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Give 3 Iron Axes"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Olympia",
+  "slug": "olympia",
+  "loved": [
+   "Blue-Rose Bouquet",
+   "Eastern Earrings",
+   "Eastern Tea Leaves",
+   "Flower Painting",
+   "History of a Master",
+   "Orgus Coffee",
+   "Portrait of Yu Phas",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Coffee Pastries",
+   "Common Coffee",
+   "Gaudy Bangle",
+   "Pack of Pastels",
+   "Select Coffee",
+   "Skin Balm",
+   "Southern Coffee"
+  ],
+  "likes": "Song, dance, playing instruments, writing songs, attracting attention",
+  "interests": "Caring for her instruments, studying music and dance",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Complete Olympia's 3 Requests"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Complete Olympia's 3 Requests"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Complete Olympia's 3 Requests"
+    ]
+   },
+   "Leda": {
+    "status": "auto",
+    "when": "Chapter 4"
+   }
+  }
+ },
+ {
+  "name": "Orchel",
+  "slug": "orchel",
+  "loved": [
+   "Dual Fish Knives",
+   "History of a Master",
+   "Pegasus Panorama",
+   "Poems of the Greats",
+   "Portrait of Yu Phas",
+   "School Scandal"
+  ],
+  "reallyLiked": [
+   "Crimson Bull Figure",
+   "Garum",
+   "Herbal Recipe Guide",
+   "Home-Recipe Book",
+   "Horse-Grooming Kit",
+   "Jade Panther Figure",
+   "Kitten Figurine",
+   "Outdoor Cooking Set",
+   "Strong Seasonings",
+   "Tales of Adventure",
+   "Tales of the Arena",
+   "The Knight's Suitors",
+   "The Works of Dante",
+   "Trader's Handbook",
+   "Village Recipes"
+  ],
+  "likes": "Animals, listening to music, cleaning, doing laundry, cooking",
+  "interests": "Caring for plants, reading",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 4: Qualifier; Orchel's Paralogue",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "guest": "Chapter 7: Qualifier; Orchel's Paralogue",
+    "status": "guest"
+   },
+   "Theodora": {
+    "guest": "Chapter 3: Battle; Chapter 4: Qualifier; Orchel's Paralogue",
+    "status": "guest"
+   },
+   "Leda": {
+    "guest": "Chapter 5: Qualifier; Orchel's Paralogue",
+    "status": "guest"
+   }
+  }
+ },
+ {
+  "name": "Peppe",
+  "slug": "peppe",
+  "loved": [
+   "Arrowhead Gem"
+  ],
+  "reallyLiked": [
+   "Board-Game Tactics",
+   "Common Coffee",
+   "Crimson Ghosh",
+   "Joint-Relief Gloves",
+   "Kitten Figurine",
+   "Magic-Trick Set",
+   "Outdoor Cooking Set",
+   "Pack of Pastels",
+   "Pastry Cookbook",
+   "Protection Figurine",
+   "Sharp Fishhook",
+   "Spirit Board Game",
+   "Sturdy Rucksack",
+   "The Works of Dante",
+   "Training Pillar",
+   "Training Weights"
+  ],
+  "likes": "The spirits, the sun, his hometown",
+  "interests": "Hunting, people watching in the city",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 10 onward",
+    "support": 1,
+    "renown": 9,
+    "conditions": [
+     "Clear Bertrand's Paralogue"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Clear Bertrand's Paralogue"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 11 onward",
+    "support": 2,
+    "renown": 7,
+    "conditions": [
+     "Clear Bertrand's Paralogue"
+    ]
+   },
+   "Leda": {
+    "status": "unavailable"
+   }
+  }
+ },
+ {
+  "name": "Peter",
+  "slug": "peter",
+  "loved": [
+   "Arrowhead Gem",
+   "Candy Crystals",
+   "Decorative Arrows",
+   "History of a Master",
+   "Portrait of Yu Phas"
+  ],
+  "reallyLiked": [
+   "Ceremonial Spear",
+   "Coffee Pastries",
+   "Dagda Beard Grass",
+   "Eastern Tea Leaves",
+   "Flower Painting",
+   "Fragrant Pastries",
+   "Ginji Cervi",
+   "Honey Pastries",
+   "Jamel Milk",
+   "Kitten Figurine",
+   "Mature Dried Cervi",
+   "Mellow Pastries",
+   "Pastry Cookbook",
+   "Saraminian Sweets",
+   "Simple Pastries",
+   "Strong Cervi",
+   "Weak Cervi",
+   "Wing Fletching",
+   "Yarc Milk"
+  ],
+  "likes": "His mother's home cooking, ginji fruits",
+  "interests": "Eating, watching clouds",
+  "recruit": {
+   "Cai": {
+    "status": "auto",
+    "when": "Chapter 1"
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 1 Phantom Ginji"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 1 Phantom Ginji"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Give 1 Phantom Ginji"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Seteth",
+  "slug": "seteth",
+  "loved": [
+   "Poems of the Greats",
+   "Strategy Manuscript",
+   "Tales of Adventure"
+  ],
+  "reallyLiked": [
+   "Common Coffee",
+   "Eastern Tea Leaves",
+   "Everyday Scenes",
+   "Flexible Fishing Rod",
+   "Herbal Recipe Guide",
+   "Home-Recipe Book",
+   "Huge Fish Eyeball",
+   "Orgus Coffee",
+   "Pastry Cookbook",
+   "Select Coffee",
+   "Sharp Fishhook",
+   "Southern Coffee",
+   "Sturdy Rucksack",
+   "Trader's Handbook",
+   "Village Recipes"
+  ],
+  "likes": "The teachings of Seiros, fishing, his daughter, hardworking people",
+  "interests": "Writing fables, preaching, teaching",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Complete Seteth's Request"
+    ]
+   },
+   "Dietrich": {
+    "status": "unavailable"
+   },
+   "Theodora": {
+    "guest": "Chapter 3: Battle",
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Complete Seteth's Request"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Complete Seteth's Request"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Sha Lan",
+  "slug": "sha-lan",
+  "loved": [
+   "Special \"Medicine\""
+  ],
+  "reallyLiked": [
+   "Common Coffee",
+   "Energizing Ghosh",
+   "Niiza Garum",
+   "Outdoor Cooking Set",
+   "Pastry Cookbook",
+   "Select Coffee"
+  ],
+  "likes": "Delicious food, drinks, socializing",
+  "interests": "Caring for Anatolia, studying",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 5: Qualifier",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "guest": "Chapter 4: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 11 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Clear Anatolia's Paralogue",
+     "Answer 3 Questions correctly"
+    ]
+   },
+   "Theodora": {
+    "guest": "Chapter 5: Qualifier; Chapter 12: Battle",
+    "status": "guest"
+   },
+   "Leda": {
+    "guest": "Chapter 5: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 10 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Clear Anatolia's Paralogue",
+     "Answer 3 Questions correctly"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Simon",
+  "slug": "simon",
+  "loved": [
+   "Ceremonial Spear",
+   "History of a Master",
+   "Portrait of Yu Phas",
+   "Rancid Garum"
+  ],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Crimson Ghosh",
+   "Dual Fish Knives",
+   "Pickled Vegetables",
+   "Protection Figurine",
+   "Solomon Coffee"
+  ],
+  "likes": "Fighting to the death, food from his hometown, womanizing",
+  "interests": "Carving wooden figures, making preserves",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 500 Gold",
+     "Choose Tails"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 500 Gold",
+     "Choose Tails"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 500 Gold",
+     "Choose Tails"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Give 500 Gold",
+     "Choose Tails"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Sirocco",
+  "slug": "sirocco",
+  "loved": [
+   "Arrowhead Gem",
+   "Crimson Ghosh",
+   "Flower Painting",
+   "History of a Master",
+   "Poems of the Greats",
+   "Portrait of Yu Phas",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Eastern Love Story",
+   "Jade Ghosh",
+   "Joint-Relief Gloves",
+   "Light Shosh",
+   "Mature Ghosh",
+   "Mature Shosh",
+   "Pack of Pastels",
+   "Rustic Ghosh",
+   "Skin Balm",
+   "Tome from Away",
+   "Young Ghosh",
+   "Young Shosh"
+  ],
+  "likes": "The goddess Kalla, all women, reciting poetry",
+  "interests": "Reading, drawing portraits",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Complete Sirocco's Request"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Complete Sirocco's Request"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 1,
+    "renown": 5,
+    "conditions": [
+     "Complete Sirocco's Request"
+    ]
+   },
+   "Leda": {
+    "status": "auto",
+    "when": "Chapter 1"
+   }
+  }
+ },
+ {
+  "name": "Sofia",
+  "slug": "sofia",
+  "loved": [
+   "Blue-Rose Bouquet",
+   "Dual Fish Knives",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Common Coffee",
+   "Crimson Ghosh",
+   "Ginji Cervi",
+   "Honey Milk",
+   "Honey Pastries",
+   "Jamel Milk",
+   "Kitten Figurine",
+   "Magic-Trick Set",
+   "Niiza Garum",
+   "Outdoor Cooking Set",
+   "Pack of Pastels",
+   "Pastry Cookbook",
+   "Pickled Vegetables",
+   "Protection Figurine",
+   "Pure-White Cervi",
+   "Sharp Fishhook",
+   "Yarc Milk"
+  ],
+  "likes": "Delicious food, the moment when food is served (and soon vanishes)",
+  "interests": "Proselytizing about Solel, eating her fill",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 9
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 9
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 5 onward",
+    "support": 1,
+    "renown": 2
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 7
+   }
+  }
+ },
+ {
+  "name": "Tahonia",
+  "slug": "tahonia",
+  "loved": [
+   "History of a Master"
+  ],
+  "reallyLiked": [
+   "Full Sewing Kit",
+   "The Works of Dante"
+  ],
+  "likes": "Reading, sewing, training",
+  "interests": "Python Technique fighting, attending to Aswan",
+  "recruit": null,
+  "note": "Joins in Part III: Salvation, Section 5."
+ },
+ {
+  "name": "Talimun",
+  "slug": "talimun",
+  "loved": [
+   "Blue-Rose Bouquet",
+   "Crimson Ghosh",
+   "Flower Painting",
+   "History of a Master",
+   "Portrait of Yu Phas",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Ceremonial Spear",
+   "Crimson Bull Figure",
+   "Jade Panther Figure",
+   "Secret Ghosh",
+   "Southern Ghosh"
+  ],
+  "likes": "Money, adventure, cinnamon, flirting, following his heart",
+  "interests": "Making money, going on perilous adventures",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 7: Qualifier; Talimun's Paralogue",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "guest": "Chapter 4: Clash; Chapter 7: Qualifier; Talimun's Paralogue",
+    "status": "guest"
+   },
+   "Theodora": {
+    "guest": "Chapter 5: Qualifier; Talimun's Paralogue",
+    "status": "guest"
+   },
+   "Leda": {
+    "guest": "Chapter 8: Qualifier",
+    "status": "guest"
+   }
+  }
+ },
+ {
+  "name": "Theodora",
+  "slug": "theodora",
+  "loved": [],
+  "reallyLiked": [
+   "Dagda Beard Grass",
+   "Eastern Black Silk",
+   "Eastern Tea Leaves",
+   "Horse-Grooming Kit"
+  ],
+  "likes": "Fighting, seeing the people of Saramis thrive",
+  "interests": "Hunting, combat training",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 4: Qualifier",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "guest": "Chapter 6: Qualifier; Theodora's Paralogue",
+    "status": "guest"
+   },
+   "Theodora": {
+    "status": "auto",
+    "when": "Chapter 1"
+   },
+   "Leda": {
+    "guest": "Chapter 6: Qualifier",
+    "status": "guest"
+   }
+  }
+ },
+ {
+  "name": "Tialla",
+  "slug": "tialla",
+  "loved": [
+   "Eastern Board Game",
+   "Ebony Game Board",
+   "History of a Master",
+   "Morfis Almanac",
+   "Portrait of Yu Phas",
+   "School Scandal",
+   "Tome from Away"
+  ],
+  "reallyLiked": [
+   "Alecto Garum",
+   "Board-Game Tactics",
+   "Eastern Love Story",
+   "Eastern Tea Leaves",
+   "Everyday Scenes",
+   "Garum",
+   "Ginji Cervi",
+   "Herbal Recipe Guide",
+   "Home-Recipe Book",
+   "Jamel Milk",
+   "Mature Dried Cervi",
+   "Pastry Cookbook",
+   "Pickled Bulbs",
+   "Smooth Garum",
+   "Solomon Coffee",
+   "Spirit Board Game",
+   "Strategy Manuscript",
+   "Strong Cervi",
+   "Strong Seasonings",
+   "Tales of Adventure",
+   "Tales of the Arena",
+   "The Knight's Suitors",
+   "Trader's Handbook",
+   "Village Recipes",
+   "Weak Cervi",
+   "Yarc Milk"
+  ],
+  "likes": "Libraries, gossiping about love, alone time, her grandfather",
+  "interests": "Reading, playing board games",
+  "recruit": {
+   "Cai": {
+    "status": "auto",
+    "when": "Chapter 1"
+   },
+   "Dietrich": {
+    "guest": "Chapter 4: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 11 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Clear Cai's Paralogue",
+     "Give 3000 Gold"
+    ]
+   },
+   "Theodora": {
+    "guest": "Chapter 4: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 12",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Clear Cai's Paralogue",
+     "Give 3000 Gold"
+    ]
+   },
+   "Leda": {
+    "guest": "Chapter 8: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 11 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Clear Cai's Paralogue",
+     "Give 3000 Gold"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Tobias",
+  "slug": "tobias",
+  "loved": [
+   "Strategy Manuscript",
+   "Tales of Adventure",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Alecto Garum",
+   "Dagda Beard Grass",
+   "Eastern Black Silk",
+   "Eastern Tea Leaves",
+   "Garum",
+   "Herbal Recipe Guide",
+   "Home-Recipe Book",
+   "Horse-Grooming Kit",
+   "Huge Fish Eyeball",
+   "Jade Ghosh",
+   "Kitten Figurine",
+   "Mature Ghosh",
+   "Mature Shosh",
+   "Pastry Cookbook",
+   "Rustic Ghosh",
+   "Secret Ghosh",
+   "Sharp Fishhook",
+   "Smooth Garum",
+   "Southern Ghosh",
+   "Strong Seasonings",
+   "Sturdy Rucksack",
+   "Sun Ghosh",
+   "Training Bracelet",
+   "Village Recipes",
+   "Wing Fletching",
+   "Young Ghosh"
+  ],
+  "likes": "Singing, interacting with others",
+  "interests": "Hunting, solitary camping",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 10: Clash against Theodora",
+    "status": "guest"
+   },
+   "Dietrich": {
+    "status": "unavailable"
+   },
+   "Theodora": {
+    "status": "auto",
+    "when": "Chapter 1"
+   },
+   "Leda": {
+    "status": "unavailable"
+   }
+  }
+ },
+ {
+  "name": "Troy",
+  "slug": "troy",
+  "loved": [
+   "History of a Master",
+   "Morfis Almanac",
+   "Portrait of Yu Phas",
+   "Rancid Garum"
+  ],
+  "reallyLiked": [
+   "Ahm Lu Cloth",
+   "Board-Game Tactics",
+   "Candy Crystals",
+   "Flower Painting",
+   "Fodlan Tea",
+   "Magic-Trick Set",
+   "Mature Dried Cervi",
+   "Spirit Board Game",
+   "Strong Cervi",
+   "Tome from Away",
+   "Weak Cervi"
+  ],
+  "likes": "Her kin, natural scenes",
+  "interests": "Maintaining her weapons",
+  "recruit": null,
+  "note": "Joins in the Prologue."
+ },
+ {
+  "name": "Ultand",
+  "slug": "ultand",
+  "loved": [
+   "History of a Master",
+   "Legendary Garum",
+   "Portrait of Yu Phas",
+   "Rancid Garum"
+  ],
+  "reallyLiked": [
+   "Blue-Rose Bouquet",
+   "Candy Crystals",
+   "Ceremonial Spear",
+   "Crimson Ghosh",
+   "Eastern Love Story",
+   "Flower Painting",
+   "Full Sewing Kit",
+   "Garum",
+   "Morfis Almanac",
+   "Niiza Garum",
+   "Outdoor Cooking Set",
+   "Pastry Cookbook"
+  ],
+  "likes": "Looking after others, her family, housekeeping, love stories",
+  "interests": "Saving money, wandering around marketplaces",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 3: Battle",
+    "status": "auto",
+    "when": "Chapter 6"
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 5 onward",
+    "support": 3,
+    "renown": 5,
+    "conditions": [
+     "Give Mother's Gift"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 7 onward",
+    "support": 3,
+    "renown": 6,
+    "conditions": [
+     "Give Mother's Gift"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give Mother's Gift"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Ursula",
+  "slug": "ursula",
+  "loved": [
+   "Flower Painting",
+   "History of a Master",
+   "Pegasus Panorama",
+   "Portrait of Yu Phas"
+  ],
+  "reallyLiked": [
+   "Arrowhead Gem",
+   "Common Coffee",
+   "Crimson Ghosh",
+   "Eastern Love Story",
+   "Kitten Figurine",
+   "Mane Ornament",
+   "Pack of Pastels",
+   "Select Coffee"
+  ],
+  "likes": "Poetry, animals, flowers in the shade, counting money",
+  "interests": "Reading, drawing pictures",
+  "recruit": {
+   "Cai": {
+    "guest": "Chapter 7: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 10 onward",
+    "support": 3,
+    "renown": 10,
+    "conditions": [
+     "Clear Talimun's Paralogue",
+     "Agree 3 times"
+    ]
+   },
+   "Dietrich": {
+    "guest": "Chapter 7: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Clear Talimun's Paralogue",
+     "Agree 3 times"
+    ]
+   },
+   "Theodora": {
+    "guest": "Chapter 5: Qualifier",
+    "status": "recruit",
+    "when": "Chapter 11 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Clear Talimun's Paralogue",
+     "Agree 3 times"
+    ]
+   },
+   "Leda": {
+    "guest": "Chapter 8: Qualifier",
+    "status": "guest"
+   }
+  }
+ },
+ {
+  "name": "Yang Jie",
+  "slug": "yang-jie",
+  "loved": [
+   "Eastern Tea Leaves",
+   "Poems of the Greats",
+   "Strategy Manuscript",
+   "Tales of Adventure",
+   "Volcano Ghosh"
+  ],
+  "reallyLiked": [
+   "Aromatic Shosh",
+   "Coffee Pastries",
+   "Common Coffee",
+   "Flexible Fishing Rod",
+   "Herbal Recipe Guide",
+   "Home-Recipe Book",
+   "Huge Fish Eyeball",
+   "Jade Ghosh",
+   "Kitten Figurine",
+   "Light Shosh",
+   "Mature Ghosh",
+   "Mature Shosh",
+   "Orgus Coffee",
+   "Pastry Cookbook",
+   "Rustic Ghosh",
+   "Secret Ghosh",
+   "Select Coffee",
+   "Sharp Fishhook",
+   "Southern Coffee",
+   "Southern Ghosh",
+   "Sun Ghosh",
+   "The Works of Dante",
+   "Trader's Handbook",
+   "Village Recipes",
+   "Young Ghosh"
+  ],
+  "likes": "Alcohol, tales of old, distant journeys, saving the weak",
+  "interests": "Collecting liquors, giving sermons",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 4 onward",
+    "support": 2,
+    "renown": 3,
+    "conditions": [
+     "Answer 3 Questions correctly"
+    ]
+   },
+   "Dietrich": {
+    "status": "auto",
+    "when": "Chapter 4"
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 9 onward",
+    "support": 3,
+    "renown": 9,
+    "conditions": [
+     "Answer 3 Questions correctly"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Answer 3 Questions correctly"
+    ]
+   }
+  }
+ },
+ {
+  "name": "Zarcone",
+  "slug": "zarcone",
+  "loved": [
+   "Eastern Tea Leaves"
+  ],
+  "reallyLiked": [
+   "Eastern Earrings",
+   "Gaudy Bangle",
+   "Pickled Bulbs",
+   "Potted Vegetables",
+   "Strategy Manuscript",
+   "Tales of Adventure",
+   "Wing Fletching"
+  ],
+  "likes": "Money, violence, good women, vegetables, drinking with friends",
+  "interests": "Tormenting the weak, pillaging",
+  "recruit": {
+   "Cai": {
+    "status": "recruit",
+    "when": "Chapter 8 onward",
+    "support": 3,
+    "renown": 8,
+    "conditions": [
+     "Give 10000, 1000, or 10 Gold"
+    ]
+   },
+   "Dietrich": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 3,
+    "renown": 7,
+    "conditions": [
+     "Give 10000, 1000, or 10 Gold"
+    ]
+   },
+   "Theodora": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 1,
+    "renown": 4,
+    "conditions": [
+     "Give 10000, 1000, or 10 Gold"
+    ]
+   },
+   "Leda": {
+    "status": "recruit",
+    "when": "Chapter 6 onward",
+    "support": 2,
+    "renown": 5,
+    "conditions": [
+     "Give 10000, 1000, or 10 Gold"
+    ]
+   }
+  }
+ }
+]

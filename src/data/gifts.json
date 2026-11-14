@@ -1,0 +1,966 @@
+[
+ {
+  "name": "Ahm Lu Cloth",
+  "category": "Fashion",
+  "sources": [
+   "Theater"
+  ]
+ },
+ {
+  "name": "Alecto Garum",
+  "category": "Food & Cooking",
+  "sources": [
+   "Alecto Market"
+  ]
+ },
+ {
+  "name": "Antique Medal",
+  "category": "Miscellaneous",
+  "sources": [
+   "Zoste Market"
+  ]
+ },
+ {
+  "name": "Aromatic Shosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Gift Vendor",
+   "Alecto Market"
+  ]
+ },
+ {
+  "name": "Arrowhead Gem",
+  "category": "Training & Gear",
+  "sources": [
+   "Breston Market"
+  ]
+ },
+ {
+  "name": "Blue Shosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Gift Vendor"
+  ]
+ },
+ {
+  "name": "Blue-Rose Bouquet",
+  "category": "Art & Décor",
+  "sources": [
+   "Market Vendor",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Board-Game Tactics",
+  "category": "Board Games",
+  "sources": [
+   "Breston Market"
+  ]
+ },
+ {
+  "name": "Bow Repair Kit",
+  "category": "Training & Gear",
+  "sources": [
+   "Zoste Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Brined Fish Guts",
+  "category": "Fishing",
+  "sources": [
+   "Kira Market"
+  ]
+ },
+ {
+  "name": "Candy Crystals",
+  "category": "Sweets",
+  "sources": [
+   "Market Vendor"
+  ]
+ },
+ {
+  "name": "Ceremonial Spear",
+  "category": "Training & Gear",
+  "sources": [
+   "Grand Aragon Market",
+   "Da Mina Market"
+  ]
+ },
+ {
+  "name": "Coffee Pastries",
+  "category": "Sweets",
+  "sources": [
+   "Gift Vendor",
+   "Megaira Market"
+  ]
+ },
+ {
+  "name": "Common Coffee",
+  "category": "Coffee & Tea",
+  "sources": [
+   "Gift Vendor",
+   "Megaira Market",
+   "Regia Market",
+   "Shama Port Market"
+  ]
+ },
+ {
+  "name": "Concentrated Garum",
+  "category": "Food & Cooking",
+  "sources": [
+   "Port of Pandora Market"
+  ]
+ },
+ {
+  "name": "Crafting Knives",
+  "category": "Training & Gear",
+  "sources": [
+   "Market Vendor",
+   "Da Mina Market"
+  ]
+ },
+ {
+  "name": "Crimson Bull Figure",
+  "category": "Art & Décor",
+  "sources": [
+   "Grand Aragon Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Crimson Ghosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Grand Aragon Market",
+   "Barsk Post Town Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Dagda Beard Grass",
+  "category": "Horse Care",
+  "sources": [
+   "Market Vendor",
+   "Orens Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Decorative Arrows",
+  "category": "Training & Gear",
+  "sources": [
+   "Market Vendor"
+  ]
+ },
+ {
+  "name": "Divination Bagua",
+  "category": "Miscellaneous",
+  "sources": [
+   "Osiris Market"
+  ]
+ },
+ {
+  "name": "Dual Fish Knives",
+  "category": "Training & Gear",
+  "sources": [
+   "Niiza Port Market",
+   "Dione Fort",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Eastern Black Silk",
+  "category": "Fashion",
+  "sources": [
+   "Callianeira Port Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Eastern Board Game",
+  "category": "Board Games",
+  "sources": [
+   "Theater"
+  ]
+ },
+ {
+  "name": "Eastern Earrings",
+  "category": "Fashion",
+  "sources": [
+   "Callianeira Port Market"
+  ]
+ },
+ {
+  "name": "Eastern Love Story",
+  "category": "Books",
+  "sources": [
+   "Market Vendor",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Eastern Tea Leaves",
+  "category": "Coffee & Tea",
+  "sources": [
+   "Callianeira Port Market"
+  ]
+ },
+ {
+  "name": "Ebony Game Board",
+  "category": "Board Games",
+  "sources": [
+   "Port of Pandora Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Energizing Ghosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Megaira Market",
+   "Benetnasch Market"
+  ]
+ },
+ {
+  "name": "Everyday Scenes",
+  "category": "Books",
+  "sources": []
+ },
+ {
+  "name": "Exquisite Ring",
+  "category": "Fashion",
+  "sources": [
+   "Market Vendor",
+   "Callianeira Port Market"
+  ]
+ },
+ {
+  "name": "Flexible Fishing Rod",
+  "category": "Fishing",
+  "sources": [
+   "Market Vendor",
+   "Fina Peddler",
+   "Raivo Port Market"
+  ]
+ },
+ {
+  "name": "Flower Painting",
+  "category": "Art & Décor",
+  "sources": [
+   "Stoppered Shrine"
+  ]
+ },
+ {
+  "name": "Fodlan Tea",
+  "category": "Coffee & Tea",
+  "sources": [
+   "Port of Pandora Market"
+  ]
+ },
+ {
+  "name": "Fragrant Pastries",
+  "category": "Sweets",
+  "sources": [
+   "Gift Vendor",
+   "Orens Market",
+   "Mons Market"
+  ]
+ },
+ {
+  "name": "Full Sewing Kit",
+  "category": "Miscellaneous",
+  "sources": [
+   "Market Vendor"
+  ]
+ },
+ {
+  "name": "Garum",
+  "category": "Food & Cooking",
+  "sources": [
+   "Gift Vendor"
+  ]
+ },
+ {
+  "name": "Gaudy Bangle",
+  "category": "Fashion",
+  "sources": [
+   "Market Vendor"
+  ]
+ },
+ {
+  "name": "Ginji Cervi",
+  "category": "Cervi & Milk",
+  "sources": [
+   "Ribeira Peddler"
+  ]
+ },
+ {
+  "name": "Herbal Recipe Guide",
+  "category": "Books",
+  "sources": [
+   "Market Vendor",
+   "Raivo Port Market",
+   "Megaira Market"
+  ]
+ },
+ {
+  "name": "History of a Master",
+  "category": "Books",
+  "sources": [
+   "Twalinn Market"
+  ]
+ },
+ {
+  "name": "Home-Recipe Book",
+  "category": "Books",
+  "sources": [
+   "Market Vendor",
+   "Raivo Port Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Honey Milk",
+  "category": "Cervi & Milk",
+  "sources": [
+   "Regia Market"
+  ]
+ },
+ {
+  "name": "Honey Pastries",
+  "category": "Sweets",
+  "sources": [
+   "Regia Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Horse-Grooming Kit",
+  "category": "Horse Care",
+  "sources": [
+   "Aguino Market",
+   "Grand Aragon Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Huge Fish Eyeball",
+  "category": "Fishing",
+  "sources": [
+   "Alecto Market"
+  ]
+ },
+ {
+  "name": "Imitation Medal",
+  "category": "Miscellaneous",
+  "sources": [
+   "Whill Market"
+  ]
+ },
+ {
+  "name": "Jade Ghosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Gift Vendor",
+   "Callianeira Port Market",
+   "Whill Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Jade Panther Figure",
+  "category": "Art & Décor",
+  "sources": [
+   "Grand Aragon Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Jamel Milk",
+  "category": "Cervi & Milk",
+  "sources": [
+   "Gift Vendor",
+   "Osiris Market",
+   "Daimon Market",
+   "Twalinn Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Joint-Relief Gloves",
+  "category": "Training & Gear",
+  "sources": [
+   "Market Vendor",
+   "Breston Market"
+  ]
+ },
+ {
+  "name": "Kitten Figurine",
+  "category": "Art & Décor",
+  "sources": [
+   "Market Vendor",
+   "Orens Market",
+   "Osiris Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Legendary Garum",
+  "category": "Food & Cooking",
+  "sources": [
+   "Alecto Market"
+  ]
+ },
+ {
+  "name": "Light Shosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Gift Vendor",
+   "Niiza Port Market",
+   "Mons Market"
+  ]
+ },
+ {
+  "name": "Magic-Trick Set",
+  "category": "Miscellaneous",
+  "sources": [
+   "Regia Market"
+  ]
+ },
+ {
+  "name": "Mane Ornament",
+  "category": "Horse Care",
+  "sources": [
+   "Market Vendor",
+   "Grand Aragon Market"
+  ]
+ },
+ {
+  "name": "Mature Dried Cervi",
+  "category": "Cervi & Milk",
+  "sources": [
+   "Gift Vendor",
+   "Kassite Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Mature Ghosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Gift Vendor",
+   "Fina Peddler",
+   "Barsk Post Town Market",
+   "Mahon Castle Town Market"
+  ]
+ },
+ {
+  "name": "Mature Shosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Alecto Market",
+   "Niiza Port Market"
+  ]
+ },
+ {
+  "name": "Meal Voucher",
+  "category": "Food & Cooking",
+  "sources": [
+   "Theater"
+  ]
+ },
+ {
+  "name": "Meaty Delicacy",
+  "category": "Food & Cooking",
+  "sources": [
+   "Zoste Market"
+  ]
+ },
+ {
+  "name": "Mellow Pastries",
+  "category": "Sweets",
+  "sources": [
+   "Gift Vendor",
+   "Orens Market"
+  ]
+ },
+ {
+  "name": "Morfis Almanac",
+  "category": "Books",
+  "sources": [
+   "Port of Pandora Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Morfis Tea",
+  "category": "Coffee & Tea",
+  "sources": []
+ },
+ {
+  "name": "Niiza Garum",
+  "category": "Food & Cooking",
+  "sources": [
+   "Niiza Port Market"
+  ]
+ },
+ {
+  "name": "Odd Vegetable Seeds",
+  "category": "Food & Cooking",
+  "sources": [
+   "Zoste Market"
+  ]
+ },
+ {
+  "name": "Orgus Coffee",
+  "category": "Coffee & Tea",
+  "sources": [
+   "Gift Vendor",
+   "Whill Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Outdoor Cooking Set",
+  "category": "Training & Gear",
+  "sources": [
+   "Grand Aragon Market",
+   "Mahon Castle Town Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Pack of Pastels",
+  "category": "Art & Décor",
+  "sources": [
+   "Market Vendor",
+   "Regia Market"
+  ]
+ },
+ {
+  "name": "Pastry Cookbook",
+  "category": "Books",
+  "sources": [
+   "Market Vendor",
+   "Regia Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Pegasus Panorama",
+  "category": "Art & Décor",
+  "sources": [
+   "Mons Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Pickled Bulbs",
+  "category": "Food & Cooking",
+  "sources": [
+   "Aguino Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Pickled Vegetables",
+  "category": "Food & Cooking",
+  "sources": [
+   "Kassite Market",
+   "Daimon Market",
+   "Zoste Market"
+  ]
+ },
+ {
+  "name": "Poems of the Greats",
+  "category": "Books",
+  "sources": [
+   "Raivo Port Market"
+  ]
+ },
+ {
+  "name": "Portrait of Yu Phas",
+  "category": "Art & Décor",
+  "sources": [
+   "Reach Renown Level 12"
+  ]
+ },
+ {
+  "name": "Potted Vegetables",
+  "category": "Food & Cooking",
+  "sources": [
+   "Market Vendor",
+   "Regia Market"
+  ]
+ },
+ {
+  "name": "Protection Figurine",
+  "category": "Art & Décor",
+  "sources": [
+   "Market Vendor",
+   "Fina Peddler",
+   "Niiza Port Market"
+  ]
+ },
+ {
+  "name": "Pure-White Cervi",
+  "category": "Cervi & Milk",
+  "sources": [
+   "Osiris Market"
+  ]
+ },
+ {
+  "name": "Rancid Garum",
+  "category": "Food & Cooking",
+  "sources": [
+   "Benetnasch Market"
+  ]
+ },
+ {
+  "name": "Rare Southern Seeds",
+  "category": "Food & Cooking",
+  "sources": [
+   "Kira Market"
+  ]
+ },
+ {
+  "name": "Rare Spices",
+  "category": "Food & Cooking",
+  "sources": [
+   "Market Vendor",
+   "Callianeira Port Market"
+  ]
+ },
+ {
+  "name": "Red Hair Clip",
+  "category": "Fashion",
+  "sources": [
+   "Shama Port Market"
+  ]
+ },
+ {
+  "name": "Red-Rose Bouquet",
+  "category": "Art & Décor",
+  "sources": []
+ },
+ {
+  "name": "Rugged Blade",
+  "category": "Training & Gear",
+  "sources": [
+   "Whill Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Rustic Ghosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Ribeira Peddler",
+   "Daimon Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Saraminian Sweets",
+  "category": "Sweets",
+  "sources": [
+   "Megaira Market"
+  ]
+ },
+ {
+  "name": "School Scandal",
+  "category": "Books",
+  "sources": [
+   "Mons Market",
+   "Cougar Woodlands"
+  ]
+ },
+ {
+  "name": "Secret Ghosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Callianeira Port Market",
+   "Yaaman Market"
+  ]
+ },
+ {
+  "name": "Select Coffee",
+  "category": "Coffee & Tea",
+  "sources": [
+   "Gift Vendor",
+   "Megaira Market",
+   "Shama Port Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Sharp Dagger",
+  "category": "Training & Gear",
+  "sources": [
+   "Da Mina Market",
+   "Mahon Castle Town Market"
+  ]
+ },
+ {
+  "name": "Sharp Fishhook",
+  "category": "Fishing",
+  "sources": [
+   "Fina Peddler",
+   "Raivo Port Market",
+   "Alecto Market",
+   "Niiza Port Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Shield Portrait",
+  "category": "Art & Décor",
+  "sources": [
+   "Megaira Market"
+  ]
+ },
+ {
+  "name": "Simple Pastries",
+  "category": "Sweets",
+  "sources": [
+   "Gift Vendor",
+   "Orens Market",
+   "Benetnasch Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Skin Balm",
+  "category": "Fashion",
+  "sources": [
+   "Market Vendor",
+   "Barsk Post Town Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Smooth Garum",
+  "category": "Food & Cooking",
+  "sources": [
+   "Raivo Port Market"
+  ]
+ },
+ {
+  "name": "Solomon Coffee",
+  "category": "Coffee & Tea",
+  "sources": [
+   "Gift Vendor",
+   "Shama Port Market"
+  ]
+ },
+ {
+  "name": "Southern Coffee",
+  "category": "Coffee & Tea",
+  "sources": [
+   "Gift Vendor",
+   "Megaira Market"
+  ]
+ },
+ {
+  "name": "Southern Ghosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Callianeira Port Market",
+   "Megaira Market"
+  ]
+ },
+ {
+  "name": "Special \"Medicine\"",
+  "category": "Food & Cooking",
+  "sources": [
+   "Benetnasch Market"
+  ]
+ },
+ {
+  "name": "Spirit Board Game",
+  "category": "Board Games",
+  "sources": [
+   "Niiza Port Market",
+   "Aditi's Cave"
+  ]
+ },
+ {
+  "name": "Strategy Manuscript",
+  "category": "Books",
+  "sources": [
+   "Ribeira Peddler",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Strong Cervi",
+  "category": "Cervi & Milk",
+  "sources": [
+   "Gift Vendor",
+   "Raivo Port Market",
+   "Orens Market",
+   "Kassite Market"
+  ]
+ },
+ {
+  "name": "Strong Seasonings",
+  "category": "Food & Cooking",
+  "sources": [
+   "Market Vendor",
+   "Callianeira Port Market",
+   "Kira Market"
+  ]
+ },
+ {
+  "name": "Sturdy Rucksack",
+  "category": "Training & Gear",
+  "sources": [
+   "Market Vendor",
+   "Breston Market",
+   "Nemea Cavern"
+  ]
+ },
+ {
+  "name": "Sun Ghosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Gift Vendor",
+   "Callianeira Port Market"
+  ]
+ },
+ {
+  "name": "Tales of Adventure",
+  "category": "Books",
+  "sources": [
+   "Alecto Market"
+  ]
+ },
+ {
+  "name": "Tales of the Arena",
+  "category": "Books",
+  "sources": [
+   "Kassite Market"
+  ]
+ },
+ {
+  "name": "The Knight's Suitors",
+  "category": "Books",
+  "sources": [
+   "Mons Market"
+  ]
+ },
+ {
+  "name": "The Works of Dante",
+  "category": "Books",
+  "sources": [
+   "Market Vendor",
+   "Mahon Castle Town Market",
+   "Mons Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Thick Foreign Tome",
+  "category": "Books",
+  "sources": [
+   "Mahon Castle Town Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Tome from Away",
+  "category": "Books",
+  "sources": [
+   "Port of Pandora Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Trader's Handbook",
+  "category": "Books",
+  "sources": [
+   "Alecto Market"
+  ]
+ },
+ {
+  "name": "Training Bracelet",
+  "category": "Training & Gear",
+  "sources": [
+   "Market Vendor"
+  ]
+ },
+ {
+  "name": "Training Pillar",
+  "category": "Training & Gear",
+  "sources": [
+   "Breston Market",
+   "Theater"
+  ]
+ },
+ {
+  "name": "Training Weights",
+  "category": "Training & Gear",
+  "sources": [
+   "Market Vendor",
+   "Breston Market"
+  ]
+ },
+ {
+  "name": "Village Recipes",
+  "category": "Books",
+  "sources": [
+   "Yaaman Market",
+   "Aguino Market"
+  ]
+ },
+ {
+  "name": "Volcano Ghosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Gift Vendor",
+   "Barsk Post Town Market",
+   "Da Mina Market"
+  ]
+ },
+ {
+  "name": "Weak Cervi",
+  "category": "Cervi & Milk",
+  "sources": [
+   "Raivo Port Market",
+   "Orens Market",
+   "Kassite Market"
+  ]
+ },
+ {
+  "name": "Wing Fletching",
+  "category": "Training & Gear",
+  "sources": [
+   "Ribeira Peddler"
+  ]
+ },
+ {
+  "name": "Yarc Milk",
+  "category": "Cervi & Milk",
+  "sources": [
+   "Ribeira Peddler"
+  ]
+ },
+ {
+  "name": "Young Ghosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Gift Vendor",
+   "Fina Peddler",
+   "Barsk Post Town Market",
+   "Mons Market"
+  ]
+ },
+ {
+  "name": "Young Shosh",
+  "category": "Ghosh & Shosh",
+  "sources": [
+   "Niiza Port Market"
+  ]
+ }
+]
