@@ -280,7 +280,7 @@ const Gifting = ({ showName }: { showName: boolean }) => {
               selected={selectedCharacter === c.name}
               showName={showName}
               onClick={() => selectCharacter(c.name)}
-              badge={sort !== 'name' ? requirementBadge(c, route) : undefined}
+              badge={requirementBadge(c, route)}
               dimmed={!isRecruitable(c, route)}
             />
           ))}

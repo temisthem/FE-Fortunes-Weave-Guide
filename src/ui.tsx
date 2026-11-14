@@ -28,7 +28,7 @@ export const CharacterIcon = ({
   showName: boolean;
   onClick: () => void;
   badge?: ReactNode;
-  /** Grey out (50%) a unit that can't be recruited on the selected path. */
+  /** Grayscale a unit that is guest-only or can't be recruited on the selected path. */
   dimmed?: boolean;
 }) => (
   <div className={'mx-[0.3%] mb-[0.6%] w-[15%] sm:w-[10%] md:w-[7.5%] lg:w-[6%] xl:w-[5.5%]'}>
@@ -98,13 +98,11 @@ export const SortSelector = ({ sort, setSort }: { sort: SortKey; setSort: (s: So
   <ToggleGroup label={'Sort by'} options={SORT_OPTIONS} value={sort} onChange={setSort} />
 );
 
-/** Compact "R8·S3" badge shown on portraits when sorting by requirements. */
+/** Compact "R8·S3" badge on portraits of units recruited with Renown/Support. Nothing for auto-joiners. */
 export const requirementBadge = (c: Character, route: Route) => {
   const info = getRouteInfo(c, route);
-  if (!info) return null;
-  if (info.status === 'auto') return 'Auto';
-  if (info.status === 'recruit') return `R${info.renown ?? '?'}·S${info.support ?? '?'}`;
-  return null;
+  if (info?.status !== 'recruit') return null;
+  return `R${info.renown ?? '?'}·S${info.support ?? '?'}`;
 };
 
 /** Grid used for every list of gift tiles. */
