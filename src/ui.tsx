@@ -9,25 +9,27 @@ import {
   ROUTES,
   SORT_LABELS,
   characterByName,
-  fanCount,
   getRouteInfo,
   portrait,
 } from '@/data.ts';
 import { ControlGroup, ToggleGroup, cx, radius, state, text } from '@/design.tsx';
 
-/** Portrait button in a selection grid. */
+/** Portrait button in a selection grid. The selected one gets a ring; others stay in full colour. */
 export const CharacterIcon = ({
   character,
   selected,
   showName,
   onClick,
   badge,
+  dimmed,
 }: {
   character: Character;
   selected: boolean;
   showName: boolean;
   onClick: () => void;
   badge?: ReactNode;
+  /** Grey out (50%) a unit that can't be recruited on the selected path. */
+  dimmed?: boolean;
 }) => (
   <div className={'mx-[0.3%] mb-[0.6%] w-[15%] sm:w-[10%] md:w-[7.5%] lg:w-[6%] xl:w-[5.5%]'}>
     <button
@@ -38,7 +40,7 @@ export const CharacterIcon = ({
       aria-pressed={selected}
     >
       <img
-        className={cx('aspect-square w-full transition', radius, selected ? state.selected : state.unselected)}
+        className={cx('aspect-square w-full transition', radius, selected && state.selected, dimmed && state.dimmed)}
         src={portrait(character.slug)}
         alt={character.name}
         loading={'lazy'}
@@ -79,7 +81,7 @@ export const RouteSelector = ({ route, setRoute }: { route: Route; setRoute: (r:
           aria-pressed={route === r}
         >
           <img
-            className={cx('aspect-square w-full transition', radius, route === r ? state.selected : state.unselected)}
+            className={cx('aspect-square w-full transition', radius, route === r && state.selected)}
             src={portrait(characterByName.get(r)!.slug)}
             alt={r}
           />
@@ -117,7 +119,7 @@ export const GiftTile = ({
   selected,
   onClick,
   selectable,
-  compact,
+  likes,
 }: {
   gift: Gift;
   preference?: Preference;
@@ -125,10 +127,9 @@ export const GiftTile = ({
   onClick?: () => void;
   /** In a picker: show fan counts and grey out the tiles that aren't selected. */
   selectable?: boolean;
-  /** Name only (no category line), for the character's gift lists. */
-  compact?: boolean;
+  /** Picker only: how many recruitable units on the path like it. */
+  likes?: number;
 }) => {
-  const fans = fanCount.get(gift.name) ?? 0;
   return (
     <button
       type={'button'}
@@ -138,21 +139,20 @@ export const GiftTile = ({
         radius,
         state.focus,
         'flex w-full flex-col justify-center border-2 px-2.5 py-1.5 text-left transition',
-        !compact && 'min-h-[3.25rem]',
+        likes !== undefined && 'min-h-[3.25rem]',
         preference === 'Loved' ? 'border-yellow-400 bg-rose-900' : 'border-amber-950 bg-amber-800',
         selected && state.selected,
         selectable && !selected && state.unselected,
-        selectable && fans === 0 && 'opacity-60',
+        likes === 0 && 'opacity-60',
       )}
     >
       <span className={'text-xs font-semibold leading-tight text-amber-50 md:text-sm'}>
         {preference === 'Loved' && <span className={'mr-1 text-yellow-300'}>♥</span>}
         {gift.name}
       </span>
-      {!compact && (
+      {likes !== undefined && (
         <span className={'text-[10px] uppercase tracking-wide text-amber-200/80 md:text-[11px]'}>
-          {gift.category}
-          {selectable && ` · ${fans} fan${fans === 1 ? '' : 's'}`}
+          {likes} {likes === 1 ? 'like' : 'likes'}
         </span>
       )}
     </button>

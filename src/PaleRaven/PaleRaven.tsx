@@ -1,6 +1,7 @@
 import { characters, portrait, raven } from '@/data.ts';
-import { DetailHeader, EmptyState, Hint, Input, Section, Table, Td, Th, cx, text } from '@/design.tsx';
+import { DetailHeader, EmptyState, Input, Section, Table, Td, Th, cx, text } from '@/design.tsx';
 import { useStoredState } from '@/useStoredState.ts';
+import { useScrollOnSelect } from '@/useScrollOnSelect.ts';
 import { CharacterGrid, CharacterIcon } from '@/ui.tsx';
 
 const ravenCharacters = characters.filter((c) => raven[c.name]);
@@ -8,6 +9,12 @@ const ravenCharacters = characters.filter((c) => raven[c.name]);
 const PaleRaven = ({ showName }: { showName: boolean }) => {
   const [selected, setSelected] = useStoredState<string | null>('raven.character', null);
   const [filter, setFilter] = useStoredState<string>('raven.filter', '');
+  const results = useScrollOnSelect<HTMLDivElement>();
+
+  const selectCharacter = (name: string) => {
+    setSelected(name);
+    results.requestScroll();
+  };
 
   const entries = selected ? raven[selected] ?? [] : [];
   const needle = filter.trim().toLowerCase();
@@ -16,11 +23,6 @@ const PaleRaven = ({ showName }: { showName: boolean }) => {
 
   return (
     <>
-      <Hint>
-        Once a week, pick a unit to feed the Pale Raven. They make three remarks. React correctly to all three for
-        &ldquo;Perfect Bird Time&rdquo; and a support boost with Eshmel.
-      </Hint>
-
       <CharacterGrid>
         {ravenCharacters.map((c) => (
           <CharacterIcon
@@ -28,21 +30,19 @@ const PaleRaven = ({ showName }: { showName: boolean }) => {
             character={c}
             selected={selected === c.name}
             showName={showName}
-            onClick={() => setSelected(c.name)}
+            onClick={() => selectCharacter(c.name)}
           />
         ))}
       </CharacterGrid>
 
-      <div className={'mt-6'}>
+      <div ref={results.ref} className={'mt-6 scroll-mt-4'}>
         {character ? (
           <>
             <DetailHeader
               image={portrait(character.slug)}
               title={character.name}
               aside={<Input value={filter} onChange={setFilter} placeholder={'Filter prompts…'} />}
-            >
-              <p>{entries.length} known remarks</p>
-            </DetailHeader>
+            />
 
             <Section>
               {shown.length === 0 ? (

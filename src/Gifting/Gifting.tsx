@@ -12,6 +12,8 @@ import {
   fansOf,
   giftByName,
   gifts,
+  isRecruitable,
+  likesOnRoute,
   portrait,
   requirementSummary,
 } from '@/data.ts';
@@ -53,20 +55,15 @@ const MODE_OPTIONS = [
   { value: 'gift', label: 'By Gift' },
 ] as const;
 
-/** One-line recruitment summary for the selected route. */
-const RecruitmentLine = ({ character, route }: { character: Character; route: Route }) => {
+/** Selected character's header: requirements on the selected path. */
+const RecruitmentHeader = ({ character, route }: { character: Character; route: Route }) => {
   const r = requirementSummary(character, route);
   return (
-    <Fact label={`Recruit (${route}’s Path)`}>
-      {r.renown !== undefined && (
-        <>
-          <span className={'font-semibold'}>Renown Lv {r.renown}</span> ·{' '}
-          <span className={'font-semibold'}>Support Lv {r.support}</span>
-          {r.details && ' · '}
-        </>
-      )}
-      {r.details}
-    </Fact>
+    <DetailHeader image={portrait(character.slug)} title={character.name}>
+      <Fact label={'Renown Lv'}>{r.renown ?? '—'}</Fact>
+      <Fact label={'Support Lv'}>{r.support ?? '—'}</Fact>
+      <Fact label={'Recruit condition'}>{r.details || '—'}</Fact>
+    </DetailHeader>
   );
 };
 
@@ -109,11 +106,7 @@ const Gifting = ({ showName }: { showName: boolean }) => {
 
   const renderCharacterDetails = (c: Character) => (
     <>
-      <DetailHeader image={portrait(c.slug)} title={c.name}>
-        <RecruitmentLine character={c} route={route} />
-        {c.likes && <Fact label={'Likes'}>{c.likes}</Fact>}
-        {c.interests && <Fact label={'Interests'}>{c.interests}</Fact>}
-      </DetailHeader>
+      <RecruitmentHeader character={c} route={route} />
 
       {c.loved.length + c.reallyLiked.length === 0 ? (
         <EmptyState>No known favourite gifts yet.</EmptyState>
@@ -127,7 +120,6 @@ const Gifting = ({ showName }: { showName: boolean }) => {
                     key={g}
                     gift={giftByName.get(g)!}
                     preference={'Loved'}
-                    compact
                     onClick={() => selectGift(g, true)}
                   />
                 ))}
@@ -142,7 +134,6 @@ const Gifting = ({ showName }: { showName: boolean }) => {
                     key={g}
                     gift={giftByName.get(g)!}
                     preference={'Really Liked'}
-                    compact
                     onClick={() => selectGift(g, true)}
                   />
                 ))}
@@ -190,6 +181,7 @@ const Gifting = ({ showName }: { showName: boolean }) => {
                     key={g.name}
                     gift={g}
                     selectable
+                    likes={likesOnRoute(g.name, route)}
                     selected={selectedGift === g.name}
                     onClick={() => selectGift(g.name)}
                   />
@@ -214,7 +206,7 @@ const Gifting = ({ showName }: { showName: boolean }) => {
         {fans.length === 0 ? (
           <EmptyState>Nobody is known to love or really like this gift.</EmptyState>
         ) : (
-          <Section title={`Who likes it (${route}’s Path)`}>
+          <Section title={'Who likes it'}>
             <Table>
               <thead>
                 <tr>
@@ -237,7 +229,7 @@ const Gifting = ({ showName }: { showName: boolean }) => {
                           onClick={() => selectCharacter(c.name)}
                         >
                           <img
-                            className={'aspect-square w-8 shrink-0 rounded md:w-10'}
+                            className={cx('aspect-square w-8 shrink-0 rounded md:w-10', !isRecruitable(c, route) && state.dimmed)}
                             src={portrait(c.slug)}
                             alt={''}
                             loading={'lazy'}
@@ -289,6 +281,7 @@ const Gifting = ({ showName }: { showName: boolean }) => {
               showName={showName}
               onClick={() => selectCharacter(c.name)}
               badge={sort !== 'name' ? requirementBadge(c, route) : undefined}
+              dimmed={!isRecruitable(c, route)}
             />
           ))}
         </CharacterGrid>

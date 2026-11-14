@@ -103,21 +103,7 @@
   ],
   "likes": "Dante's plays, board games, sewing, beautiful landscapes",
   "interests": "Classroom study, archery training",
-  "recruit": {
-   "Cai": {
-    "guest": "Chapter 5: Dungeon",
-    "status": "guest"
-   },
-   "Dietrich": {
-    "status": "unavailable"
-   },
-   "Theodora": {
-    "status": "unavailable"
-   },
-   "Leda": {
-    "status": "unavailable"
-   }
-  },
+  "recruit": null,
   "note": "Joins in Part III: Salvation, Section 5."
  },
  {
@@ -418,21 +404,7 @@
   ],
   "likes": "Serving Aurora's temple, patrolling",
   "interests": "Playing board games, classroom study",
-  "recruit": {
-   "Cai": {
-    "guest": "Chapter 6: Battle",
-    "status": "guest"
-   },
-   "Dietrich": {
-    "status": "unavailable"
-   },
-   "Theodora": {
-    "status": "unavailable"
-   },
-   "Leda": {
-    "status": "unavailable"
-   }
-  },
+  "recruit": null,
   "note": "Joins in Part III: Salvation, Section 2."
  },
  {
@@ -447,8 +419,22 @@
   ],
   "likes": "The green armor he received from the king, beautiful women",
   "interests": "Researching military strategies, enjoying the arts",
-  "recruit": null,
-  "note": "Joins in Part II: War, Chapter 2 (Dietrich and Leda paths only)."
+  "recruit": {
+   "Cai": {
+    "status": "unavailable"
+   },
+   "Dietrich": {
+    "status": "auto",
+    "when": "Part II: War, Chapter 2"
+   },
+   "Theodora": {
+    "status": "unavailable"
+   },
+   "Leda": {
+    "status": "auto",
+    "when": "Part II: War, Chapter 2"
+   }
+  }
  },
  {
   "name": "Dadao",
@@ -1130,21 +1116,7 @@
   ],
   "likes": "Memories of happier times",
   "interests": "None",
-  "recruit": {
-   "Cai": {
-    "status": "unavailable"
-   },
-   "Dietrich": {
-    "status": "unavailable"
-   },
-   "Theodora": {
-    "guest": "Chapter 6: Battle",
-    "status": "guest"
-   },
-   "Leda": {
-    "status": "unavailable"
-   }
-  },
+  "recruit": null,
   "note": "Joins in the Prologue."
  },
  {
@@ -1950,8 +1922,22 @@
   ],
   "likes": "The red armor he received from the king, being loyal",
   "interests": "All forms of battle training",
-  "recruit": null,
-  "note": "Joins in Part II: War, Chapter 3 (Dietrich and Leda paths only)."
+  "recruit": {
+   "Cai": {
+    "status": "unavailable"
+   },
+   "Dietrich": {
+    "status": "auto",
+    "when": "Part II: War, Chapter 3"
+   },
+   "Theodora": {
+    "status": "unavailable"
+   },
+   "Leda": {
+    "status": "auto",
+    "when": "Part II: War, Chapter 3"
+   }
+  }
  },
  {
   "name": "Nezha",

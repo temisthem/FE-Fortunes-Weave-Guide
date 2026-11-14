@@ -24,6 +24,8 @@ export const text = {
 export const state = {
   selected: 'ring-2 ring-amber-600 ring-offset-2 ring-offset-amber-50',
   unselected: 'filter grayscale-[50%] opacity-90 hover:grayscale-0 hover:opacity-100',
+  /** Units that can't be recruited on the selected path. */
+  dimmed: 'filter grayscale-[50%]',
   focus: 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-600',
 };
 

@@ -74,12 +74,24 @@ export const fansOf = (gift: string) =>
     return [];
   });
 
-export const fanCount = new Map(gifts.map((g) => [g.name, fansOf(g.name).length]));
-
 export const portrait = (slug: string) => `${import.meta.env.BASE_URL}portraits/${slug}.webp`;
 
 export const getRouteInfo = (c: Character, route: Route): RouteInfo | null =>
   c.recruit ? c.recruit[route] : null;
+
+/**
+ * Whether a unit can join you on this path: they join automatically, can be
+ * recruited, or join through the story on every path (no per-path data).
+ * Guest-only and unavailable units are not recruitable.
+ */
+export const isRecruitable = (c: Character, route: Route) => {
+  const info = getRouteInfo(c, route);
+  return !info || info.status === 'auto' || info.status === 'recruit';
+};
+
+/** How many recruitable units on this path love or really like a gift. */
+export const likesOnRoute = (gift: string, route: Route) =>
+  fansOf(gift).filter((f) => isRecruitable(f.character, route)).length;
 
 /** Short human label for a character's requirement on a route. */
 export const describeStatus = (c: Character, route: Route) => {
@@ -115,12 +127,11 @@ export const requirementSummary = (c: Character, route: Route) => {
 
 // ---- sorting -------------------------------------------------------------
 
-export type SortKey = 'name' | 'renown' | 'support';
+export type SortKey = 'name' | 'renown';
 
 export const SORT_LABELS: Record<SortKey, string> = {
   name: 'Name',
   renown: 'Renown Lv',
-  support: 'Support Lv',
 };
 
 /**
@@ -139,10 +150,10 @@ const requirementRank = (c: Character, route: Route, key: 'renown' | 'support') 
 
 export const compareCharacters = (sort: SortKey, route: Route) => (a: Character, b: Character) => {
   if (sort === 'name') return a.name.localeCompare(b.name);
-  const other = sort === 'renown' ? 'support' : 'renown';
+  // Ties on Renown Lv are broken by Support Lv, then name.
   return (
-    requirementRank(a, route, sort) - requirementRank(b, route, sort) ||
-    requirementRank(a, route, other) - requirementRank(b, route, other) ||
+    requirementRank(a, route, 'renown') - requirementRank(b, route, 'renown') ||
+    requirementRank(a, route, 'support') - requirementRank(b, route, 'support') ||
     a.name.localeCompare(b.name)
   );
 };
