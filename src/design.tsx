@@ -125,30 +125,33 @@ export const Tabs = <T extends string>({
   onChange: (v: T) => void;
   aside?: ReactNode;
 }) => (
-  <nav className={'flex items-center border-b-2 border-amber-900/25'} role={'tablist'}>
-    {options.map((o) => {
-      const active = o.value === value;
-      return (
-        <button
-          key={o.value}
-          type={'button'}
-          role={'tab'}
-          aria-selected={active}
-          onClick={() => onChange(o.value)}
-          className={cx(
-            '-mb-0.5 flex-1 self-stretch border-b-[3px] px-3 py-1 text-sm font-bold transition-colors md:py-1.5 md:text-base',
-            'rounded-t-md focus-visible:bg-amber-200/60 focus-visible:outline-none',
-            active
-              ? 'border-amber-600 text-amber-950'
-              : 'border-transparent text-amber-900/60 hover:border-amber-300 hover:text-amber-900',
-          )}
-        >
-          {o.label}
-        </button>
-      );
-    })}
-    {aside && <div className={'ml-1 shrink-0'}>{aside}</div>}
-  </nav>
+  <div className={'flex items-center gap-2'}>
+    <nav className={'flex flex-1 border-b-2 border-amber-900/25'} role={'tablist'}>
+      {options.map((o) => {
+        const active = o.value === value;
+        return (
+          <button
+            key={o.value}
+            type={'button'}
+            role={'tab'}
+            aria-selected={active}
+            onClick={() => onChange(o.value)}
+            className={cx(
+              '-mb-0.5 flex-1 border-b-[3px] px-3 py-1 text-sm font-bold transition-colors md:py-1.5 md:text-base',
+              'rounded-t-md focus-visible:bg-amber-200/60 focus-visible:outline-none',
+              active
+                ? 'border-amber-600 text-amber-950'
+                : 'border-transparent text-amber-900/60 hover:border-amber-300 hover:text-amber-900',
+            )}
+          >
+            {o.label}
+          </button>
+        );
+      })}
+    </nav>
+    {/* Outside the underlined bar so it doesn't read as another tab. */}
+    {aside && <div className={'shrink-0'}>{aside}</div>}
+  </div>
 );
 
 /** One on/off row in a settings menu. */
@@ -191,7 +194,14 @@ export const SettingsMenu = ({ items }: { items: SettingItem[] }) => {
           open && 'bg-amber-200/70',
         )}
       >
-        <svg viewBox={'0 0 24 24'} className={'h-5 w-5'} fill={'none'} stroke={'currentColor'} strokeWidth={2} aria-hidden>
+        <svg
+          viewBox={'0 0 24 24'}
+          className={'h-5 w-5'}
+          fill={'none'}
+          stroke={'currentColor'}
+          strokeWidth={2}
+          aria-hidden
+        >
           <path
             strokeLinecap={'round'}
             strokeLinejoin={'round'}
@@ -249,7 +259,13 @@ export const Input = ({
   placeholder: string;
 }) => (
   <input
-    className={cx(radius, border, text.small, 'w-44 bg-amber-50 px-2 py-1 placeholder:text-amber-900/50 sm:w-56', state.focus)}
+    className={cx(
+      radius,
+      border,
+      text.small,
+      'w-44 bg-amber-50 px-2 py-1 placeholder:text-amber-900/50 sm:w-56',
+      state.focus,
+    )}
     placeholder={placeholder}
     value={value}
     onChange={(e) => onChange(e.target.value)}
@@ -316,7 +332,12 @@ const cellBase = 'border-b border-r border-amber-900/20 px-1.5 py-1.5 align-midd
  * rounded, alternates row shading, and drops the divider under the last row.
  */
 export const Table = ({ children }: { children: ReactNode }) => (
-  <div className={cx(radius, 'mx-auto w-full max-w-4xl overflow-hidden border-2 border-amber-900/70 bg-amber-50/80 shadow-sm')}>
+  <div
+    className={cx(
+      radius,
+      'mx-auto w-full max-w-4xl overflow-hidden border-2 border-amber-900/70 bg-amber-50/80 shadow-sm',
+    )}
+  >
     <table
       className={cx(
         text.small,
