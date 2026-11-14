@@ -3,7 +3,7 @@
  * colour and interaction states stay consistent. Change a token here and it
  * updates everywhere.
  */
-import type { ReactNode } from 'react';
+import { type ReactNode, useEffect, useRef, useState } from 'react';
 
 // ---- tokens --------------------------------------------------------------
 
@@ -111,18 +111,21 @@ export const ToggleGroup = <T extends string>({
 
 /**
  * Top-level navigation between the app's screens. Styled as underlined tabs so
- * it reads differently from the in-screen toggle buttons.
+ * it reads differently from the in-screen toggle buttons. `aside` sits at the
+ * right end of the bar (e.g. the settings menu).
  */
 export const Tabs = <T extends string>({
   options,
   value,
   onChange,
+  aside,
 }: {
   options: readonly { value: T; label: ReactNode }[];
   value: T;
   onChange: (v: T) => void;
+  aside?: ReactNode;
 }) => (
-  <nav className={'flex border-b-2 border-amber-900/25'} role={'tablist'}>
+  <nav className={'flex items-center border-b-2 border-amber-900/25'} role={'tablist'}>
     {options.map((o) => {
       const active = o.value === value;
       return (
@@ -133,7 +136,7 @@ export const Tabs = <T extends string>({
           aria-selected={active}
           onClick={() => onChange(o.value)}
           className={cx(
-            '-mb-0.5 flex-1 border-b-4 px-4 py-2 text-base font-bold transition-colors md:text-lg',
+            '-mb-0.5 flex-1 self-stretch border-b-[3px] px-3 py-1 text-sm font-bold transition-colors md:py-1.5 md:text-base',
             'rounded-t-md focus-visible:bg-amber-200/60 focus-visible:outline-none',
             active
               ? 'border-amber-600 text-amber-950'
@@ -144,8 +147,90 @@ export const Tabs = <T extends string>({
         </button>
       );
     })}
+    {aside && <div className={'ml-1 shrink-0'}>{aside}</div>}
   </nav>
 );
+
+/** One on/off row in a settings menu. */
+export type SettingItem = { label: string; checked: boolean; onChange: (v: boolean) => void };
+
+/** Gear button that opens a small dropdown of on/off settings. Closes on outside click or Escape. */
+export const SettingsMenu = ({ items }: { items: SettingItem[] }) => {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: PointerEvent) => {
+      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    document.addEventListener('pointerdown', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('pointerdown', onDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
+  return (
+    <div ref={ref} className={'relative'}>
+      <button
+        type={'button'}
+        aria-label={'Settings'}
+        title={'Settings'}
+        aria-expanded={open}
+        aria-haspopup={'true'}
+        onClick={() => setOpen(!open)}
+        className={cx(
+          radius,
+          state.focus,
+          'flex h-8 w-8 items-center justify-center text-amber-900 transition-colors hover:bg-amber-200/70',
+          open && 'bg-amber-200/70',
+        )}
+      >
+        <svg viewBox={'0 0 24 24'} className={'h-5 w-5'} fill={'none'} stroke={'currentColor'} strokeWidth={2} aria-hidden>
+          <path
+            strokeLinecap={'round'}
+            strokeLinejoin={'round'}
+            d={
+              'M10.3 4.3c.4-1.7 2.9-1.7 3.4 0a1.7 1.7 0 0 0 2.6 1.1c1.5-.9 3.3.8 2.4 2.4a1.7 1.7 0 0 0 1 2.5c1.8.5 1.8 3 0 3.4a1.7 1.7 0 0 0-1 2.6c.9 1.5-.9 3.3-2.4 2.4a1.7 1.7 0 0 0-2.6 1c-.4 1.8-3 1.8-3.4 0a1.7 1.7 0 0 0-2.5-1c-1.6.9-3.3-.9-2.4-2.4a1.7 1.7 0 0 0-1.1-2.6c-1.7-.4-1.7-2.9 0-3.4a1.7 1.7 0 0 0 1.1-2.5c-.9-1.6.8-3.3 2.4-2.4a1.7 1.7 0 0 0 2.5-1.1z'
+            }
+          />
+          <circle cx={12} cy={12} r={3} />
+        </svg>
+      </button>
+      {open && (
+        <div
+          className={cx(
+            radius,
+            'absolute right-0 top-full z-20 mt-1 w-60 border-2 border-amber-900/40 bg-amber-50 p-1.5 shadow-lg',
+          )}
+        >
+          {items.map((i) => (
+            <label
+              key={i.label}
+              className={cx(
+                text.small,
+                'flex cursor-pointer items-center justify-between gap-3 rounded px-2 py-1.5 hover:bg-amber-100',
+              )}
+            >
+              {i.label}
+              <input
+                type={'checkbox'}
+                className={'h-4 w-4 cursor-pointer accent-amber-600'}
+                checked={i.checked}
+                onChange={(e) => i.onChange(e.target.checked)}
+              />
+            </label>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
 /** Row of control groups at the top of a screen. */
 export const Toolbar = ({ children }: { children: ReactNode }) => (
@@ -212,10 +297,6 @@ export const Fact = ({ label, children }: { label: string; children: ReactNode }
 
 export const EmptyState = ({ children }: { children: ReactNode }) => (
   <p className={cx(text.heading, 'mx-auto mt-8 w-fit text-center')}>{children}</p>
-);
-
-export const Hint = ({ children }: { children: ReactNode }) => (
-  <p className={cx(text.small, 'mx-auto mt-2 max-w-2xl text-center italic text-amber-900')}>{children}</p>
 );
 
 /** Inset, scrollable surface (for long pickers). */

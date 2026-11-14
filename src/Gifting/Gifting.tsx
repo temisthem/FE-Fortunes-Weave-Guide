@@ -22,7 +22,6 @@ import {
   DetailHeader,
   EmptyState,
   Fact,
-  Hint,
   Input,
   Panel,
   Section,
@@ -35,6 +34,7 @@ import {
   state,
   text,
 } from '@/design.tsx';
+import { useSettings } from '@/settings.ts';
 import { useStoredState } from '@/useStoredState.ts';
 import { useScrollOnSelect } from '@/useScrollOnSelect.ts';
 import {
@@ -42,7 +42,6 @@ import {
   CharacterIcon,
   GiftGrid,
   GiftTile,
-  NamesToggle,
   PreferenceLabel,
   RouteSelector,
   SortSelector,
@@ -68,7 +67,8 @@ const RecruitmentHeader = ({ character, route }: { character: Character; route: 
   );
 };
 
-const Gifting = ({ showName, setShowName }: { showName: boolean; setShowName: (v: boolean) => void }) => {
+const Gifting = () => {
+  const { badges } = useSettings();
   const [mode, setMode] = useStoredState<GiftMode>('gift.mode', 'character', (v) =>
     ['character', 'gift'].includes(v as string),
   );
@@ -114,7 +114,7 @@ const Gifting = ({ showName, setShowName }: { showName: boolean; setShowName: (v
       ) : (
         <>
           {c.loved.length > 0 && (
-            <Section title={'♥ Loved gifts'}>
+            <Section title={'Loved gifts'}>
               <GiftGrid>
                 {c.loved.map((g) => (
                   <GiftTile
@@ -141,7 +141,6 @@ const Gifting = ({ showName, setShowName }: { showName: boolean; setShowName: (v
               </GiftGrid>
             </Section>
           )}
-          <Hint>Tap a gift to see everyone else who likes it.</Hint>
         </>
       )}
     </>
@@ -270,7 +269,6 @@ const Gifting = ({ showName, setShowName }: { showName: boolean; setShowName: (v
         <ToggleGroup label={'View'} options={MODE_OPTIONS} value={mode} onChange={setMode} />
         <RouteSelector route={route} setRoute={setRoute} />
         <SortSelector sort={sort} setSort={setSort} />
-        <NamesToggle showName={showName} setShowName={setShowName} />
       </Toolbar>
 
       {mode === 'character' ? (
@@ -280,9 +278,8 @@ const Gifting = ({ showName, setShowName }: { showName: boolean; setShowName: (v
               key={c.name}
               character={c}
               selected={selectedCharacter === c.name}
-              showName={showName}
               onClick={() => selectCharacter(c.name)}
-              badge={requirementBadge(c, route)}
+              badge={badges && requirementBadge(c, route)}
               dimmed={!isRecruitable(c, route)}
             />
           ))}

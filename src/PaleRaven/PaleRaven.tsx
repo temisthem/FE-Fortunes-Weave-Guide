@@ -1,12 +1,12 @@
 import { characters, portrait, raven } from '@/data.ts';
-import { DetailHeader, EmptyState, Input, Section, Table, Td, Th, Toolbar, cx, text } from '@/design.tsx';
+import { DetailHeader, EmptyState, Input, Section, Table, Td, Th, cx, text } from '@/design.tsx';
 import { useStoredState } from '@/useStoredState.ts';
 import { useScrollOnSelect } from '@/useScrollOnSelect.ts';
-import { CharacterGrid, CharacterIcon, NamesToggle } from '@/ui.tsx';
+import { CharacterGrid, CharacterIcon } from '@/ui.tsx';
 
 const ravenCharacters = characters.filter((c) => raven[c.name]);
 
-const PaleRaven = ({ showName, setShowName }: { showName: boolean; setShowName: (v: boolean) => void }) => {
+const PaleRaven = () => {
   const [selected, setSelected] = useStoredState<string | null>('raven.character', null);
   const [filter, setFilter] = useStoredState<string>('raven.filter', '');
   const results = useScrollOnSelect<HTMLDivElement>();
@@ -23,17 +23,12 @@ const PaleRaven = ({ showName, setShowName }: { showName: boolean; setShowName: 
 
   return (
     <>
-      <Toolbar>
-        <NamesToggle showName={showName} setShowName={setShowName} />
-      </Toolbar>
-
       <CharacterGrid>
         {ravenCharacters.map((c) => (
           <CharacterIcon
             key={c.name}
             character={c}
             selected={selected === c.name}
-            showName={showName}
             onClick={() => selectCharacter(c.name)}
           />
         ))}

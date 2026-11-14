@@ -1,6 +1,8 @@
+import { useMemo } from 'react';
 import Gifting from '@/Gifting/Gifting.tsx';
 import PaleRaven from '@/PaleRaven/PaleRaven.tsx';
-import { Link, Tabs, cx, text } from '@/design.tsx';
+import { Link, SettingsMenu, Tabs, cx, text } from '@/design.tsx';
+import { SettingsContext } from '@/settings.ts';
 import { useStoredState } from '@/useStoredState.ts';
 
 type Screen = 'gifting' | 'raven';
@@ -14,18 +16,36 @@ const App = () => {
   const [screen, setScreen] = useStoredState<Screen>('screenState', 'gifting', (v) =>
     ['gifting', 'raven'].includes(v as string),
   );
-  const [showNames, setShowNames] = useStoredState('nameState', true);
+  const [names, setNames] = useStoredState('nameState', true);
+  const [badges, setBadges] = useStoredState('badgeState', true);
+  const [routeNames, setRouteNames] = useStoredState('routeNameState', true);
+  const settings = useMemo(() => ({ names, badges, routeNames }), [names, badges, routeNames]);
 
   return (
     <div className={'app-bg'}>
       <div className={'mx-auto flex h-full min-h-screen max-w-[1280px] flex-col bg-amber-50 bg-opacity-85 p-4 md:p-5'}>
-        <header className={'mb-5'}>
-          <Tabs options={SCREEN_OPTIONS} value={screen} onChange={setScreen} />
+        <header className={'mb-3 md:mb-4'}>
+          <Tabs
+            options={SCREEN_OPTIONS}
+            value={screen}
+            onChange={setScreen}
+            aside={
+              <SettingsMenu
+                items={[
+                  { label: 'Show names', checked: names, onChange: setNames },
+                  { label: 'Show Renown/Support tags', checked: badges, onChange: setBadges },
+                  { label: 'Show route names', checked: routeNames, onChange: setRouteNames },
+                ]}
+              />
+            }
+          />
         </header>
 
         <main>
-          {screen === 'gifting' && <Gifting showName={showNames} setShowName={setShowNames} />}
-          {screen === 'raven' && <PaleRaven showName={showNames} setShowName={setShowNames} />}
+          <SettingsContext.Provider value={settings}>
+            {screen === 'gifting' && <Gifting />}
+            {screen === 'raven' && <PaleRaven />}
+          </SettingsContext.Provider>
         </main>
 
         <footer className={cx(text.small, 'ml-auto mt-auto pt-10 text-right text-amber-900')}>
