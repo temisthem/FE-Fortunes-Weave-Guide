@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import {
   type Character,
   type Gift,
+  type LikeCounts,
   type Preference,
   type Route,
   type SortKey,
@@ -132,10 +133,10 @@ export const GiftTile = ({
   preference?: Preference;
   selected?: boolean;
   onClick?: () => void;
-  /** In a picker: show fan counts and grey out the tiles that aren't selected. */
+  /** In a picker: show like counts and grey out the tiles that aren't selected. */
   selectable?: boolean;
-  /** Picker only: how many recruitable units on the path like it. */
-  likes?: number;
+  /** Picker only: how many recruitable units on the path love / like it. */
+  likes?: LikeCounts;
 }) => {
   return (
     <button
@@ -150,7 +151,7 @@ export const GiftTile = ({
         preference === 'Loved' ? 'border-yellow-400 bg-rose-900' : 'border-amber-950 bg-amber-800',
         selected && state.selected,
         selectable && !selected && state.unselected,
-        likes === 0 && 'opacity-60',
+        likes && likes.loved + likes.liked === 0 && 'opacity-60',
       )}
     >
       <span className={'text-xs font-semibold leading-tight text-amber-50 md:text-sm'}>
@@ -159,7 +160,9 @@ export const GiftTile = ({
       </span>
       {likes !== undefined && (
         <span className={'text-[10px] uppercase tracking-wide text-amber-200/80 md:text-[11px]'}>
-          {likes} {likes === 1 ? 'like' : 'likes'}
+          <span className={likes.loved > 0 ? 'text-yellow-300' : undefined}>♥ {likes.loved} loved</span>
+          {' · '}
+          {likes.liked} liked
         </span>
       )}
     </button>
@@ -167,4 +170,4 @@ export const GiftTile = ({
 };
 
 export const PreferenceLabel = ({ preference }: { preference: Preference }) =>
-  preference === 'Loved' ? <span className={'font-bold text-rose-800'}>♥ Loved</span> : <>Really liked</>;
+  preference === 'Loved' ? <span className={'font-bold text-rose-800'}>♥ Loved</span> : <>Liked</>;

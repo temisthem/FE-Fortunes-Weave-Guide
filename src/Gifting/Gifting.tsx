@@ -128,13 +128,13 @@ const Gifting = ({ showName, setShowName }: { showName: boolean; setShowName: (v
             </Section>
           )}
           {c.reallyLiked.length > 0 && (
-            <Section title={'Really liked gifts'}>
+            <Section title={'Liked gifts'}>
               <GiftGrid>
                 {c.reallyLiked.map((g) => (
                   <GiftTile
                     key={g}
                     gift={giftByName.get(g)!}
-                    preference={'Really Liked'}
+                    preference={'Liked'}
                     onClick={() => selectGift(g, true)}
                   />
                 ))}
@@ -205,7 +205,7 @@ const Gifting = ({ showName, setShowName }: { showName: boolean; setShowName: (v
           {gift.sources.length > 0 && <Fact label={'Found at'}>{gift.sources.join(', ')}</Fact>}
         </DetailHeader>
         {fans.length === 0 ? (
-          <EmptyState>Nobody is known to love or really like this gift.</EmptyState>
+          <EmptyState>Nobody is known to love or like this gift.</EmptyState>
         ) : (
           <Section title={'Who likes it'}>
             <Table>

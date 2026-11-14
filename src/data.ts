@@ -40,7 +40,7 @@ export interface RavenEntry {
   alt?: string;
 }
 
-export type Preference = 'Loved' | 'Really Liked';
+export type Preference = 'Loved' | 'Liked';
 
 export const characters = charactersJson as Character[];
 export const gifts = giftsJson as Gift[];
@@ -65,12 +65,11 @@ export const GIFT_CATEGORIES = [
   'Miscellaneous',
 ];
 
-/** Characters who love / really like a gift. */
+/** Characters who love / like a gift. */
 export const fansOf = (gift: string) =>
   characters.flatMap((c) => {
     if (c.loved.includes(gift)) return [{ character: c, preference: 'Loved' as Preference }];
-    if (c.reallyLiked.includes(gift))
-      return [{ character: c, preference: 'Really Liked' as Preference }];
+    if (c.reallyLiked.includes(gift)) return [{ character: c, preference: 'Liked' as Preference }];
     return [];
   });
 
@@ -89,9 +88,14 @@ export const isRecruitable = (c: Character, route: Route) => {
   return !info || info.status === 'auto' || info.status === 'recruit';
 };
 
-/** How many recruitable units on this path love or really like a gift. */
-export const likesOnRoute = (gift: string, route: Route) =>
-  fansOf(gift).filter((f) => isRecruitable(f.character, route)).length;
+export type LikeCounts = { loved: number; liked: number };
+
+/** How many recruitable units on this path love / like a gift. */
+export const likesOnRoute = (gift: string, route: Route): LikeCounts => {
+  const fans = fansOf(gift).filter((f) => isRecruitable(f.character, route));
+  const loved = fans.filter((f) => f.preference === 'Loved').length;
+  return { loved, liked: fans.length - loved };
+};
 
 /** Short human label for a character's requirement on a route. */
 export const describeStatus = (c: Character, route: Route) => {
