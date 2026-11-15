@@ -1,5 +1,6 @@
 <script lang="ts">
   import Gifting from '@/Gifting/Gifting.svelte';
+  import Meals from '@/Meals/Meals.svelte';
   import PaleRaven from '@/PaleRaven/PaleRaven.svelte';
   import Link from '@/design/Link.svelte';
   import SettingsMenu from '@/design/SettingsMenu.svelte';
@@ -8,14 +9,15 @@
   import { settings } from '@/settings.svelte.ts';
   import { stored } from '@/stored.svelte.ts';
 
-  type Screen = 'gifting' | 'raven';
+  type Screen = 'gifting' | 'meals' | 'raven';
 
   const SCREEN_OPTIONS = [
     { value: 'gifting', label: 'Gifting' },
+    { value: 'meals', label: 'Meals' },
     { value: 'raven', label: 'Pale Raven' },
   ] as const;
 
-  const screen = stored<Screen>('screenState', 'gifting', (v) => ['gifting', 'raven'].includes(v as string));
+  const screen = stored<Screen>('screenState', 'gifting', (v) => ['gifting', 'meals', 'raven'].includes(v as string));
 
   const SOURCES = {
     wiki: 'https://fireemblemwiki.org/wiki/List_of_characters_in_Fire_Emblem:_Fortune%27s_Weave',
@@ -24,9 +26,10 @@
     keenGamer:
       'https://www.keengamer.com/articles/guides/fire-emblem-fortunes-weave-perfect-bird-time-answers-for-every-character/',
     gameRant: 'https://gamerant.com/fire-emblem-fortunes-weave-feed-the-pale-raven-correct-answers/',
+    fortunesWeaveGuide: 'https://fortunesweave.co.uk/characters',
   };
 
-  // Grouped by the screen they affect. Pale Raven has no settings of its own.
+  // Grouped by the screen they affect. Meals and Pale Raven have no settings of their own.
   const settingSections = [
     { title: 'General', items: [{ label: 'Show names', setting: settings.names }] },
     {
@@ -53,6 +56,8 @@
     <main>
       {#if screen.value === 'gifting'}
         <Gifting />
+      {:else if screen.value === 'meals'}
+        <Meals />
       {:else}
         <PaleRaven />
       {/if}
@@ -60,7 +65,8 @@
 
     <footer class={cx(text.small, 'ml-auto mt-auto pt-10 text-right text-amber-900')}>
       Portraits &amp; recruitment info courtesy of <Link href={SOURCES.wiki}>Fire Emblem Wiki</Link>. Gift data from
-      <Link href={SOURCES.game8}>Game8</Link>. Pale Raven answers compiled from
+      <Link href={SOURCES.game8}>Game8</Link>. Meal data from
+      <Link href={SOURCES.fortunesWeaveGuide}>fortunesweave.co.uk</Link>. Pale Raven answers compiled from
       <Link href={SOURCES.raiderKing}>RaiderKing</Link>, <Link href={SOURCES.keenGamer}>KeenGamer</Link> &amp;
       <Link href={SOURCES.gameRant}>Game Rant</Link>.
     </footer>

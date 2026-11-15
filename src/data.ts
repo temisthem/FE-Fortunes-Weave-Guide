@@ -1,6 +1,7 @@
 import charactersJson from '@/data/characters.json';
 import giftsJson from '@/data/gifts.json';
 import ravenJson from '@/data/raven.json';
+import mealsJson from '@/data/meals.json';
 
 export const ROUTES = ['Cai', 'Dietrich', 'Theodora', 'Leda'] as const;
 export type Route = (typeof ROUTES)[number];
@@ -45,6 +46,15 @@ export type Preference = 'Loved' | 'Liked';
 export const characters = charactersJson as Character[];
 export const gifts = giftsJson as Gift[];
 export const raven = ravenJson as Record<string, RavenEntry[]>;
+
+/** An inn dish and the units who love / like eating it. */
+export interface Meal {
+  name: string;
+  loved: string[];
+  liked: string[];
+}
+
+export const meals = mealsJson as Meal[];
 
 export const characterByName = new Map(characters.map((c) => [c.name, c]));
 export const giftByName = new Map(gifts.map((g) => [g.name, g]));

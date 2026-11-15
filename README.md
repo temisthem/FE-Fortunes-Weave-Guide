@@ -2,6 +2,8 @@
 
 Select a character to see every gift they love, or select a gift to see everyone who loves it, along with the Renown and Support levels needed to recruit them on your route.
 
+See every inn meal along with who loves it and who likes it.
+
 Select a character to see every Pale Raven remark and the correct reaction for a Perfect Bird Time.
 
 No more flipping between gift lists and recruitment tables!
@@ -12,4 +14,4 @@ Check it out here: https://temisthem.github.io/FE-Fortunes-Weave-Guide/
 
 ### Fixing incorrect data
 
-Submit a Pull Request with edits to /src/data/characters.json, /src/data/gifts.json or /src/data/raven.json
+Submit a Pull Request with edits to /src/data/characters.json, /src/data/gifts.json, /src/data/meals.json or /src/data/raven.json
