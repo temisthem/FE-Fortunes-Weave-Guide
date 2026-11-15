@@ -35,11 +35,8 @@
   const MENU = [...meals].sort((a, b) => a.name.localeCompare(b.name));
   const DISHES = MENU.map((m) => m.name);
 
-  const selected = stored<string[]>(
-    'meals.selected',
-    [],
-    (v) => Array.isArray(v) && v.length <= MAX_SELECTED && v.every((d) => DISHES.includes(d)),
-  );
+  // Not saved: the picked dishes clear whenever you leave Meals (this component unmounts).
+  const selected = $state({ value: [] as string[] });
 
   const sort = stored<SortKey>('meals.sort', 'name', (v) => Object.keys(SORT_LABELS).includes(v as string));
 

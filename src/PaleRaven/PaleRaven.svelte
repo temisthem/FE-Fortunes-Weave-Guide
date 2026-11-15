@@ -27,7 +27,10 @@
 
   const character = $derived(ravenCharacters.find((c) => c.name === selected.value));
   const shown = $derived.by(() => {
-    const entries = selected.value ? (raven[selected.value] ?? []) : [];
+    // Prompts are listed alphabetically.
+    const entries = selected.value
+      ? [...(raven[selected.value] ?? [])].sort((a, b) => a.prompt.localeCompare(b.prompt))
+      : [];
     const needle = filter.value.trim().toLowerCase();
     return needle ? entries.filter((e) => e.prompt.toLowerCase().includes(needle)) : entries;
   });
