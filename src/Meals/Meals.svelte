@@ -12,6 +12,7 @@
     characterByName,
     compareCharacters,
     hasRecruitTag,
+    isRouteLord,
     meals,
     requirementBadge,
   } from '@/data.ts';
@@ -53,7 +54,11 @@
   const byName = (names: string[]) =>
     names
       .map((n) => characterByName.get(n)!)
-      .filter((c) => c && (!recruitableOnly || hasRecruitTag(c, currentRoute.value)))
+      // The route's lord is the player, so they never appear (same as Gifting).
+      .filter(
+        (c) =>
+          c && !isRouteLord(c, currentRoute.value) && (!recruitableOnly || hasRecruitTag(c, currentRoute.value)),
+      )
       .sort(compareCharacters(sort.value, currentRoute.value));
 
   // Rows follow the menu order, not the order the dishes were picked.
