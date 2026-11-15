@@ -2,7 +2,8 @@
   Pick up to three inn dishes; each gets a row of units who love it and a row
   of units who like it. With the Meals "Only show recruitable units" setting
   on, a route picker appears and the rows keep only units recruited with
-  Renown/Support on that route (the ones with an R·S tag).
+  Renown/Support on that route (the ones with an R·S tag). R·S tags follow
+  the shared route either way, unless turned off in settings.
 -->
 <script lang="ts">
   import { characterByName, hasRecruitTag, meals, requirementBadge } from '@/data.ts';
@@ -59,7 +60,7 @@
 </script>
 
 {#if recruitableOnly}
-  <!-- Tags and the route only matter when the list is narrowed to a route's recruitable units. -->
+  <!-- The picker only shows while filtering; tags always follow the shared route (also set on Gifting). -->
   <Toolbar>
     <RouteSelector bind:route={currentRoute.value} />
   </Toolbar>
@@ -125,7 +126,7 @@
                         {#each reaction.characters as c (c.name)}
                           <MiniPortrait
                             character={c}
-                            badge={recruitableOnly && settings.badges.value ? requirementBadge(c, currentRoute.value) : null}
+                            badge={settings.badges.value ? requirementBadge(c, currentRoute.value) : null}
                           />
                         {/each}
                       </div>

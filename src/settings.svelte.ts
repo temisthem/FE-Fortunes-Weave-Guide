@@ -12,7 +12,7 @@ export const settings = {
   recruitableOnly: stored('recruitableOnlyState', false),
   /**
    * Meals lists only units recruited with Renown/Support on the chosen route.
-   * Turning it on also shows the route picker (and R·S tags) on Meals.
+   * Turning it on also shows the route picker on Meals.
    */
   mealsRecruitableOnly: stored('mealsRecruitableOnlyState', false),
 };
