@@ -1,9 +1,9 @@
 <!--
   Pick up to three inn dishes; each gets a row of units who love it and a row
-  of units who like it. The route picker is shared with Gifting: it sets the
-  R·S tags and hides that route's lord. With the Meals "Only show recruitable
-  units" setting on, the rows keep only units recruited with Renown/Support
-  on that route (the ones with an R·S tag).
+  of units who like it. The route picker is shared with Gifting and sets the
+  R·S tags. With the Meals "Only show recruitable units" setting on, the rows
+  keep only units recruited with Renown/Support on that route (the ones with
+  an R·S tag) plus that route's lord.
 -->
 <script lang="ts">
   import {
@@ -56,10 +56,11 @@
   const byName = (names: string[]) =>
     names
       .map((n) => characterByName.get(n)!)
-      // The route's lord is the player, so they never appear (same as Gifting).
+      // The recruitable filter keeps units with an R·S tag, plus the route's lord.
       .filter(
         (c) =>
-          c && !isRouteLord(c, currentRoute.value) && (!recruitableOnly || hasRecruitTag(c, currentRoute.value)),
+          c &&
+          (!recruitableOnly || hasRecruitTag(c, currentRoute.value) || isRouteLord(c, currentRoute.value)),
       )
       .sort(compareCharacters(sort.value, currentRoute.value));
 
