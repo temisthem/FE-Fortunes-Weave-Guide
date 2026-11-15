@@ -3,6 +3,7 @@
   import { type Character, portrait } from '@/data.ts';
   import { cx, radius, interaction, text } from '@/design/tokens.ts';
   import { settings } from '@/settings.svelte.ts';
+  import Badge from '@/ui/Badge.svelte';
 
   type Props = {
     character: Character;
@@ -28,13 +29,7 @@
       alt={character.name}
       loading="lazy"
     />
-    {#if badge}
-      <span
-        class="absolute bottom-0.5 right-0.5 rounded bg-amber-900/85 px-0.5 text-[9px] font-bold leading-3 text-amber-50 md:text-[10px]"
-      >
-        {badge}
-      </span>
-    {/if}
+    {#if badge}<Badge label={badge} />{/if}
   </button>
   {#if settings.names.value}
     <p class={cx(text.caption, 'mt-0.5 truncate text-center')}>{character.name}</p>

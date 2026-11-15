@@ -29,17 +29,17 @@
     fortunesWeaveGuide: 'https://fortunesweave.co.uk/characters',
   };
 
-  // Grouped by the screen they affect. Meals and Pale Raven have no settings of their own.
+  // Grouped by the screen they affect. Pale Raven has no settings of its own.
   const settingSections = [
-    { title: 'General', items: [{ label: 'Show names', setting: settings.names }] },
     {
-      title: 'Gifting',
+      title: 'General',
       items: [
+        { label: 'Show names', setting: settings.names },
         { label: 'Show route names', setting: settings.routeNames },
         { label: 'Show Renown/Support tags', setting: settings.badges },
-        { label: 'Only show recruitable units', setting: settings.recruitableOnly },
       ],
     },
+    { title: 'Gifting', items: [{ label: 'Only show recruitable units', setting: settings.recruitableOnly }] },
   ];
 </script>
 

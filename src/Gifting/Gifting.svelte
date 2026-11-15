@@ -1,9 +1,7 @@
 <script lang="ts">
   import {
-    type Route,
     type SortKey,
     GIFT_CATEGORIES,
-    ROUTES,
     SORT_LABELS,
     characterByName,
     characters,
@@ -30,6 +28,7 @@
   import ToggleGroup from '@/design/ToggleGroup.svelte';
   import Toolbar from '@/design/Toolbar.svelte';
   import { cx, interaction, text } from '@/design/tokens.ts';
+  import { currentRoute } from '@/route.svelte.ts';
   import { revealAfterUpdate } from '@/scroll.ts';
   import { settings } from '@/settings.svelte.ts';
   import { stored } from '@/stored.svelte.ts';
@@ -49,7 +48,7 @@
   ] as const;
 
   const mode = stored<GiftMode>('gift.mode', 'character', (v) => ['character', 'gift'].includes(v as string));
-  const route = stored<Route>('gift.route', 'Cai', (v) => ROUTES.includes(v as Route));
+  const route = currentRoute;
   const sort = stored<SortKey>('gift.sort', 'name', (v) => Object.keys(SORT_LABELS).includes(v as string));
   const selectedCharacter = stored<string | null>('gift.character', null);
   const selectedGift = stored<string | null>('gift.gift', null);

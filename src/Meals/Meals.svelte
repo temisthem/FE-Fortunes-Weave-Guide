@@ -3,15 +3,19 @@
   of units who like it.
 -->
 <script lang="ts">
-  import { characterByName, meals } from '@/data.ts';
+  import { characterByName, meals, requirementBadge } from '@/data.ts';
   import Button from '@/design/Button.svelte';
   import EmptyState from '@/design/EmptyState.svelte';
   import Table from '@/design/Table.svelte';
   import Td from '@/design/Td.svelte';
   import Th from '@/design/Th.svelte';
   import { cx, interaction, text } from '@/design/tokens.ts';
+  import Toolbar from '@/design/Toolbar.svelte';
+  import { currentRoute } from '@/route.svelte.ts';
+  import { settings } from '@/settings.svelte.ts';
   import { stored } from '@/stored.svelte.ts';
   import MiniPortrait from '@/ui/MiniPortrait.svelte';
+  import RouteSelector from '@/ui/RouteSelector.svelte';
 
   const MAX_SELECTED = 3;
   const DISHES = meals.map((m) => m.name);
@@ -50,7 +54,11 @@
   );
 </script>
 
-<div class="flex flex-col items-center gap-2">
+<Toolbar>
+  <RouteSelector bind:route={currentRoute.value} />
+</Toolbar>
+
+<div class="mt-4 flex flex-col items-center gap-2">
   <div class="flex items-center gap-3">
     <span class={text.label}>Dishes ({selected.value.length}/{MAX_SELECTED})</span>
     {#if selected.value.length > 0}
@@ -108,7 +116,10 @@
                     {:else}
                       <div class="flex flex-wrap gap-1">
                         {#each reaction.characters as c (c.name)}
-                          <MiniPortrait character={c} />
+                          <MiniPortrait
+                            character={c}
+                            badge={settings.badges.value ? requirementBadge(c, currentRoute.value) : null}
+                          />
                         {/each}
                       </div>
                     {/if}
