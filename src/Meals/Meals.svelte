@@ -6,7 +6,15 @@
   the shared route either way, unless turned off in settings.
 -->
 <script lang="ts">
-  import { characterByName, hasRecruitTag, meals, requirementBadge } from '@/data.ts';
+  import {
+    type SortKey,
+    SORT_LABELS,
+    characterByName,
+    compareCharacters,
+    hasRecruitTag,
+    meals,
+    requirementBadge,
+  } from '@/data.ts';
   import Button from '@/design/Button.svelte';
   import EmptyState from '@/design/EmptyState.svelte';
   import Table from '@/design/Table.svelte';
@@ -19,6 +27,7 @@
   import { stored } from '@/stored.svelte.ts';
   import MiniPortrait from '@/ui/MiniPortrait.svelte';
   import RouteSelector from '@/ui/RouteSelector.svelte';
+  import SortSelector from '@/ui/SortSelector.svelte';
 
   const MAX_SELECTED = 3;
   const DISHES = meals.map((m) => m.name);
@@ -28,6 +37,8 @@
     [],
     (v) => Array.isArray(v) && v.length <= MAX_SELECTED && v.every((d) => DISHES.includes(d)),
   );
+
+  const sort = stored<SortKey>('meals.sort', 'name', (v) => Object.keys(SORT_LABELS).includes(v as string));
 
   const full = $derived(selected.value.length >= MAX_SELECTED);
 
@@ -43,7 +54,7 @@
     names
       .map((n) => characterByName.get(n)!)
       .filter((c) => c && (!recruitableOnly || hasRecruitTag(c, currentRoute.value)))
-      .sort((a, b) => a.name.localeCompare(b.name));
+      .sort(compareCharacters(sort.value, currentRoute.value));
 
   // Rows follow the menu order, not the order the dishes were picked.
   const rows = $derived(
@@ -59,14 +70,13 @@
   );
 </script>
 
-{#if recruitableOnly}
+<Toolbar>
   <!-- The picker only shows while filtering; tags always follow the shared route (also set on Gifting). -->
-  <Toolbar>
-    <RouteSelector bind:route={currentRoute.value} />
-  </Toolbar>
-{/if}
+  {#if recruitableOnly}<RouteSelector bind:route={currentRoute.value} />{/if}
+  <SortSelector bind:sort={sort.value} />
+</Toolbar>
 
-<div class={cx(recruitableOnly && 'mt-4', 'flex flex-col items-center gap-2')}>
+<div class="mt-4 flex flex-col items-center gap-2">
   <div class="flex items-center gap-3">
     <span class={text.label}>Dishes ({selected.value.length}/{MAX_SELECTED})</span>
     {#if selected.value.length > 0}
