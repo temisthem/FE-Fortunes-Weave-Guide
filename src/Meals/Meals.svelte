@@ -1,9 +1,9 @@
 <!--
   Pick up to three inn dishes; each gets a row of units who love it and a row
-  of units who like it. With the Meals "Only show recruitable units" setting
-  on, a route picker appears and the rows keep only units recruited with
-  Renown/Support on that route (the ones with an R·S tag). R·S tags follow
-  the shared route either way, unless turned off in settings.
+  of units who like it. The route picker is shared with Gifting: it sets the
+  R·S tags and hides that route's lord. With the Meals "Only show recruitable
+  units" setting on, the rows keep only units recruited with Renown/Support
+  on that route (the ones with an R·S tag).
 -->
 <script lang="ts">
   import {
@@ -31,7 +31,9 @@
   import SortSelector from '@/ui/SortSelector.svelte';
 
   const MAX_SELECTED = 3;
-  const DISHES = meals.map((m) => m.name);
+  /** Dishes in alphabetical order, for both the buttons and the rows. */
+  const MENU = [...meals].sort((a, b) => a.name.localeCompare(b.name));
+  const DISHES = MENU.map((m) => m.name);
 
   const selected = stored<string[]>(
     'meals.selected',
@@ -61,9 +63,9 @@
       )
       .sort(compareCharacters(sort.value, currentRoute.value));
 
-  // Rows follow the menu order, not the order the dishes were picked.
+  // Rows stay alphabetical, not in the order the dishes were picked.
   const rows = $derived(
-    meals
+    MENU
       .filter((m) => selected.value.includes(m.name))
       .map((m) => ({
         name: m.name,
@@ -76,8 +78,7 @@
 </script>
 
 <Toolbar>
-  <!-- The picker only shows while filtering; tags always follow the shared route (also set on Gifting). -->
-  {#if recruitableOnly}<RouteSelector bind:route={currentRoute.value} />{/if}
+  <RouteSelector bind:route={currentRoute.value} />
   <SortSelector bind:sort={sort.value} />
 </Toolbar>
 

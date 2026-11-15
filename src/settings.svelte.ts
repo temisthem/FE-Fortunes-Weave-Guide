@@ -10,9 +10,6 @@ export const settings = {
   routeNames: stored('routeNameState', true),
   /** Gifting lists only units recruited with Renown/Support (the ones with an R·S tag). */
   recruitableOnly: stored('recruitableOnlyState', false),
-  /**
-   * Meals lists only units recruited with Renown/Support on the chosen route.
-   * Turning it on also shows the route picker on Meals.
-   */
+  /** Meals lists only units recruited with Renown/Support on the chosen route. */
   mealsRecruitableOnly: stored('mealsRecruitableOnlyState', false),
 };
