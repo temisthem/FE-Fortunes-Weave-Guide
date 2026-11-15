@@ -1,9 +1,11 @@
 <!--
   Pick up to three inn dishes; each gets a row of units who love it and a row
-  of units who like it.
+  of units who like it. With the Meals "Only show recruitable units" setting
+  on, a route picker appears and the rows keep only units recruited with
+  Renown/Support on that route (the ones with an R·S tag).
 -->
 <script lang="ts">
-  import { characterByName, meals, requirementBadge } from '@/data.ts';
+  import { characterByName, hasRecruitTag, meals, requirementBadge } from '@/data.ts';
   import Button from '@/design/Button.svelte';
   import EmptyState from '@/design/EmptyState.svelte';
   import Table from '@/design/Table.svelte';
@@ -34,10 +36,12 @@
     else if (!full) selected.value = [...current, dish];
   };
 
+  const recruitableOnly = $derived(settings.mealsRecruitableOnly.value);
+
   const byName = (names: string[]) =>
     names
       .map((n) => characterByName.get(n)!)
-      .filter(Boolean)
+      .filter((c) => c && (!recruitableOnly || hasRecruitTag(c, currentRoute.value)))
       .sort((a, b) => a.name.localeCompare(b.name));
 
   // Rows follow the menu order, not the order the dishes were picked.
@@ -54,11 +58,14 @@
   );
 </script>
 
-<Toolbar>
-  <RouteSelector bind:route={currentRoute.value} />
-</Toolbar>
+{#if recruitableOnly}
+  <!-- Tags and the route only matter when the list is narrowed to a route's recruitable units. -->
+  <Toolbar>
+    <RouteSelector bind:route={currentRoute.value} />
+  </Toolbar>
+{/if}
 
-<div class="mt-4 flex flex-col items-center gap-2">
+<div class={cx(recruitableOnly && 'mt-4', 'flex flex-col items-center gap-2')}>
   <div class="flex items-center gap-3">
     <span class={text.label}>Dishes ({selected.value.length}/{MAX_SELECTED})</span>
     {#if selected.value.length > 0}
@@ -118,7 +125,7 @@
                         {#each reaction.characters as c (c.name)}
                           <MiniPortrait
                             character={c}
-                            badge={settings.badges.value ? requirementBadge(c, currentRoute.value) : null}
+                            badge={recruitableOnly && settings.badges.value ? requirementBadge(c, currentRoute.value) : null}
                           />
                         {/each}
                       </div>

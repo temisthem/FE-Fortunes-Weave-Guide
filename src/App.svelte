@@ -40,6 +40,7 @@
       ],
     },
     { title: 'Gifting', items: [{ label: 'Only show recruitable units', setting: settings.recruitableOnly }] },
+    { title: 'Meals', items: [{ label: 'Only show recruitable units', setting: settings.mealsRecruitableOnly }] },
   ];
 </script>
 
