@@ -33,7 +33,8 @@
     sizes[size],
     interaction.focus,
     'whitespace-nowrap font-semibold transition-colors',
-    filled ? 'bg-amber-400 text-amber-950 hover:bg-amber-500' : 'bg-amber-200/70 text-amber-900 hover:bg-amber-300',
+    // Unselected hover stays light so it can't be mistaken for the selected colour.
+    filled ? 'bg-amber-400 text-amber-950 hover:bg-amber-500' : 'bg-amber-200/70 text-amber-900 hover:bg-amber-200',
     disabled && 'cursor-not-allowed opacity-40 hover:bg-amber-200/70',
   )}
 >
