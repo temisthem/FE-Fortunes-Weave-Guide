@@ -11,9 +11,10 @@
     variant?: 'solid' | 'toggle';
     size?: 'md' | 'sm';
     active?: boolean;
+    disabled?: boolean;
     children: Snippet;
   };
-  let { onclick, variant = 'solid', size = 'md', active = false, children }: Props = $props();
+  let { onclick, variant = 'solid', size = 'md', active = false, disabled = false, children }: Props = $props();
 
   const sizes = {
     md: 'px-3 py-1 text-sm md:text-base',
@@ -25,6 +26,7 @@
 <button
   type="button"
   {onclick}
+  {disabled}
   aria-pressed={variant === 'toggle' ? active : undefined}
   class={cx(
     radius,
@@ -32,6 +34,7 @@
     interaction.focus,
     'whitespace-nowrap font-semibold transition-colors',
     filled ? 'bg-amber-400 text-amber-950 hover:bg-amber-500' : 'bg-amber-200/70 text-amber-900 hover:bg-amber-300',
+    disabled && 'cursor-not-allowed opacity-40 hover:bg-amber-200/70',
   )}
 >
   {@render children()}
