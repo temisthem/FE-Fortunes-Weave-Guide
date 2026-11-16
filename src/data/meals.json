@@ -33,6 +33,19 @@
       "Simon",
       "Theodora",
       "Ultand"
+    ],
+    "disliked": [
+      "Bonaventure",
+      "Buccar",
+      "Fianna",
+      "Gaitz",
+      "Jasmine",
+      "Kiroc",
+      "Leda",
+      "Majide",
+      "Ursula",
+      "Yang Jie",
+      "Zarcone"
     ]
   },
   {
@@ -69,6 +82,16 @@
       "Peter",
       "Sha Lan",
       "Theodora"
+    ],
+    "disliked": [
+      "Dante",
+      "Fianna",
+      "Io",
+      "Ludia",
+      "Mu",
+      "Ninae",
+      "Sirocco",
+      "Zarcone"
     ]
   },
   {
@@ -114,6 +137,12 @@
       "Ultand",
       "Ursula",
       "Yang Jie"
+    ],
+    "disliked": [
+      "Diego",
+      "Fianna",
+      "Noctula",
+      "Nuzzuo"
     ]
   },
   {
@@ -152,6 +181,15 @@
       "Sha Lan",
       "Theodora",
       "Ultand"
+    ],
+    "disliked": [
+      "Buccar",
+      "Jasmine",
+      "Jester",
+      "Nydine",
+      "Tialla",
+      "Ursula",
+      "Zarcone"
     ]
   },
   {
@@ -192,6 +230,16 @@
       "Sha Lan",
       "Sirocco",
       "Theodora"
+    ],
+    "disliked": [
+      "Buccar",
+      "Dante",
+      "Diego",
+      "Io",
+      "Jester",
+      "Mu",
+      "Noctula",
+      "Zarcone"
     ]
   },
   {
@@ -227,6 +275,20 @@
       "Peter",
       "Ultand",
       "Ursula"
+    ],
+    "disliked": [
+      "Bonaventure",
+      "Fabio",
+      "Fianna",
+      "Gaitz",
+      "Goliath",
+      "Kiroc",
+      "Leda",
+      "Majide",
+      "Mikaela",
+      "Sirocco",
+      "Tobias",
+      "Yang Jie"
     ]
   },
   {
@@ -271,6 +333,16 @@
       "Sha Lan",
       "Theodora",
       "Ultand"
+    ],
+    "disliked": [
+      "Halvin",
+      "Inyoni",
+      "Jasmine",
+      "Mu",
+      "Nydine",
+      "Simon",
+      "Tialla",
+      "Ursula"
     ]
   },
   {
@@ -305,6 +377,22 @@
       "Olympia",
       "Simon",
       "Theodora"
+    ],
+    "disliked": [
+      "Buccar",
+      "Dante",
+      "Fabio",
+      "Fianna",
+      "Gaitz",
+      "Goliath",
+      "Io",
+      "Leda",
+      "Majide",
+      "Mikaela",
+      "Seteth",
+      "Sirocco",
+      "Yang Jie",
+      "Zarcone"
     ]
   },
   {
@@ -347,6 +435,16 @@
       "Ultand",
       "Ursula",
       "Yang Jie"
+    ],
+    "disliked": [
+      "Fianna",
+      "Io",
+      "Ludia",
+      "Ninae",
+      "Nuzzuo",
+      "Seteth",
+      "Sirocco",
+      "Tobias"
     ]
   },
   {
@@ -383,6 +481,19 @@
       "Peppe",
       "Sha Lan",
       "Ultand"
+    ],
+    "disliked": [
+      "Esmeralda",
+      "Ludia",
+      "Mu",
+      "Ninae",
+      "Nydine",
+      "Olympia",
+      "Seteth",
+      "Theodora",
+      "Tialla",
+      "Ursula",
+      "Zarcone"
     ]
   },
   {
@@ -426,6 +537,15 @@
       "Sha Lan",
       "Sirocco",
       "Theodora"
+    ],
+    "disliked": [
+      "Dante",
+      "Fianna",
+      "Halvin",
+      "Inyoni",
+      "Io",
+      "Mu",
+      "Simon"
     ]
   },
   {
@@ -472,6 +592,10 @@
       "Ultand",
       "Ursula",
       "Yang Jie"
+    ],
+    "disliked": [
+      "Fianna",
+      "Inyoni"
     ]
   }
 ]

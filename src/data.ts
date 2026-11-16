@@ -47,11 +47,12 @@ export const characters = charactersJson as Character[];
 export const gifts = giftsJson as Gift[];
 export const raven = ravenJson as Record<string, RavenEntry[]>;
 
-/** An inn dish and the units who love / like eating it. */
+/** An inn dish and the units who love / like / dislike eating it. */
 export interface Meal {
   name: string;
   loved: string[];
   liked: string[];
+  disliked: string[];
 }
 
 export const meals = mealsJson as Meal[];
@@ -179,6 +180,14 @@ const availableEarly = (c: Character, route: Route) => isRecruitable(c, route) &
 
 /** The selected route's lord is the player, so they never receive gifts. */
 export const isRouteLord = (c: Character, route: Route) => c.name === route;
+
+/**
+ * The lord of a different route. Lords can't recruit each other, and their
+ * Supports with one another only unlock in Part III, so they aren't meal
+ * guests for the route's lord.
+ */
+export const isOtherRouteLord = (c: Character, route: Route) =>
+  c.name !== route && (ROUTES as readonly string[]).includes(c.name);
 
 /**
  * Rank used for requirement sorting. Units that join automatically need

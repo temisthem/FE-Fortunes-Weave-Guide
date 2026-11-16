@@ -1,6 +1,6 @@
 <!--
-  Pick up to three inn dishes; each gets a row of units who love it and a row
-  of units who like it. The route picker is shared with Gifting and sets the
+  Pick up to three inn dishes; each gets rows of units who love, like and
+  dislike it. Other routes' lords are never listed. The route picker is shared with Gifting and sets the
   R·S tags. With the Meals "Only show recruitable units" setting on, the rows
   keep only units recruited with Renown/Support on that route (the ones with
   an R·S tag) plus that route's lord.
@@ -12,6 +12,7 @@
     characterByName,
     compareCharacters,
     hasRecruitTag,
+    isOtherRouteLord,
     isRouteLord,
     meals,
     requirementBadge,
@@ -53,10 +54,12 @@
   const byName = (names: string[]) =>
     names
       .map((n) => characterByName.get(n)!)
-      // The recruitable filter keeps units with an R·S tag, plus the route's lord.
+      // Other routes' lords never dine with this route's lord. The recruitable
+      // filter keeps units with an R·S tag, plus the route's lord.
       .filter(
         (c) =>
           c &&
+          !isOtherRouteLord(c, currentRoute.value) &&
           (!recruitableOnly || hasRecruitTag(c, currentRoute.value) || isRouteLord(c, currentRoute.value)),
       )
       .sort(compareCharacters(sort.value, currentRoute.value));
@@ -70,6 +73,7 @@
         reactions: [
           { label: 'Loves', characters: byName(m.loved) },
           { label: 'Likes', characters: byName(m.liked) },
+          { label: 'Dislikes', characters: byName(m.disliked) },
         ],
       })),
   );
@@ -111,7 +115,7 @@
       <thead>
         <tr>
           <Th class="hidden w-[18%] sm:table-cell">Meal</Th>
-          <Th>Who enjoys it</Th>
+          <Th>Reactions</Th>
         </tr>
       </thead>
       <tbody>
@@ -127,8 +131,9 @@
                     <span
                       class={cx(
                         text.label,
-                        'w-10 shrink-0 pt-2 text-[10px] md:w-12 md:pt-3 md:text-xs',
+                        'w-12 shrink-0 pt-2 text-[10px] md:w-16 md:pt-3 md:text-xs',
                         reaction.label === 'Loves' && 'text-rose-800',
+                        reaction.label === 'Dislikes' && 'text-slate-600',
                       )}
                     >
                       {reaction.label}
