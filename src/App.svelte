@@ -26,6 +26,7 @@
     keenGamer:
       'https://www.keengamer.com/articles/guides/fire-emblem-fortunes-weave-perfect-bird-time-answers-for-every-character/',
     gameRant: 'https://gamerant.com/fire-emblem-fortunes-weave-feed-the-pale-raven-correct-answers/',
+    raiderKingGifts: 'https://raiderking.com/fire-emblem-fortunes-weave-all-loved-gifts-guide/',
     fortunesWeaveGuide: 'https://fortunesweave.co.uk/characters',
   };
 
@@ -66,7 +67,7 @@
 
     <footer class={cx(text.small, 'ml-auto mt-auto pt-10 text-right text-amber-900')}>
       Portraits &amp; recruitment info courtesy of <Link href={SOURCES.wiki}>Fire Emblem Wiki</Link>. Gift data from
-      <Link href={SOURCES.game8}>Game8</Link>. Meal data from
+      <Link href={SOURCES.game8}>Game8</Link>, disliked gifts from <Link href={SOURCES.raiderKingGifts}>RaiderKing</Link>. Meal data from
       <Link href={SOURCES.fortunesWeaveGuide}>fortunesweave.co.uk</Link>. Pale Raven answers compiled from
       <Link href={SOURCES.raiderKing}>RaiderKing</Link>, <Link href={SOURCES.keenGamer}>KeenGamer</Link> &amp;
       <Link href={SOURCES.gameRant}>Game Rant</Link>.

@@ -23,6 +23,8 @@ export interface Character {
   slug: string;
   loved: string[];
   reallyLiked: string[];
+  /** Gifts they dislike (RaiderKing; known for only a few units). */
+  disliked: string[];
   likes: string;
   interests: string;
   recruit: Record<Route, RouteInfo> | null;

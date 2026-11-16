@@ -25,6 +25,9 @@
    "Village Recipes",
    "Wing Fletching"
   ],
+  "disliked": [
+   "Rancid Garum"
+  ],
   "likes": "Her parents, Bucephalus, virtuous men, talking about love",
   "interests": "Combat training, caring for her beloved steed",
   "recruit": {
@@ -71,6 +74,7 @@
    "Protection Figurine",
    "Tome from Away"
   ],
+  "disliked": [],
   "likes": "Hexagram divination, round objects",
   "interests": "Focusing her mind, martial-arts training",
   "recruit": {
@@ -101,6 +105,7 @@
    "Pack of Pastels",
    "The Works of Dante"
   ],
+  "disliked": [],
   "likes": "Dante's plays, board games, sewing, beautiful landscapes",
   "interests": "Classroom study, archery training",
   "recruit": null,
@@ -126,6 +131,7 @@
    "Southern Coffee",
    "Wing Fletching"
   ],
+  "disliked": [],
   "likes": "The Great August's tactics, up-and-coming young people",
   "interests": "Lecturing young people, reading",
   "recruit": {
@@ -176,6 +182,7 @@
    "Tome from Away",
    "Training Bracelet"
   ],
+  "disliked": [],
   "likes": "Smithing, salted meats, garum, well-crafted weapons",
   "interests": "Playing board games, reading",
   "recruit": {
@@ -220,6 +227,7 @@
    "Thick Foreign Tome",
    "Village Recipes"
   ],
+  "disliked": [],
   "likes": "Knowledge, dialogue with sages, learning about other countries",
   "interests": "Cooking, reciting poetry",
   "recruit": {
@@ -268,6 +276,7 @@
    "Young Ghosh",
    "Young Shosh"
   ],
+  "disliked": [],
   "likes": "Loyalty, training, dreaming about Leda's happiness",
   "interests": "Cooking, mentoring young people",
   "recruit": {
@@ -310,6 +319,7 @@
    "Crimson Ghosh",
    "Sharp Fishhook"
   ],
+  "disliked": [],
   "likes": "Physical training, catching animals",
   "interests": "Fishing, spear training",
   "recruit": {
@@ -352,6 +362,9 @@
    "Pack of Pastels",
    "Select Coffee",
    "Southern Coffee"
+  ],
+  "disliked": [
+   "Rancid Garum"
   ],
   "likes": "Sterling wares, sterling people, sterling meals",
   "interests": "Gathering information, making a name for herself",
@@ -402,6 +415,7 @@
    "Training Pillar",
    "Training Weights"
   ],
+  "disliked": [],
   "likes": "Serving Aurora's temple, patrolling",
   "interests": "Playing board games, classroom study",
   "recruit": null,
@@ -417,6 +431,7 @@
    "Sharp Dagger",
    "The Works of Dante"
   ],
+  "disliked": [],
   "likes": "The green armor he received from the king, beautiful women",
   "interests": "Researching military strategies, enjoying the arts",
   "recruit": {
@@ -462,6 +477,7 @@
    "Weak Cervi",
    "Yarc Milk"
   ],
+  "disliked": [],
   "likes": "Women (especially Anatolia), machines, good food, fighting",
   "interests": "Tinkering with machines, watching out for the weak",
   "recruit": {
@@ -525,6 +541,7 @@
    "Tales of the Arena",
    "The Works of Dante"
   ],
+  "disliked": [],
   "likes": "Herself, writing quickly, searching for dramatic subjects",
   "interests": "Studying people for research, seeing how others act",
   "recruit": {
@@ -581,6 +598,7 @@
    "Training Pillar",
    "Training Weights"
   ],
+  "disliked": [],
   "likes": "Walking in the forest, foraging medicinal herbs, Orchel",
   "interests": "Playing the flute, being devoted to Orchel",
   "recruit": {
@@ -646,6 +664,13 @@
    "Training Pillar",
    "Training Weights"
   ],
+  "disliked": [
+   "Common Coffee",
+   "Orgus Coffee",
+   "Select Coffee",
+   "Solomon Coffee",
+   "Southern Coffee"
+  ],
   "likes": "Objects of beauty, sweet things, his little sister",
   "interests": "Fighting the strong, meditating",
   "recruit": {
@@ -672,6 +697,7 @@
   "slug": "eshmel",
   "loved": [],
   "reallyLiked": [],
+  "disliked": [],
   "likes": "Ambitious people, people of great talent, small and unnamed flowers",
   "interests": "Playing board games",
   "recruit": null,
@@ -708,6 +734,7 @@
    "Training Bracelet",
    "Village Recipes"
   ],
+  "disliked": [],
   "likes": "Handsome men, throwing her trident, maintaining fishing gear",
   "interests": "Fishing, carving wooden dolls",
   "recruit": {
@@ -775,6 +802,7 @@
    "Sun Ghosh",
    "Young Ghosh"
   ],
+  "disliked": [],
   "likes": "Suffering, half-forgotten feelings, dissecting beautiful things",
   "interests": "Drawing, conversing with thoughtful people",
   "recruit": {
@@ -819,6 +847,9 @@
    "Select Coffee",
    "Skin Balm",
    "Southern Coffee"
+  ],
+  "disliked": [
+   "Saraminian Sweets"
   ],
   "likes": "Books of poetry, spicy foods, coffee, trustworthy people",
   "interests": "Praying, going to the theater",
@@ -883,6 +914,7 @@
    "Training Pillar",
    "Training Weights"
   ],
+  "disliked": [],
   "likes": "Tea from Sai, Ferghanan horses, dueling, calligraphy",
   "interests": "Brewing tea, practicing martial arts",
   "recruit": {
@@ -930,6 +962,7 @@
    "Wing Fletching",
    "Young Ghosh"
   ],
+  "disliked": [],
   "likes": "Rampaging, food, animals, smoking meat",
   "interests": "Training, competing as a gladiator",
   "recruit": {
@@ -1001,6 +1034,7 @@
    "Young Ghosh",
    "Young Shosh"
   ],
+  "disliked": [],
   "likes": "Booze, women, interesting people, young greenhorns",
   "interests": "Boasting",
   "recruit": {
@@ -1048,6 +1082,7 @@
    "Skin Balm",
    "Village Recipes"
   ],
+  "disliked": [],
   "likes": "Growing vegetables, shopping, street performing, cheering crowds",
   "interests": "Practicing magic tricks, housekeeping",
   "recruit": {
@@ -1114,6 +1149,7 @@
    "Tome from Away",
    "Weak Cervi"
   ],
+  "disliked": [],
   "likes": "Memories of happier times",
   "interests": "None",
   "recruit": null,
@@ -1135,6 +1171,7 @@
    "Training Bracelet",
    "Wing Fletching"
   ],
+  "disliked": [],
   "likes": "Her family and hometown, hunting, farm work, bow maintenance",
   "interests": "Archery training, being frugal",
   "recruit": {
@@ -1195,6 +1232,7 @@
    "Training Pillar",
    "Training Weights"
   ],
+  "disliked": [],
   "likes": "Chivalry, self-discipline, his beloved horse Rocinan",
   "interests": "Caring for his faithful steed, being quiet",
   "recruit": {
@@ -1260,6 +1298,7 @@
    "Training Pillar",
    "Training Weights"
   ],
+  "disliked": [],
   "likes": "Memories of her spouse, mercenary friends, trying to get rich",
   "interests": "Counting money, managing her mercenary group",
   "recruit": {
@@ -1319,6 +1358,7 @@
    "Southern Coffee",
    "Spirit Board Game"
   ],
+  "disliked": [],
   "likes": "The White-Maned Demon, seeing fear in his opponents' faces",
   "interests": "Slicing opponents into pieces, terrifying audiences",
   "recruit": {
@@ -1383,6 +1423,7 @@
    "Young Ghosh",
    "Young Shosh"
   ],
+  "disliked": [],
   "likes": "Thievery, the open sea, ships, obedient underlings",
   "interests": "Riding on ships, pirating",
   "recruit": {
@@ -1429,6 +1470,7 @@
   "slug": "klapka",
   "loved": [],
   "reallyLiked": [],
+  "disliked": [],
   "likes": "Mosa pride, his beloved wife, tales of heroism",
   "interests": "Disciplining his soldiers, collecting eastern porcelain",
   "recruit": null,
@@ -1464,6 +1506,9 @@
    "Sun Ghosh",
    "Training Bracelet",
    "Young Ghosh"
+  ],
+  "disliked": [
+   "Rancid Garum"
   ],
   "likes": "Memories of her parents, songs from home, gemstones, applause",
   "interests": "Tuning her vihuela, taking long horseback rides",
@@ -1507,6 +1552,7 @@
    "Village Recipes",
    "Wing Fletching"
   ],
+  "disliked": [],
   "likes": "Gold coins, gemstones, older men",
   "interests": "Being frugal, hunting",
   "recruit": {
@@ -1560,6 +1606,9 @@
    "Simple Pastries",
    "Training Pillar",
    "Training Weights"
+  ],
+  "disliked": [
+   "Rancid Garum"
   ],
   "likes": "Reliable people, sweets, her friends",
   "interests": "Sword training, fishing",
@@ -1634,6 +1683,7 @@
    "Training Bracelet",
    "Village Recipes"
   ],
+  "disliked": [],
   "likes": "Writing stories, appreciating art, talking about love and romance",
   "interests": "Reading adventure stories, going shopping",
   "recruit": {
@@ -1687,6 +1737,7 @@
    "Training Weights",
    "Wing Fletching"
   ],
+  "disliked": [],
   "likes": "Skygazing, dining with women",
   "interests": "Crafting throwing sticks, going on long rides",
   "recruit": {
@@ -1743,6 +1794,7 @@
    "Young Ghosh",
    "Young Shosh"
   ],
+  "disliked": [],
   "likes": "Booze, women, fighting, being strong",
   "interests": "Fighting with annoying people",
   "recruit": {
@@ -1818,6 +1870,7 @@
    "Wing Fletching",
    "Young Ghosh"
   ],
+  "disliked": [],
   "likes": "Moving her body, looking after others",
   "interests": "Cooking, baking, brewing coffee",
   "recruit": {
@@ -1873,6 +1926,7 @@
    "Weak Cervi",
    "Yarc Milk"
   ],
+  "disliked": [],
   "likes": "Concocting new medicines, her father, her mother, eating sweets",
   "interests": "Making medicinal elixirs, exercise",
   "recruit": {
@@ -1920,6 +1974,7 @@
    "Sharp Dagger",
    "Sun Ghosh"
   ],
+  "disliked": [],
   "likes": "The red armor he received from the king, being loyal",
   "interests": "All forms of battle training",
   "recruit": {
@@ -1953,6 +2008,7 @@
    "Training Bracelet",
    "Wing Fletching"
   ],
+  "disliked": [],
   "likes": "Physical activity, justice, fighting, good food",
   "interests": "Combat training, eating large amounts of food",
   "recruit": {
@@ -2007,6 +2063,7 @@
    "Eastern Black Silk",
    "Eastern Tea Leaves"
   ],
+  "disliked": [],
   "likes": "Pitiable people, talking to spirits, her keepsake necklace, skygazing",
   "interests": "Daydreaming, training",
   "recruit": {
@@ -2062,6 +2119,7 @@
    "Training Bracelet",
    "Wing Fletching"
   ],
+  "disliked": [],
   "likes": "The city and its people, brawling",
   "interests": "Sightseeing in the city, training",
   "recruit": {
@@ -2112,6 +2170,9 @@
    "Training Bracelet",
    "Training Pillar",
    "Training Weights"
+  ],
+  "disliked": [
+   "Tales of Adventure"
   ],
   "likes": "Tradition, honor, great power",
   "interests": "Conversing with forest spirits",
@@ -2170,6 +2231,7 @@
    "Training Weights",
    "Wing Fletching"
   ],
+  "disliked": [],
   "likes": "Honoring her duties, caring for orniuses",
   "interests": "Improving her combat abilities, reading",
   "recruit": {
@@ -2233,6 +2295,7 @@
    "Skin Balm",
    "Southern Coffee"
   ],
+  "disliked": [],
   "likes": "Song, dance, playing instruments, writing songs, attracting attention",
   "interests": "Caring for her instruments, studying music and dance",
   "recruit": {
@@ -2297,6 +2360,7 @@
    "Trader's Handbook",
    "Village Recipes"
   ],
+  "disliked": [],
   "likes": "Animals, listening to music, cleaning, doing laundry, cooking",
   "interests": "Caring for plants, reading",
   "recruit": {
@@ -2342,6 +2406,7 @@
    "Training Pillar",
    "Training Weights"
   ],
+  "disliked": [],
   "likes": "The spirits, the sun, his hometown",
   "interests": "Hunting, people watching in the city",
   "recruit": {
@@ -2408,6 +2473,7 @@
    "Wing Fletching",
    "Yarc Milk"
   ],
+  "disliked": [],
   "likes": "His mother's home cooking, ginji fruits",
   "interests": "Eating, watching clouds",
   "recruit": {
@@ -2469,6 +2535,7 @@
    "Trader's Handbook",
    "Village Recipes"
   ],
+  "disliked": [],
   "likes": "The teachings of Seiros, fishing, his daughter, hardworking people",
   "interests": "Writing fables, preaching, teaching",
   "recruit": {
@@ -2519,6 +2586,7 @@
    "Pastry Cookbook",
    "Select Coffee"
   ],
+  "disliked": [],
   "likes": "Delicious food, drinks, socializing",
   "interests": "Caring for Anatolia, studying",
   "recruit": {
@@ -2571,6 +2639,7 @@
    "Protection Figurine",
    "Solomon Coffee"
   ],
+  "disliked": [],
   "likes": "Fighting to the death, food from his hometown, womanizing",
   "interests": "Carving wooden figures, making preserves",
   "recruit": {
@@ -2642,6 +2711,7 @@
    "Young Ghosh",
    "Young Shosh"
   ],
+  "disliked": [],
   "likes": "The goddess Kalla, all women, reciting poetry",
   "interests": "Reading, drawing portraits",
   "recruit": {
@@ -2706,6 +2776,7 @@
    "Sharp Fishhook",
    "Yarc Milk"
   ],
+  "disliked": [],
   "likes": "Delicious food, the moment when food is served (and soon vanishes)",
   "interests": "Proselytizing about Solel, eating her fill",
   "recruit": {
@@ -2745,6 +2816,7 @@
    "Full Sewing Kit",
    "The Works of Dante"
   ],
+  "disliked": [],
   "likes": "Reading, sewing, training",
   "interests": "Python Technique fighting, attending to Aswan",
   "recruit": null,
@@ -2769,6 +2841,7 @@
    "Secret Ghosh",
    "Southern Ghosh"
   ],
+  "disliked": [],
   "likes": "Money, adventure, cinnamon, flirting, following his heart",
   "interests": "Making money, going on perilous adventures",
   "recruit": {
@@ -2799,6 +2872,26 @@
    "Eastern Black Silk",
    "Eastern Tea Leaves",
    "Horse-Grooming Kit"
+  ],
+  "disliked": [
+   "Eastern Love Story",
+   "Everyday Scenes",
+   "Herbal Recipe Guide",
+   "History of a Master",
+   "Home-Recipe Book",
+   "Morfis Almanac",
+   "Pastry Cookbook",
+   "Poems of the Greats",
+   "School Scandal",
+   "Strategy Manuscript",
+   "Tales of Adventure",
+   "Tales of the Arena",
+   "The Knight's Suitors",
+   "The Works of Dante",
+   "Thick Foreign Tome",
+   "Tome from Away",
+   "Trader's Handbook",
+   "Village Recipes"
   ],
   "likes": "Fighting, seeing the people of Saramis thrive",
   "interests": "Hunting, combat training",
@@ -2860,6 +2953,21 @@
    "Village Recipes",
    "Weak Cervi",
    "Yarc Milk"
+  ],
+  "disliked": [
+   "Coffee Pastries",
+   "Crimson Ghosh",
+   "Energizing Ghosh",
+   "Jade Ghosh",
+   "Mature Ghosh",
+   "Rancid Garum",
+   "Rustic Ghosh",
+   "Secret Ghosh",
+   "Southern Ghosh",
+   "Special \"Medicine\"",
+   "Sun Ghosh",
+   "Volcano Ghosh",
+   "Young Ghosh"
   ],
   "likes": "Libraries, gossiping about love, alone time, her grandfather",
   "interests": "Reading, playing board games",
@@ -2939,6 +3047,7 @@
    "Wing Fletching",
    "Young Ghosh"
   ],
+  "disliked": [],
   "likes": "Singing, interacting with others",
   "interests": "Hunting, solitary camping",
   "recruit": {
@@ -2980,6 +3089,7 @@
    "Tome from Away",
    "Weak Cervi"
   ],
+  "disliked": [],
   "likes": "Her kin, natural scenes",
   "interests": "Maintaining her weapons",
   "recruit": null,
@@ -3008,6 +3118,7 @@
    "Outdoor Cooking Set",
    "Pastry Cookbook"
   ],
+  "disliked": [],
   "likes": "Looking after others, her family, housekeeping, love stories",
   "interests": "Saving money, wandering around marketplaces",
   "recruit": {
@@ -3064,6 +3175,7 @@
    "Pack of Pastels",
    "Select Coffee"
   ],
+  "disliked": [],
   "likes": "Poetry, animals, flowers in the shade, counting money",
   "interests": "Reading, drawing pictures",
   "recruit": {
@@ -3143,6 +3255,7 @@
    "Village Recipes",
    "Young Ghosh"
   ],
+  "disliked": [],
   "likes": "Alcohol, tales of old, distant journeys, saving the weak",
   "interests": "Collecting liquors, giving sermons",
   "recruit": {
@@ -3193,6 +3306,13 @@
    "Strategy Manuscript",
    "Tales of Adventure",
    "Wing Fletching"
+  ],
+  "disliked": [
+   "Common Coffee",
+   "Orgus Coffee",
+   "Select Coffee",
+   "Solomon Coffee",
+   "Southern Coffee"
   ],
   "likes": "Money, violence, good women, vegetables, drinking with friends",
   "interests": "Tormenting the weak, pillaging",

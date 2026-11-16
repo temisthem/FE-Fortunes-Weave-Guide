@@ -164,7 +164,8 @@
 
       {#if character.loved.length + character.reallyLiked.length === 0}
         <EmptyState>No known favourite gifts yet.</EmptyState>
-      {:else}
+      {/if}
+      {#if character.loved.length + character.reallyLiked.length > 0}
         {#if character.loved.length > 0}
           <Section title="Loved gifts">
             <GiftGrid>
@@ -183,6 +184,15 @@
             </GiftGrid>
           </Section>
         {/if}
+      {/if}
+      {#if character.disliked.length > 0}
+        <Section title="Disliked gifts">
+          <GiftGrid>
+            {#each character.disliked as g (g)}
+              <GiftTile gift={giftByName.get(g)!} preference="Disliked" onclick={() => selectGift(g, true)} />
+            {/each}
+          </GiftGrid>
+        </Section>
       {/if}
     {:else}
       <EmptyState>Select a character to start!</EmptyState>

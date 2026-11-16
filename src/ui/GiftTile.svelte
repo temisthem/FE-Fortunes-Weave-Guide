@@ -1,11 +1,11 @@
-<!-- Gift card: dark tile with light text. Loved gifts get a gold border on a red tile. -->
+<!-- Gift card: dark tile with light text. Loved gifts get a gold border on a red tile; disliked ones a grey tile. -->
 <script lang="ts">
   import type { Gift, LikeCounts, Preference } from '@/data.ts';
   import { cx, radius, interaction } from '@/design/tokens.ts';
 
   type Props = {
     gift: Gift;
-    preference?: Preference;
+    preference?: Preference | 'Disliked';
     selected?: boolean;
     onclick: () => void;
     /** In a picker: grey out the tiles that aren't selected. */
@@ -25,7 +25,11 @@
     interaction.focus,
     'flex w-full flex-col justify-center border-2 px-2.5 py-1.5 text-left transition',
     likes && 'min-h-[3.25rem]',
-    preference === 'Loved' ? 'border-yellow-400 bg-rose-900' : 'border-amber-950 bg-amber-800',
+    preference === 'Loved'
+      ? 'border-yellow-400 bg-rose-900'
+      : preference === 'Disliked'
+        ? 'border-slate-700 bg-slate-600'
+        : 'border-amber-950 bg-amber-800',
     selected && interaction.selected,
     selectable && !selected && interaction.unselected,
     likes && likes.loved + likes.liked === 0 && 'opacity-60',
