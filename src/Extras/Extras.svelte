@@ -24,6 +24,6 @@
   {#if tab.value === 'characters'}
     <Characters />
   {:else}
-    <RecruitPlanner onBrowse={() => (tab.value = 'characters')} />
+    <RecruitPlanner />
   {/if}
 </div>

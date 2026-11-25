@@ -4,7 +4,6 @@
 -->
 <script lang="ts">
   import { type Character, canFavourite, characterByName, compareCharacters, requirementSummary } from '@/data.ts';
-  import Button from '@/design/Button.svelte';
   import EmptyState from '@/design/EmptyState.svelte';
   import Table from '@/design/Table.svelte';
   import Td from '@/design/Td.svelte';
@@ -16,8 +15,6 @@
   import CharacterLabel from '@/ui/CharacterLabel.svelte';
   import ClassLabel from '@/ui/ClassLabel.svelte';
   import RouteSelector from '@/ui/RouteSelector.svelte';
-
-  let { onBrowse }: { onBrowse: () => void } = $props();
 
   const planned = $derived(
     favouritesOf(currentRoute.value)
@@ -36,9 +33,6 @@
   <p class={cx(text.small, 'mx-auto mt-2 max-w-md text-center text-amber-900')}>
     In Characters, tap {currentRoute.value}'s portrait on a row to add that character here.
   </p>
-  <div class="mt-3 flex justify-center">
-    <Button size="sm" onclick={onBrowse}>Browse characters</Button>
-  </div>
 {:else}
   <div class="mt-4">
     <Table>

@@ -1,10 +1,19 @@
 <!--
-  Every character with their class and which lords have favourited them. Tap a
+  Every character you can recruit with Renown/Support on at least one route,
+  and which lords have favourited them. Tap a
   row to expand it into the recruitment requirements on each route, plus a
   shortcut to their gifts.
 -->
 <script lang="ts">
-  import { ROUTES, characterByName, characters, getRouteInfo, portrait, requirementSummary } from '@/data.ts';
+  import {
+    ROUTES,
+    characterByName,
+    characters,
+    getRouteInfo,
+    hasRecruitTag,
+    portrait,
+    requirementSummary,
+  } from '@/data.ts';
   import Button from '@/design/Button.svelte';
   import Table from '@/design/Table.svelte';
   import Td from '@/design/Td.svelte';
@@ -12,11 +21,12 @@
   import { cx, interaction, radius, text } from '@/design/tokens.ts';
   import { openGiftsFor } from '@/Gifting/state.svelte.ts';
   import CharacterLabel from '@/ui/CharacterLabel.svelte';
-  import ClassLabel from '@/ui/ClassLabel.svelte';
   import FavouriteToggles from '@/ui/FavouriteToggles.svelte';
   import GiftIcon from '@/ui/GiftIcon.svelte';
 
-  const sorted = [...characters].sort((a, b) => a.name.localeCompare(b.name));
+  const sorted = characters
+    .filter((c) => ROUTES.some((r) => hasRecruitTag(c, r)))
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   let expanded: string[] = $state([]);
 
@@ -26,14 +36,13 @@
 </script>
 
 <p class={cx(text.small, 'mx-auto mb-3 max-w-4xl text-center text-amber-900')}>
-  Tap a row for recruitment details. Tap a lord to favourite that character for the Recruit Planner.
+  Tap a row for recruitment details.
 </p>
 
 <Table striped={false}>
   <thead>
     <tr>
       <Th>Character</Th>
-      <Th class="hidden sm:table-cell sm:w-[28%]">Class</Th>
       <Th class="w-[118px] sm:w-[150px]">Favourited</Th>
     </tr>
   </thead>
@@ -62,18 +71,14 @@
             >
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
             </svg>
-            <CharacterLabel character={c}>
-              <!-- On phones the Class column is hidden, so show the class here. -->
-              <span class={cx(text.caption, 'block truncate text-amber-900 sm:hidden')}>{c.class ?? '—'}</span>
-            </CharacterLabel>
+            <CharacterLabel character={c} />
           </button>
         </Td>
-        <Td class="hidden sm:table-cell"><ClassLabel name={c.class} /></Td>
         <Td><FavouriteToggles character={c} /></Td>
       </tr>
       {#if open}
         <tr class={cx(shade)}>
-          <td colspan="3" class="border-b border-amber-900/20 px-2 pb-3 pt-1 sm:px-3">
+          <td colspan="2" class="border-b border-amber-900/20 px-2 pb-3 pt-1 sm:px-3">
             {#if c.recruit}
               <div class="grid grid-cols-2 gap-2 md:grid-cols-4">
                 {#each ROUTES as r (r)}
