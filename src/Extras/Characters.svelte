@@ -35,10 +35,6 @@
   };
 </script>
 
-<p class={cx(text.small, 'mx-auto mb-3 max-w-4xl text-center text-amber-900')}>
-  Tap a row for recruitment details.
-</p>
-
 <Table striped={false}>
   <thead>
     <tr>

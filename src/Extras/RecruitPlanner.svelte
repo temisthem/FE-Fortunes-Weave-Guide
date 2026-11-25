@@ -13,7 +13,6 @@
   import { favouritesOf, toggleFavourite } from '@/favourites.svelte.ts';
   import { currentRoute } from '@/route.svelte.ts';
   import CharacterLabel from '@/ui/CharacterLabel.svelte';
-  import ClassLabel from '@/ui/ClassLabel.svelte';
   import RouteSelector from '@/ui/RouteSelector.svelte';
 
   const planned = $derived(
@@ -46,10 +45,9 @@
       <thead>
         <tr>
           <Th>Character</Th>
-          <Th class="hidden w-[20%] sm:table-cell">Class</Th>
           <Th class="w-[17%] sm:w-[11%]">Renown Lv</Th>
           <Th class="w-[17%] sm:w-[11%]">Support Lv</Th>
-          <Th class="hidden w-[30%] sm:table-cell">Requirement</Th>
+          <Th class="hidden w-[36%] sm:table-cell">Requirement</Th>
           <Th class="w-10 sm:w-12"><span class="sr-only">Remove</span></Th>
         </tr>
       </thead>
@@ -59,13 +57,12 @@
           <tr>
             <Td>
               <CharacterLabel character={c}>
-                <!-- On phones the Class and Requirement columns are hidden, so show them here. -->
+                <!-- On phones the Requirement column is hidden, so show it here. -->
                 <span class={cx(text.caption, 'block text-amber-900 sm:hidden')}>
-                  {c.class ?? '—'} · {req.details || 'No other requirement'}
+                  {req.details || 'No other requirement'}
                 </span>
               </CharacterLabel>
             </Td>
-            <Td class="hidden sm:table-cell"><ClassLabel name={c.class} /></Td>
             <Td tone="center">{req.renown}</Td>
             <Td tone="center">{req.support}</Td>
             <Td tone="muted" class="hidden sm:table-cell">{req.details || 'None'}</Td>

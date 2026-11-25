@@ -30,7 +30,6 @@
     gameRant: 'https://gamerant.com/fire-emblem-fortunes-weave-feed-the-pale-raven-correct-answers/',
     raiderKingGifts: 'https://raiderking.com/fire-emblem-fortunes-weave-all-loved-gifts-guide/',
     fortunesWeaveGuide: 'https://fortunesweave.co.uk/characters',
-    wikiClasses: 'https://fireemblemwiki.org/wiki/List_of_classes_in_Fire_Emblem:_Fortune%27s_Weave',
     developer: 'https://github.com/temisthem',
   };
 
@@ -38,8 +37,7 @@
     { what: 'Portraits and recruitment info', from: [{ name: 'Fire Emblem Wiki', href: SOURCES.wiki }] },
     { what: 'Gift data', from: [{ name: 'Game8', href: SOURCES.game8 }] },
     { what: 'Disliked gifts', from: [{ name: 'RaiderKing', href: SOURCES.raiderKingGifts }] },
-    { what: 'Meal data and classes', from: [{ name: 'fortunesweave.co.uk', href: SOURCES.fortunesWeaveGuide }] },
-    { what: 'Class icons', from: [{ name: 'Fire Emblem Wiki', href: SOURCES.wikiClasses }] },
+    { what: 'Meal data', from: [{ name: 'fortunesweave.co.uk', href: SOURCES.fortunesWeaveGuide }] },
     {
       what: 'Pale Raven answers',
       from: [

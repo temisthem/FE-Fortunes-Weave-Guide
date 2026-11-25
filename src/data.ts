@@ -90,10 +90,6 @@ export const fansOf = (gift: string) =>
 
 export const portrait = (slug: string) => `${import.meta.env.BASE_URL}portraits/${slug}.webp`;
 
-/** Map sprite for a class (Fire Emblem Wiki), e.g. "Light Cavalry" → classes/light-cavalry.png. */
-export const classIcon = (className: string) =>
-  `${import.meta.env.BASE_URL}classes/${className.toLowerCase().replace(/[^a-z]+/g, '-')}.png`;
-
 export const getRouteInfo = (c: Character, route: Route): RouteInfo | null =>
   c.recruit ? c.recruit[route] : null;
 
