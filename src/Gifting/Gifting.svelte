@@ -28,10 +28,12 @@
   import ToggleGroup from '@/design/ToggleGroup.svelte';
   import Toolbar from '@/design/Toolbar.svelte';
   import { cx, interaction, text } from '@/design/tokens.ts';
+  import { mode, pending, selectedCharacter } from '@/Gifting/state.svelte.ts';
   import { currentRoute } from '@/route.svelte.ts';
   import { revealAfterUpdate } from '@/scroll.ts';
-  import { settings } from '@/settings.svelte.ts';
+  import { giftingFilters, settings } from '@/settings.svelte.ts';
   import { stored } from '@/stored.svelte.ts';
+  import { onMount } from 'svelte';
   import CharacterGrid from '@/ui/CharacterGrid.svelte';
   import CharacterIcon from '@/ui/CharacterIcon.svelte';
   import GiftGrid from '@/ui/GiftGrid.svelte';
@@ -40,26 +42,31 @@
   import RouteSelector from '@/ui/RouteSelector.svelte';
   import SortSelector from '@/ui/SortSelector.svelte';
 
-  type GiftMode = 'character' | 'gift';
-
   const MODE_OPTIONS = [
     { value: 'character', label: 'By Character' },
     { value: 'gift', label: 'By Gift' },
   ] as const;
 
-  const mode = stored<GiftMode>('gift.mode', 'character', (v) => ['character', 'gift'].includes(v as string));
   const route = currentRoute;
   const sort = stored<SortKey>('gift.sort', 'name', (v) => Object.keys(SORT_LABELS).includes(v as string));
-  const selectedCharacter = stored<string | null>('gift.character', null);
   const selectedGift = stored<string | null>('gift.gift', null);
   const category = stored<string>('gift.category', 'All');
   const search = stored<string>('gift.search', '');
 
   let results: HTMLDivElement | undefined = $state();
 
+  // Arrived from another screen (Extras → Characters): show the character's gifts.
+  onMount(() => {
+    if (!pending.reveal) return;
+    pending.reveal = false;
+    revealAfterUpdate(results);
+  });
+
+  const filters = $derived(giftingFilters());
+
   const sortedCharacters = $derived(
     characters
-      .filter((c) => showInGifting(c, route.value, settings.recruitableOnly.value))
+      .filter((c) => showInGifting(c, route.value, filters))
       .sort(compareCharacters(sort.value, route.value)),
   );
   const character = $derived(selectedCharacter.value ? characterByName.get(selectedCharacter.value) : undefined);
@@ -99,7 +106,7 @@
   const fans = $derived(
     gift
       ? fansOf(gift.name)
-          .filter((f) => showInGifting(f.character, route.value, settings.recruitableOnly.value))
+          .filter((f) => showInGifting(f.character, route.value, filters))
           .sort((a, b) => compareCharacters(sort.value, route.value)(a.character, b.character))
       : [],
   );
@@ -141,7 +148,7 @@
             <GiftTile
               gift={g}
               selectable
-              likes={likesOnRoute(g.name, route.value, settings.recruitableOnly.value)}
+              likes={likesOnRoute(g.name, route.value, filters)}
               selected={selectedGift.value === g.name}
               onclick={() => selectGift(g.name)}
             />

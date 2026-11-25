@@ -2,9 +2,11 @@
 
 Select a character to see every gift they love, or select a gift to see everyone who loves it, along with the Renown and Support levels needed to recruit them on your route.
 
-See every inn meal along with who loves it and who likes it.
+Pick up to three inn meals to see who loves, likes or dislikes each one.
 
 Select a character to see every Pale Raven remark and the correct reaction for a Perfect Bird Time.
+
+In Extras, browse every character's class and recruitment requirements, and favourite the ones each lord plans to recruit to build a Recruit Planner.
 
 No more flipping between gift lists and recruitment tables!
 

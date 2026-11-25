@@ -21,6 +21,8 @@ export interface RouteInfo {
 export interface Character {
   name: string;
   slug: string;
+  /** Class they join as (fortunesweave.co.uk); null when no source names it. */
+  class: string | null;
   loved: string[];
   reallyLiked: string[];
   /** Gifts they dislike (RaiderKing; known for only a few units). */
@@ -88,6 +90,10 @@ export const fansOf = (gift: string) =>
 
 export const portrait = (slug: string) => `${import.meta.env.BASE_URL}portraits/${slug}.webp`;
 
+/** Map sprite for a class (Fire Emblem Wiki), e.g. "Light Cavalry" → classes/light-cavalry.png. */
+export const classIcon = (className: string) =>
+  `${import.meta.env.BASE_URL}classes/${className.toLowerCase().replace(/[^a-z]+/g, '-')}.png`;
+
 export const getRouteInfo = (c: Character, route: Route): RouteInfo | null =>
   c.recruit ? c.recruit[route] : null;
 
@@ -107,15 +113,32 @@ export type LikeCounts = { loved: number; liked: number };
 export const hasRecruitTag = (c: Character, route: Route) => getRouteInfo(c, route)?.status === 'recruit';
 
 /**
- * Units listed in Gifting: never the route's lord (the player), and with
- * `recruitableOnly` only the units that have an R·S tag.
+ * Units you always have to recruit yourself: recruitable with Renown/Support
+ * on at least one route, and never joining automatically on any route. Lords,
+ * auto-joiners, story joiners and guest-only units are left out.
  */
-export const showInGifting = (c: Character, route: Route, recruitableOnly: boolean) =>
-  !isRouteLord(c, route) && (!recruitableOnly || hasRecruitTag(c, route));
+export const alwaysNeedsRecruiting = (c: Character) => {
+  const infos = c.recruit ? Object.values(c.recruit) : [];
+  return infos.some((i) => i.status === 'recruit') && !infos.some((i) => i.status === 'auto');
+};
+
+/** The Gifting settings that narrow which units are listed. */
+export type GiftingFilters = {
+  /** Only units with an R·S tag on the selected route. */
+  recruitableOnly: boolean;
+  /** Only units that never join automatically on any route (see `alwaysNeedsRecruiting`). */
+  neverAutoOnly: boolean;
+};
+
+/** Units listed in Gifting: never the route's lord (the player), narrowed by the Gifting settings. */
+export const showInGifting = (c: Character, route: Route, filters: GiftingFilters) =>
+  !isRouteLord(c, route) &&
+  (!filters.recruitableOnly || hasRecruitTag(c, route)) &&
+  (!filters.neverAutoOnly || alwaysNeedsRecruiting(c));
 
 /** How many of the units listed in Gifting love / like a gift (matches the "Who likes it" table). */
-export const likesOnRoute = (gift: string, route: Route, recruitableOnly: boolean): LikeCounts => {
-  const fans = fansOf(gift).filter((f) => showInGifting(f.character, route, recruitableOnly));
+export const likesOnRoute = (gift: string, route: Route, filters: GiftingFilters): LikeCounts => {
+  const fans = fansOf(gift).filter((f) => showInGifting(f.character, route, filters));
   const loved = fans.filter((f) => f.preference === 'Loved').length;
   return { loved, liked: fans.length - loved };
 };
@@ -150,6 +173,12 @@ export const requirementSummary = (c: Character, route: Route) => {
     details: (info.conditions ?? []).join(' · '),
   };
 };
+
+/**
+ * Whether a lord can plan to recruit this unit: they're recruited with
+ * Renown/Support on that lord's route (they have an R·S tag there).
+ */
+export const canFavourite = hasRecruitTag;
 
 // ---- sorting -------------------------------------------------------------
 

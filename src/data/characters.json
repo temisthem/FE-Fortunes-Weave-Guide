@@ -2,6 +2,7 @@
  {
   "name": "Alexandra",
   "slug": "alexandra",
+  "class": "Wing Soldier",
   "loved": [
    "Eastern Earrings",
    "Strategy Manuscript",
@@ -60,6 +61,7 @@
  {
   "name": "Anatolia",
   "slug": "anatolia",
+  "class": "Ovate",
   "loved": [
    "History of a Master",
    "Morfis Almanac",
@@ -99,6 +101,7 @@
  {
   "name": "Aswan",
   "slug": "aswan",
+  "class": "Sniper",
   "loved": [],
   "reallyLiked": [
    "Full Sewing Kit",
@@ -114,6 +117,7 @@
  {
   "name": "Benditz",
   "slug": "benditz",
+  "class": "Charioteer",
   "loved": [
    "Eastern Black Silk",
    "Eastern Earrings",
@@ -164,6 +168,7 @@
  {
   "name": "Bertrand",
   "slug": "bertrand",
+  "class": "Warrior",
   "loved": [
    "Dual Fish Knives",
    "Ebony Game Board",
@@ -206,6 +211,7 @@
  {
   "name": "Bonaventure",
   "slug": "bonaventure",
+  "class": "Noble",
   "loved": [
    "Crimson Ghosh",
    "Strategy Manuscript",
@@ -252,6 +258,7 @@
  {
   "name": "Buccar",
   "slug": "buccar",
+  "class": "Commoner",
   "loved": [
    "Crimson Ghosh",
    "Dual Fish Knives",
@@ -313,6 +320,7 @@
  {
   "name": "Cai",
   "slug": "cai",
+  "class": "Commoner",
   "loved": [],
   "reallyLiked": [
    "Arrowhead Gem",
@@ -344,6 +352,7 @@
  {
   "name": "Catania",
   "slug": "catania",
+  "class": "Commoner",
   "loved": [
    "Eastern Black Silk",
    "Eastern Earrings",
@@ -398,6 +407,7 @@
  {
   "name": "Centurio",
   "slug": "centurio",
+  "class": "Dreadnought",
   "loved": [
    "Ceremonial Spear",
    "Eastern Board Game",
@@ -424,6 +434,7 @@
  {
   "name": "Creek",
   "slug": "creek",
+  "class": "Bardinger",
   "loved": [
    "History of a Master"
   ],
@@ -454,6 +465,7 @@
  {
   "name": "Dadao",
   "slug": "dadao",
+  "class": "Commoner",
   "loved": [
    "Poems of the Greats",
    "Strategy Manuscript",
@@ -522,6 +534,7 @@
  {
   "name": "Dante",
   "slug": "dante",
+  "class": "Commoner",
   "loved": [
    "History of a Master",
    "Morfis Almanac",
@@ -586,6 +599,7 @@
  {
   "name": "Diego",
   "slug": "diego",
+  "class": null,
   "loved": [
    "Arrowhead Gem",
    "Decorative Arrows"
@@ -647,6 +661,7 @@
  {
   "name": "Dietrich",
   "slug": "dietrich",
+  "class": "Commoner",
   "loved": [],
   "reallyLiked": [
    "Arrowhead Gem",
@@ -695,6 +710,7 @@
  {
   "name": "Eshmel",
   "slug": "eshmel",
+  "class": "Guardian",
   "loved": [],
   "reallyLiked": [],
   "disliked": [],
@@ -706,6 +722,7 @@
  {
   "name": "Esmeralda",
   "slug": "esmeralda",
+  "class": "Commoner",
   "loved": [
    "Eastern Earrings",
    "Tales of Adventure"
@@ -774,6 +791,7 @@
  {
   "name": "Fabio",
   "slug": "fabio",
+  "class": "Commoner",
   "loved": [
    "Tales of Adventure",
    "Volcano Ghosh"
@@ -834,6 +852,7 @@
  {
   "name": "Fianna",
   "slug": "fianna",
+  "class": "Commoner",
   "loved": [
    "Arrowhead Gem",
    "Blue-Rose Bouquet",
@@ -895,6 +914,7 @@
  {
   "name": "Gaitz",
   "slug": "gaitz",
+  "class": "Commoner",
   "loved": [
    "Ceremonial Spear",
    "Flower Painting",
@@ -941,6 +961,7 @@
  {
   "name": "Goliath",
   "slug": "goliath",
+  "class": "Commoner",
   "loved": [
    "Strategy Manuscript",
    "Volcano Ghosh"
@@ -1008,6 +1029,7 @@
  {
   "name": "Guzran",
   "slug": "guzran",
+  "class": "Gladiator",
   "loved": [
    "Strategy Manuscript",
    "Tales of Adventure",
@@ -1065,6 +1087,7 @@
  {
   "name": "Halvin",
   "slug": "halvin",
+  "class": "Commoner",
   "loved": [
    "Eastern Black Silk",
    "Eastern Earrings"
@@ -1127,6 +1150,7 @@
  {
   "name": "Hong Hua",
   "slug": "hong-hua",
+  "class": "Ovate",
   "loved": [
    "Fodlan Tea",
    "History of a Master",
@@ -1158,6 +1182,7 @@
  {
   "name": "Inyoni",
   "slug": "inyoni",
+  "class": "Archer",
   "loved": [
    "Strategy Manuscript",
    "Tales of Adventure"
@@ -1216,6 +1241,7 @@
  {
   "name": "Io",
   "slug": "io",
+  "class": "Light Cavalry",
   "loved": [],
   "reallyLiked": [
    "Arrowhead Gem",
@@ -1277,6 +1303,7 @@
  {
   "name": "Jasmine",
   "slug": "jasmine",
+  "class": "Soldier",
   "loved": [],
   "reallyLiked": [
    "Arrowhead Gem",
@@ -1343,6 +1370,7 @@
  {
   "name": "Jester",
   "slug": "jester",
+  "class": "Commoner",
   "loved": [
    "Arrowhead Gem"
   ],
@@ -1403,6 +1431,7 @@
  {
   "name": "Kiroc",
   "slug": "kiroc",
+  "class": "Hunter",
   "loved": [
    "Arrowhead Gem",
    "Crimson Ghosh",
@@ -1468,6 +1497,7 @@
  {
   "name": "Klapka",
   "slug": "klapka",
+  "class": "Guardian",
   "loved": [],
   "reallyLiked": [],
   "disliked": [],
@@ -1479,6 +1509,7 @@
  {
   "name": "Leda",
   "slug": "leda",
+  "class": "Hunter",
   "loved": [
    "Eastern Black Silk",
    "Eastern Earrings",
@@ -1534,6 +1565,7 @@
  {
   "name": "Lilian",
   "slug": "lilian",
+  "class": "Hunter",
   "loved": [
    "Eastern Earrings",
    "Eastern Tea Leaves",
@@ -1592,6 +1624,7 @@
  {
   "name": "Loretta",
   "slug": "loretta",
+  "class": "Commoner",
   "loved": [],
   "reallyLiked": [
    "Arrowhead Gem",
@@ -1655,6 +1688,7 @@
  {
   "name": "Ludia",
   "slug": "ludia",
+  "class": "Noble",
   "loved": [
    "Eastern Black Silk",
    "Eastern Earrings",
@@ -1728,6 +1762,7 @@
  {
   "name": "Lysander",
   "slug": "lysander",
+  "class": "Ornius Rider",
   "loved": [],
   "reallyLiked": [
    "Dagda Beard Grass",
@@ -1777,6 +1812,7 @@
  {
   "name": "Majide",
   "slug": "majide",
+  "class": "Commoner",
   "loved": [
    "Arrowhead Gem",
    "Crimson Ghosh",
@@ -1839,6 +1875,7 @@
  {
   "name": "Mikaela",
   "slug": "mikaela",
+  "class": "Gladiator",
   "loved": [
    "Tales of Adventure",
    "Volcano Ghosh"
@@ -1910,6 +1947,7 @@
  {
   "name": "Mu",
   "slug": "mu",
+  "class": "Commoner",
   "loved": [
    "Candy Crystals",
    "History of a Master",
@@ -1966,6 +2004,7 @@
  {
   "name": "Nathan",
   "slug": "nathan",
+  "class": "Bardinger",
   "loved": [
    "History of a Master"
   ],
@@ -1997,6 +2036,7 @@
  {
   "name": "Nezha",
   "slug": "nezha",
+  "class": "Commoner",
   "loved": [
    "Strategy Manuscript",
    "Tales of Adventure"
@@ -2053,6 +2093,7 @@
  {
   "name": "Ninae",
   "slug": "ninae",
+  "class": "Commoner",
   "loved": [
    "Strategy Manuscript",
    "Tales of Adventure"
@@ -2108,6 +2149,7 @@
  {
   "name": "Noctula",
   "slug": "noctula",
+  "class": "Commoner",
   "loved": [
    "Strategy Manuscript",
    "Tales of Adventure"
@@ -2152,6 +2194,7 @@
  {
   "name": "Nuzzuo",
   "slug": "nuzzuo",
+  "class": "Hunter",
   "loved": [
    "Arrowhead Gem",
    "Dual Fish Knives"
@@ -2218,6 +2261,7 @@
  {
   "name": "Nydine",
   "slug": "nydine",
+  "class": "Commoner",
   "loved": [
    "Strategy Manuscript",
    "Tales of Adventure"
@@ -2276,6 +2320,7 @@
  {
   "name": "Olympia",
   "slug": "olympia",
+  "class": "Priest",
   "loved": [
    "Blue-Rose Bouquet",
    "Eastern Earrings",
@@ -2335,6 +2380,7 @@
  {
   "name": "Orchel",
   "slug": "orchel",
+  "class": null,
   "loved": [
    "Dual Fish Knives",
    "History of a Master",
@@ -2385,6 +2431,7 @@
  {
   "name": "Peppe",
   "slug": "peppe",
+  "class": "Noble",
   "loved": [
    "Arrowhead Gem"
   ],
@@ -2445,6 +2492,7 @@
  {
   "name": "Peter",
   "slug": "peter",
+  "class": "Commoner",
   "loved": [
    "Arrowhead Gem",
    "Candy Crystals",
@@ -2513,6 +2561,7 @@
  {
   "name": "Seteth",
   "slug": "seteth",
+  "class": "Soldier",
   "loved": [
    "Poems of the Greats",
    "Strategy Manuscript",
@@ -2575,6 +2624,7 @@
  {
   "name": "Sha Lan",
   "slug": "sha-lan",
+  "class": "Commoner",
   "loved": [
    "Special \"Medicine\""
   ],
@@ -2625,6 +2675,7 @@
  {
   "name": "Simon",
   "slug": "simon",
+  "class": "Commoner",
   "loved": [
    "Ceremonial Spear",
    "History of a Master",
@@ -2688,6 +2739,7 @@
  {
   "name": "Sirocco",
   "slug": "sirocco",
+  "class": "Commoner",
   "loved": [
    "Arrowhead Gem",
    "Crimson Ghosh",
@@ -2751,6 +2803,7 @@
  {
   "name": "Sofia",
   "slug": "sofia",
+  "class": "Commoner",
   "loved": [
    "Blue-Rose Bouquet",
    "Dual Fish Knives",
@@ -2809,6 +2862,7 @@
  {
   "name": "Tahonia",
   "slug": "tahonia",
+  "class": "Battlemaster",
   "loved": [
    "History of a Master"
   ],
@@ -2825,6 +2879,7 @@
  {
   "name": "Talimun",
   "slug": "talimun",
+  "class": "Ovate",
   "loved": [
    "Blue-Rose Bouquet",
    "Crimson Ghosh",
@@ -2866,6 +2921,7 @@
  {
   "name": "Theodora",
   "slug": "theodora",
+  "class": "Noble",
   "loved": [],
   "reallyLiked": [
    "Dagda Beard Grass",
@@ -2917,6 +2973,7 @@
  {
   "name": "Tialla",
   "slug": "tialla",
+  "class": "Commoner",
   "loved": [
    "Eastern Board Game",
    "Ebony Game Board",
@@ -3014,6 +3071,7 @@
  {
   "name": "Tobias",
   "slug": "tobias",
+  "class": "Noble",
   "loved": [
    "Strategy Manuscript",
    "Tales of Adventure",
@@ -3070,6 +3128,7 @@
  {
   "name": "Troy",
   "slug": "troy",
+  "class": "War Monk",
   "loved": [
    "History of a Master",
    "Morfis Almanac",
@@ -3098,6 +3157,7 @@
  {
   "name": "Ultand",
   "slug": "ultand",
+  "class": "Diviner",
   "loved": [
    "History of a Master",
    "Legendary Garum",
@@ -3159,6 +3219,7 @@
  {
   "name": "Ursula",
   "slug": "ursula",
+  "class": "Commoner",
   "loved": [
    "Flower Painting",
    "History of a Master",
@@ -3221,6 +3282,7 @@
  {
   "name": "Yang Jie",
   "slug": "yang-jie",
+  "class": "Diviner",
   "loved": [
    "Eastern Tea Leaves",
    "Poems of the Greats",
@@ -3295,6 +3357,7 @@
  {
   "name": "Zarcone",
   "slug": "zarcone",
+  "class": "Commoner",
   "loved": [
    "Eastern Tea Leaves"
   ],
