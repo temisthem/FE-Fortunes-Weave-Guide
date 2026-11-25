@@ -3,7 +3,7 @@
   recruit each on that lord's route. Lowest Renown Lv first.
 -->
 <script lang="ts">
-  import { type Character, canFavourite, characterByName, compareCharacters, requirementSummary } from '@/data.ts';
+  import { type Character, canFavourite, characterByName, getRouteInfo, requirementSummary } from '@/data.ts';
   import EmptyState from '@/design/EmptyState.svelte';
   import Table from '@/design/Table.svelte';
   import Td from '@/design/Td.svelte';
@@ -20,7 +20,14 @@
     favouritesOf(currentRoute.value)
       .map((n) => characterByName.get(n))
       .filter((c): c is Character => c !== undefined && canFavourite(c, currentRoute.value))
-      .sort(compareCharacters('renown', currentRoute.value)),
+      .sort((a, b) => {
+        const ra = getRouteInfo(a, currentRoute.value)!;
+        const rb = getRouteInfo(b, currentRoute.value)!;
+        // Renown Lv ascending, then Support Lv, then name.
+        return (
+          (ra.renown ?? 99) - (rb.renown ?? 99) || (ra.support ?? 99) - (rb.support ?? 99) || a.name.localeCompare(b.name)
+        );
+      }),
   );
 </script>
 
@@ -62,7 +69,8 @@
             <Td tone="center">{req.renown}</Td>
             <Td tone="center">{req.support}</Td>
             <Td tone="muted" class="hidden sm:table-cell">{req.details || 'None'}</Td>
-            <Td tone="center">
+            <!-- No side padding: the 28px button is wider than the padded cell on desktop. -->
+            <Td tone="center" class="!px-0">
               <button
                 type="button"
                 aria-label={`Remove ${c.name} from ${currentRoute.value}'s plan`}
