@@ -124,13 +124,24 @@ export type GiftingFilters = {
   recruitableOnly: boolean;
   /** Only units that never join automatically on any route (see `alwaysNeedsRecruiting`). */
   neverAutoOnly: boolean;
+  /** The route lord's Recruit Planner list when "Hide unplanned recruits" is on; null when off. */
+  planned: readonly string[] | null;
 };
+
+/**
+ * With the "Hide unplanned recruits" setting on (`planned` is the lord's
+ * Recruit Planner list), units recruited with Renown/Support on this route
+ * are kept only if they're in the plan. Everyone else is unaffected.
+ */
+export const isPlannedOrNotRecruit = (c: Character, route: Route, planned: readonly string[] | null) =>
+  !planned || !hasRecruitTag(c, route) || planned.includes(c.name);
 
 /** Units listed in Gifting: never the route's lord (the player), narrowed by the Gifting settings. */
 export const showInGifting = (c: Character, route: Route, filters: GiftingFilters) =>
   !isRouteLord(c, route) &&
   (!filters.recruitableOnly || hasRecruitTag(c, route)) &&
-  (!filters.neverAutoOnly || alwaysNeedsRecruiting(c));
+  (!filters.neverAutoOnly || alwaysNeedsRecruiting(c)) &&
+  isPlannedOrNotRecruit(c, route, filters.planned);
 
 /** How many of the units listed in Gifting love / like a gift (matches the "Who likes it" table). */
 export const likesOnRoute = (gift: string, route: Route, filters: GiftingFilters): LikeCounts => {

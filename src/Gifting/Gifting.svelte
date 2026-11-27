@@ -62,7 +62,7 @@
     revealAfterUpdate(results);
   });
 
-  const filters = $derived(giftingFilters());
+  const filters = $derived(giftingFilters(route.value));
 
   const sortedCharacters = $derived(
     characters

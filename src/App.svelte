@@ -48,7 +48,7 @@
     },
   ];
 
-  // Grouped by the screen they affect. Pale Raven has no settings of its own.
+  // Grouped by the screen they affect. General ones apply across screens.
   const settingSections = [
     {
       title: 'General',
@@ -56,6 +56,7 @@
         { label: 'Show names', setting: settings.names },
         { label: 'Show route names', setting: settings.routeNames },
         { label: 'Show Renown/Support tags', setting: settings.badges },
+        { label: 'Hide recruits not in the Recruit Planner', setting: settings.plannedOnly },
       ],
     },
     {

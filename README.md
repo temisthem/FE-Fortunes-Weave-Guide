@@ -6,7 +6,7 @@ Pick up to three inn meals to see who loves, likes or dislikes each one.
 
 Select a character to see every Pale Raven remark and the correct reaction for a Perfect Bird Time.
 
-In Extras, browse every character's class and recruitment requirements, and favourite the ones each lord plans to recruit to build a Recruit Planner.
+In Extras, browse every recruitable character's requirements, and favourite the ones each lord plans to recruit to build a Recruit Planner (with a shortcut to each planned character's gifts). A setting can hide recruits who aren't in the planner from Gifting, Meals and Pale Raven.
 
 No more flipping between gift lists and recruitment tables!
 

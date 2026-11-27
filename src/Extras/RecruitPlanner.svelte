@@ -1,6 +1,7 @@
 <!--
   The characters the selected lord has favourited, with what it takes to
-  recruit each on that lord's route. Lowest Renown Lv first.
+  recruit each on that lord's route. Lowest Renown Lv first. Each row links to
+  the character's gifts and can be removed from the plan.
 -->
 <script lang="ts">
   import { type Character, canFavourite, characterByName, getRouteInfo, requirementSummary } from '@/data.ts';
@@ -11,8 +12,10 @@
   import { cx, interaction, radius, text } from '@/design/tokens.ts';
   import Toolbar from '@/design/Toolbar.svelte';
   import { favouritesOf, toggleFavourite } from '@/favourites.svelte.ts';
+  import { openGiftsFor } from '@/Gifting/state.svelte.ts';
   import { currentRoute } from '@/route.svelte.ts';
   import CharacterLabel from '@/ui/CharacterLabel.svelte';
+  import GiftIcon from '@/ui/GiftIcon.svelte';
   import RouteSelector from '@/ui/RouteSelector.svelte';
 
   const planned = $derived(
@@ -45,10 +48,11 @@
       <thead>
         <tr>
           <Th>Character</Th>
-          <Th class="w-[17%] sm:w-[11%]">Renown Lv</Th>
-          <Th class="w-[17%] sm:w-[11%]">Support Lv</Th>
+          <Th class="w-[19%] !px-1 sm:w-[11%] sm:!px-3">Renown Lv</Th>
+          <Th class="w-[19%] !px-1 sm:w-[11%] sm:!px-3">Support Lv</Th>
           <Th class="hidden w-[36%] sm:table-cell">Requirement</Th>
-          <Th class="w-10 sm:w-12"><span class="sr-only">Remove</span></Th>
+          <Th class="w-9 sm:w-12"><span class="sr-only">Gifts</span></Th>
+          <Th class="w-9 sm:w-12"><span class="sr-only">Remove</span></Th>
         </tr>
       </thead>
       <tbody>
@@ -66,7 +70,22 @@
             <Td tone="center">{req.renown}</Td>
             <Td tone="center">{req.support}</Td>
             <Td tone="muted" class="hidden sm:table-cell">{req.details || 'None'}</Td>
-            <!-- No side padding: the 28px button is wider than the padded cell on desktop. -->
+            <!-- No side padding: the 28px buttons are wider than the padded cells on desktop. -->
+            <Td tone="center" class="!px-0">
+              <button
+                type="button"
+                aria-label={`View ${c.name}'s gifts`}
+                title="View gifts"
+                onclick={() => openGiftsFor(c.name)}
+                class={cx(
+                  radius,
+                  interaction.focus,
+                  'mx-auto flex h-7 w-7 items-center justify-center text-amber-900 hover:bg-amber-200/70',
+                )}
+              >
+                <GiftIcon />
+              </button>
+            </Td>
             <Td tone="center" class="!px-0">
               <button
                 type="button"

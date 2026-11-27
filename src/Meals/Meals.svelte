@@ -3,7 +3,8 @@
   dislike it. Other routes' lords are never listed. The route picker is shared with Gifting and sets the
   R·S tags. With the Meals "Only show recruitable units" setting on, the rows
   keep only units recruited with Renown/Support on that route (the ones with
-  an R·S tag) plus that route's lord.
+  an R·S tag) plus that route's lord. "Hide unplanned recruits" drops R·S
+  units the lord hasn't added to the Recruit Planner.
 -->
 <script lang="ts">
   import {
@@ -13,6 +14,7 @@
     compareCharacters,
     hasRecruitTag,
     isOtherRouteLord,
+    isPlannedOrNotRecruit,
     isRouteLord,
     meals,
     requirementBadge,
@@ -25,7 +27,7 @@
   import { cx, interaction, text } from '@/design/tokens.ts';
   import Toolbar from '@/design/Toolbar.svelte';
   import { currentRoute } from '@/route.svelte.ts';
-  import { settings } from '@/settings.svelte.ts';
+  import { plannedFilter, settings } from '@/settings.svelte.ts';
   import { stored } from '@/stored.svelte.ts';
   import MiniPortrait from '@/ui/MiniPortrait.svelte';
   import RouteSelector from '@/ui/RouteSelector.svelte';
@@ -50,6 +52,7 @@
   };
 
   const recruitableOnly = $derived(settings.mealsRecruitableOnly.value);
+  const planned = $derived(plannedFilter(currentRoute.value));
 
   const byName = (names: string[]) =>
     names
@@ -60,6 +63,7 @@
         (c) =>
           c &&
           !isOtherRouteLord(c, currentRoute.value) &&
+          isPlannedOrNotRecruit(c, currentRoute.value, planned) &&
           (!recruitableOnly || hasRecruitTag(c, currentRoute.value) || isRouteLord(c, currentRoute.value)),
       )
       .sort(compareCharacters(sort.value, currentRoute.value));

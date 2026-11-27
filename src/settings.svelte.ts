@@ -1,4 +1,5 @@
-import type { GiftingFilters } from '@/data.ts';
+import type { GiftingFilters, Route } from '@/data.ts';
+import { favouritesOf } from '@/favourites.svelte.ts';
 import { stored } from '@/stored.svelte.ts';
 
 /** Display preferences, edited from the settings menu and saved in localStorage. */
@@ -15,10 +16,16 @@ export const settings = {
   neverAutoOnly: stored('neverAutoOnlyState', false),
   /** Meals lists only units recruited with Renown/Support on the chosen route, plus its lord. */
   mealsRecruitableOnly: stored('mealsRecruitableOnlyState', false),
+  /** Gifting, Meals and Pale Raven hide Renown/Support recruits the lord hasn't added to the Recruit Planner. */
+  plannedOnly: stored('plannedOnlyState', false),
 };
 
+/** The lord's Recruit Planner list when "Hide unplanned recruits" is on; null when off. */
+export const plannedFilter = (route: Route) => (settings.plannedOnly.value ? favouritesOf(route) : null);
+
 /** The current Gifting filters, read reactively from the settings. */
-export const giftingFilters = (): GiftingFilters => ({
+export const giftingFilters = (route: Route): GiftingFilters => ({
   recruitableOnly: settings.recruitableOnly.value,
   neverAutoOnly: settings.neverAutoOnly.value,
+  planned: plannedFilter(route),
 });
